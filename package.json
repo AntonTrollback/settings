@@ -35,6 +35,10 @@
   },
   "dependencies": {
     "normalize.css": "^3.0.3",
-    "suitcss-base": "^0.8.0"
+    "suitcss-base": "^0.8.0",
+    "suitcss-utils-display": "^0.4.2",
+    "suitcss-utils-layout": "^0.4.2",
+    "suitcss-utils-size": "^0.7.2",
+    "suitcss-utils-text": "^0.4.2"
   }
 }

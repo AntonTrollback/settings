@@ -1,0 +1,15 @@
+.u-link {
+  outline: 0;
+  color: var(--color-link);
+}
+
+.u-link:hover,
+.u-link:focus,
+.u-link:active {
+  text-decoration: underline;
+  color: var(--color-link);
+}
+
+.u-link:active {
+  color: color(var(--color-link) b(+ 25%));
+}
