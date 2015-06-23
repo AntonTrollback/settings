@@ -1,0 +1,28 @@
+html {
+  height: 100%;
+  font: var(--base-font);
+  color: var(--base-color);
+  background: white;
+}
+
+/**
+ * Remove some default styles
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  color: inherit;
+  text-decoration: inherit;
+  outline: 0;
+}
