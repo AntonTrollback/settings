@@ -1,6 +1,6 @@
 /* Fonts */
 
-@import url("http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic");
+@import url("http://fonts.googleapis.com/css?family=Asul:400,700|Karla:400,400italic,700,700italic");
 
 /* Base */
 
@@ -20,6 +20,8 @@
 /* Config */
 
 :root {
-  --base-font: "Karla", "Verdana", "Geneva", "sans-serif";
+  --base-font-family: "Karla", "Verdana", "Geneva", "sans-serif";
+  --base-font-family-alt: "Asul", "Karla", "Verdana", "Geneva", "sans-serif";
+  --base-font: normal normal normal 16px/1.5 var(--base-font-family);
   --base-color: #222;
 }
