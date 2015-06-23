@@ -1,7 +1,7 @@
 html {
   height: 100%;
-  font: var(--base-font);
-  color: var(--base-color);
+  font: normal normal normal var(--font-size)/var(--line-height) var(--font-family);
+  color: var(--color-text);
   background: white;
 }
 

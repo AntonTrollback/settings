@@ -11,7 +11,7 @@
 
 /* Components */
 
-/* */
+@import "components/type";
 
 /* Utilities */
 
@@ -26,14 +26,16 @@
  * Config
  */
 
+/* Global props */
+
 :root {
   --color-link: blue;
   --color-text: #222;
 
-  --base-font-family: "Karla", "Verdana", "Geneva", "sans-serif";
-  --base-font-family-alt: "Asul", "Karla", "Verdana", "Geneva", "sans-serif";
-  --base-font: normal normal normal 16px/1.5 var(--base-font-family);
-  --base-color: var(--color-text);
+  --font-family: "Karla", "Verdana", "Geneva", "sans-serif";
+  --font-family-alt: "Asul", "Karla", "Verdana", "Geneva", "sans-serif";
+  --font-size: 16px;
+  --line-height: 1.5;
 }
 
 /* Breakpoints */

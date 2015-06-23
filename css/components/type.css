@@ -1,0 +1,112 @@
+:root {
+  --Type-baseline: 25px;
+  --Type-baseline-double: calc(var(--Type-baseline) * 2);
+}
+
+.Type {
+
+}
+
+/**
+ * Links
+ */
+
+.Type .u-link {
+  outline: 0;
+  color: var(--color-link);
+}
+
+.Type .u-link:hover,
+.Type .u-link:focus,
+.Type .u-link:active {
+  text-decoration: underline;
+  color: var(--color-link);
+}
+
+.Type .u-link:active {
+  color: color(var(--color-link) b(+ 25%));
+}
+
+/**
+ * Headings
+ */
+
+.Type h1 {
+  font-size: 44px;
+  line-height: var(--Type-baseline-double);
+  letter-spacing: -1px;
+}
+
+.Type h2 {
+  font-size: 33px;
+  line-height: var(--Type-baseline-double);
+  letter-spacing: -1px;
+}
+
+.Type h3 {
+  font-size: 23px;
+  line-height: var(--Type-baseline);
+}
+
+.Type h4,
+.Type h5,
+.Type h6 {
+  font: inherit;
+  font-weight: bold;
+}
+
+/**
+ * Block content elements
+ */
+
+@custom-selector :--Type-block-elements
+  blockquote, p, pre, img, video, iframe, embed, object, ul, ol, hr,
+  h1, h2, h3, h4, h5, h6;
+
+.Type :--Type-block-elements {
+  max-width: 100%;
+  margin: var(--Type-baseline) 0;
+}
+
+/**
+ * Lists
+ */
+
+@custom-selector :--Type-sub-lists
+  ul ul, ol ol, ul ol, ol ul;
+
+.Type ol,
+.Type ul {
+  padding-left: 2em;
+  list-style: square;
+}
+
+.Type ol {
+  list-style: decimal;
+}
+
+.Type :--Type-sub-lists {
+  margin-bottom: 0;
+}
+
+/**
+ * Prevent overflowing margins
+ */
+
+.Type > :first-child {
+  margin-top: 0 !important;
+}
+
+.Type > :last-child {
+  margin-bottom: 0 !important;
+}
+
+/**
+ * Remove wysiwyg inline styles
+ */
+
+.Type [style] {
+  color: inherit !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+}
