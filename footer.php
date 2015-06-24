@@ -4,7 +4,7 @@
     footer
   </footer>
 
-  <script src="<?= get_template_directory_uri(); ?>/dist/settings.js?v0.1"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/dist/settings.js?v0.1"></script>
 
   <?php wp_footer(); ?>
 
