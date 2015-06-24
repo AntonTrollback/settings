@@ -25,7 +25,8 @@
       "baseURL": "js"
     },
     "dependencies": {
-      "skrollr": "github:Prinzhorn/skrollr@^0.6.29"
+      "skrollr": "npm:skrollr@^0.6.26",
+      "svg4everybody": "npm:svg4everybody@^0.0.2"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.1.13",
