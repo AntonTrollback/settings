@@ -11,7 +11,9 @@
 
 /* Components */
 
+@import "components/site";
 @import "components/type";
+@import "components/nav";
 
 /* Utilities */
 

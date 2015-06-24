@@ -1,0 +1,180 @@
+.Nav {
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 800px;
+
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  z-index: 100;
+  transform: translateX(-50%);
+  overflow: hidden;
+
+  font-family: var(--font-family-alt);
+  color: #000;
+  background: #fff;
+  white-space: nowrap;
+  text-align: center;
+  mix-blend-mode: exclusion;
+
+  /* Prevent inline block white-space */
+  font-size: 0;
+}
+
+.Nav-homeLink,
+.Nav-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Nav-homeLink:hover + .Nav-inner {
+  color: red;
+}
+
+.Nav-logo {
+  width: 28px;
+  padding: 8px 0;
+  box-sizing: border-box;
+  position: absolute;
+  margin: 0 14px;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.Nav-logo:last-child {
+  left: auto;
+  right: 0;
+  display: none;
+}
+
+.Nav-inner {
+  position: relative;
+  display: inline-block;
+  min-width: 100%;
+  height: 0;
+}
+
+.Nav-list {
+  display: inline-block;
+  vertical-align: top;
+  max-width: calc(100% - 90px);
+  margin: 0 -8px;
+  height: 0;
+  color: var(--color-text);
+}
+
+.Nav-sub {
+  /* Let's skip sub navigations for now */
+  display: none;
+}
+
+.Nav-item {
+  display: inline-block;
+  font-size: var(--font-size);
+}
+
+.Nav-action {
+  padding: 14px 12px;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+}
+
+.Nav,
+.Nav-logo,
+.Nav-action {
+  height: 52px;
+}
+
+/**
+ * States
+ */
+
+.Nav-item.is-active .Nav-action:after {
+  content: "";
+  display: block;
+  margin-top: -5px;
+  border-bottom: 5px solid;
+}
+
+.Nav-action:hover,
+.Nav-action:focus,
+.Nav-action:active {
+  color: red;
+}
+
+/**
+ * Wider viewports
+ */
+
+@media (--sm-viewport) {
+  .Nav {
+    width: 95%;
+  }
+}
+
+@media (--md-viewport) {
+  .Nav,
+  .Nav-logo,
+  .Nav-action {
+    height: 64px;
+  }
+
+  .Nav {
+    top: 25px;
+  }
+
+  .Nav-logo {
+    width: 38px;
+    margin: 0 14px;
+  }
+
+  .Nav-logo:last-child {
+    display: block;
+  }
+
+  .Nav-item {
+    font-size: 18px;
+  }
+
+  .Nav-action {
+    padding: 19px 13px;
+  }
+}
+
+/**
+ * Scrolling
+ */
+
+.Nav-wrap {
+  /* Horizontal scrolling */
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  backface-visibility: hidden;
+}
+
+/* Shadows */
+
+.Nav:before,
+.Nav:after {
+  content: "";
+  height: 100%;
+  width: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.Nav:after {
+  left: auto;
+  right: 0;
+  transform: rotate(180deg);
+}

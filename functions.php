@@ -33,6 +33,12 @@ function settings_setup() {
 add_action( 'after_setup_theme', 'settings_setup' );
 
 /**
+ * Third-party libs
+ */
+
+require get_template_directory() . '/inc/bem-menu.php';
+
+/**
  * Custom template tags for this theme.
  */
 
