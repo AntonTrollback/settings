@@ -5,6 +5,10 @@ html {
   background: white;
 }
 
+img {
+  max-width: 100%;
+}
+
 /**
  * Remove some default styles
  */

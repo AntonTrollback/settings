@@ -15,6 +15,9 @@
   background: #fff;
   white-space: nowrap;
   text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   mix-blend-mode: exclusion;
 
   /* Prevent inline block white-space */
@@ -28,10 +31,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.Nav-homeLink:hover + .Nav-inner {
-  color: red;
 }
 
 .Nav-logo {
@@ -64,7 +63,6 @@
   max-width: calc(100% - 90px);
   margin: 0 -8px;
   height: 0;
-  color: var(--color-text);
 }
 
 .Nav-sub {
@@ -91,8 +89,56 @@
 }
 
 /**
+ * Scrolling
+ */
+
+.Nav-wrap {
+  /* Horizontal scrolling */
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  backface-visibility: hidden;
+}
+
+/* Shadows */
+
+.Nav:before,
+.Nav:after {
+  content: "";
+  height: 100%;
+  width: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.Nav:after {
+  left: auto;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+/**
  * States
  */
+
+.Nav:hover {
+  mix-blend-mode: initial;
+  background: #000;
+  color: #fff;
+}
+
+.Nav:hover:before,
+.Nav:hover:after {
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
+}
+
+.Nav-homeLink:hover + .Nav-inner {
+
+}
 
 .Nav-item.is-active .Nav-action:after {
   content: "";
@@ -104,7 +150,7 @@
 .Nav-action:hover,
 .Nav-action:focus,
 .Nav-action:active {
-  color: red;
+  text-decoration: underline;
 }
 
 /**
@@ -144,37 +190,4 @@
   .Nav-action {
     padding: 19px 13px;
   }
-}
-
-/**
- * Scrolling
- */
-
-.Nav-wrap {
-  /* Horizontal scrolling */
-  overflow-y: hidden;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  backface-visibility: hidden;
-}
-
-/* Shadows */
-
-.Nav:before,
-.Nav:after {
-  content: "";
-  height: 100%;
-  width: 16px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 100%);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.Nav:after {
-  left: auto;
-  right: 0;
-  transform: rotate(180deg);
 }

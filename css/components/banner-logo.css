@@ -1,0 +1,81 @@
+.BannerLogo {
+  color: #000;
+  position: relative;
+  margin-top: 10%;
+}
+
+.BannerLogo-type {
+  width: 100%;
+}
+
+/* Border */
+
+.BannerLogo-type:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: currentColor;
+  margin: 1.5% 0 2%;
+
+  /* Move it a few pixels to the right */
+  width: 98%;
+  margin-left: 2%;
+}
+
+@media (--sm-viewport) {
+  .BannerLogo-type:after {
+    height: 8px;
+    margin-top: 2.5%;
+  }
+}
+
+@media (--sm-viewport) {
+  .BannerLogo-type:after {
+    height: 8px;
+    margin-top: 2.5%;
+  }
+}
+
+.BannerLogo-sub {
+  display: block;
+  font-family: var(--font-family-alt);
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin-left: 2%;
+}
+
+/* Note `max-width` query */
+
+@media (--sm-max-viewport) {
+  .BannerLogo-sub {
+    /* "responsive text", specific for an exact string and font */
+    letter-spacing: 0.15vw;
+    font-size: 5.25vw;
+    margin-left: 1.5vw;
+  }
+}
+
+.BannerLogo-diamond {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 27vw;
+  height: 27vw;
+  max-width: 170px;
+  max-height: 170px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  transform-origin: top left;
+  background: #fff;
+  mix-blend-mode: exclusion;
+  will-change: transform;
+}
+
+@media (--lg-viewport) {
+  .BannerLogo-diamond {
+    max-width: 205px;
+    max-height: 205px;
+  }
+}

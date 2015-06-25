@@ -59,6 +59,14 @@ if ( ! function_exists( 'the_post_navigation' ) ) :
   }
 endif;
 
+/**
+ * Get url to dist asset
+ */
+
+function settings_get_asset_url( $file_name ) {
+  global $revision;
+  echo get_template_directory_uri() . '/dist/' . $file_name . '?revision=' . $revision;
+}
 
 if ( ! function_exists( 'settings_posted_on' ) ) :
   /**

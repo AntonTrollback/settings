@@ -5,10 +5,8 @@
 <?php wp_head(); ?>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/settings.css?v0.1">
+<link rel="stylesheet" href="<?php settings_get_asset_url( 'settings.css' ); ?>">
 
 <body class="Site">
 
   <?php get_template_part( 'partials/header' ); ?>
-
-  <div class="Site-container">

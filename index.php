@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <?php get_template_part( 'partials/banner-intro' ); ?>
 
-  <main role="main" data-0="background-color:rgb(0,0,255); transform: rotate(0deg)" data-200="background-color:rgb(255,0,0); transform: rotate(360deg)">
+  <main class="Site-container" role="main">
     <?php while ( have_posts() ) : the_post(); ?>
       <article>
         <?php the_title( '<h1>', '</h1>' ); ?>

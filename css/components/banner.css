@@ -1,0 +1,66 @@
+.Banner {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  transition: height .5s ease;
+}
+
+@media (--sm-viewport) {
+  .Banner { height: 450px; }
+}
+
+@media (--md-viewport) {
+  .Banner { height: 550px; }
+}
+
+@media (--lg-viewport) {
+  .Banner { height: 600px; }
+}
+
+.Banner-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("clouds.jpg");
+  will-change: transform;
+}
+
+/**
+ * `transform: translate` seem to isolates the blend-modes. Let's go with
+ * `inline-block` for centering instead.
+ */
+
+.Banner {
+  font-size: 0;
+  text-align: center;
+}
+
+.Banner:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  position: relative;
+  z-index: 100;
+}
+
+.Banner-content {
+  font-size: var(--font-size);
+  width: 80%;
+  max-width: 500px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  text-align: left;
+}
+
+@media (--lg-viewport) {
+  .Banner-content {
+    max-width: 600px;
+  }
+}

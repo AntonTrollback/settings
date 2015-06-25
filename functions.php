@@ -1,5 +1,8 @@
 <?php
 
+// Todo:
+$revision = 1;
+
 function settings_setup() {
   /**
    * Add default posts and comments RSS feed links to head.

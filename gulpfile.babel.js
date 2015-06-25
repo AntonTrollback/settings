@@ -15,9 +15,16 @@ var cssPattern = [
   'css/**/*.css'
 ];
 
+var filesPattern = [
+  'img/**/*.{jpg,png,gif,svg}'
+]
+
 gulp.task('css', () => {
   return gulp.src(['css/app.css'])
-    .pipe(cssnext({ compress: { comments: { removeAll: true } } }))
+    .pipe(cssnext({
+      compress: { comments: { removeAll: true } },
+      url: { url: (url) => { return url; } }
+    }))
     .pipe(rename('settings.css'))
     .pipe(header(fs.readFileSync('style.css', 'utf8')))
     .pipe(gulp.dest('dist/'))
@@ -29,13 +36,19 @@ gulp.task('jshint', () => {
     .pipe(jshint.reporter('default'));
 });
 
-gulp.task('jspm', shell.task('npm run bundle-javascript'));
+gulp.task('js', shell.task('npm run bundle-javascript'));
 
-gulp.task('watch', () => {
-  gulp.watch(jshintPattern, ['jshint', 'jspm']);
-  gulp.watch(cssPattern, ['css']);
+gulp.task('copyfiles', () => {
+  return gulp.src(filesPattern)
+    .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('build', ['css', 'jshint', 'jspm']);
+gulp.task('watch', () => {
+  gulp.watch(jshintPattern, ['jshint', 'js']);
+  gulp.watch(cssPattern, ['css']);
+  gulp.watch(filesPattern, ['copyfiles']);
+});
+
+gulp.task('build', ['css', 'jshint', 'js', 'copyfiles']);
 
 gulp.task('default', ['build']);
