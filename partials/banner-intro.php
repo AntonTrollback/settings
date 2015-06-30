@@ -14,7 +14,10 @@
         <span class="u-hiddenVisually">Settings:</span>
         <div class="BannerLogo-sub">Normkreativa möjligheter</div>
       </h1>
-      <div class="BannerLogo-diamond"></div>
+      <div class="BannerLogo-diamond"
+       data-anchor-target=".Banner"
+       data-top="transform: rotate(45deg) translate(-50%, -50%)"
+       data-top-bottom="transform: rotate(45deg) translate(-30%, -30%)"></div>
     </div>
   </div>
 </div>
