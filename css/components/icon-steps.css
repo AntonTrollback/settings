@@ -1,0 +1,61 @@
+.IconSteps {
+  background: #111;
+  color: #fff;
+  font-family: var(--font-family-alt);
+}
+
+.IconSteps-content {
+  padding: 30px 0;
+  width: 88%;
+  max-width: 700px;
+  font-size: 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.IconSteps-item {
+  display: inline-block;
+  width: 50%;
+  font-size: 18px;
+}
+
+.IconSteps-item:last-child {
+  margin-top: 1em;
+}
+
+.IconSteps-figure {
+  margin: 0 auto;
+  width: 70px;
+  height: 70px;
+  background: #64b0ad;
+  margin-bottom: 0.6em;
+}
+
+@media (--sm-viewport) {
+  .IconSteps-content {
+    padding: 50px 0;
+  }
+
+  .IconSteps-item {
+    width: calc(100% / 3);
+  }
+
+  .IconSteps-item:last-child {
+    margin-top: 0;
+  }
+
+  .IconSteps-figure {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (--md-viewport) {
+  .IconSteps-item {
+    font-size: 20px;
+  }
+  .IconSteps-figure {
+    width: 115px;
+    height: 115px;
+  }
+}

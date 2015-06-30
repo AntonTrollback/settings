@@ -1,3 +1,19 @@
+/**
+ * Colors
+ */
+
+.u-colorPurple {
+  color: var(--color-purple);
+}
+
+.u-colorTeal {
+  color: var(--color-teal);
+}
+
+/**
+ * Display as link
+ */
+
 .u-link {
   outline: 0;
   color: var(--color-link);

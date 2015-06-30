@@ -2,16 +2,26 @@
   isolation: isolate;
   overflow-x: hidden;
   background-color: #fff;
+  padding-bottom: 70px;
 }
 
 .Site-container {
-  width: 90%;
+  width: 88%;
   max-width: 800px;
   margin: 0 auto;
 }
 
+.Site-content {
+  padding: 30px 0;
+}
+
+.Site-content--center {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
 @media (--sm-viewport) {
-  .Nav {
-    width: 95%;
+  .Site-content {
+    padding: 42px 0;
   }
 }
