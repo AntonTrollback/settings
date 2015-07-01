@@ -2,6 +2,8 @@
   color: #000;
   position: relative;
   margin-top: 10%;
+  user-select: none;
+  cursor: default;
 }
 
 .BannerLogo-type {
@@ -17,7 +19,7 @@
   background: currentColor;
   margin: 1.5% 0 2%;
 
-  /* Move it a few pixels to the right */
+  /* Align with the the logo type */
   width: 98%;
   margin-left: 2%;
 }
@@ -42,19 +44,18 @@
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
-  font-size: 22px;
-  letter-spacing: 2px;
-  margin-left: 2%;
+
+  /* Responsive text, specific for an exact string and font */
+  letter-spacing: 0.15vw;
+  font-size: 5.25vw;
+  margin-left: 1.5vw;
 }
 
-/* Note `max-width` query */
-
-@media (--sm-max-viewport) {
+@media (--sm-viewport) {
   .BannerLogo-sub {
-    /* "responsive text", specific for an exact string and font */
-    letter-spacing: 0.15vw;
-    font-size: 5.25vw;
-    margin-left: 1.5vw;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-left: 2%;
   }
 }
 

@@ -16,7 +16,7 @@
 @import "components/nav";
 @import "components/banner";
 @import "components/banner-logo";
-@import "components/icon-steps";
+@import "components/figure-banner";
 
 /* Utilities */
 
@@ -27,10 +27,6 @@
 
 @import "utilities/misc";
 
-/**
- * Config
- */
-
 /* Global props */
 
 :root {
@@ -40,11 +36,8 @@
   --color-link: blue;
   --color-text: #333;
 
-
   --font-family: "Karla", "Verdana", "Geneva", "sans-serif";
   --font-family-alt: "Asul", "Karla", "Verdana", "Geneva", "sans-serif";
-  --font-size: 17px;
-  --line-height: 1.5;
 }
 
 /* Breakpoints */

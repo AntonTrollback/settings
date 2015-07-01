@@ -2,13 +2,14 @@
   box-sizing: border-box;
   width: 88%;
   max-width: 838px;
+  user-select: none;
+  overflow: hidden;
 
   position: fixed;
   top: 15px;
   left: 50%;
   z-index: 100;
   transform: translateX(-50%);
-  overflow: hidden;
 
   font-family: var(--font-family-alt);
   color: #000;
@@ -24,7 +25,7 @@
   font-size: 0;
 }
 
-.Nav-homeLink,
+.Nav-home,
 .Nav-wrap {
   position: absolute;
   top: 0;
@@ -72,7 +73,7 @@
 
 .Nav-item {
   display: inline-block;
-  font-size: var(--font-size);
+  font-size: 1rem;
 }
 
 .Nav-action {
@@ -136,7 +137,7 @@
   background: linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
 }
 
-.Nav-homeLink:hover + .Nav-inner {
+.Nav-home:hover + .Nav-inner {
 
 }
 

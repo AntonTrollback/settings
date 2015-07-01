@@ -1,29 +1,30 @@
-.IconSteps {
+.FigureBanner {
   background: #111;
   color: #fff;
   font-family: var(--font-family-alt);
 }
 
-.IconSteps-content {
+.FigureBanner-content {
   padding: 30px 0;
   width: 88%;
   max-width: 700px;
   font-size: 0;
   text-align: center;
   margin: 0 auto;
+  cursor: default;
 }
 
-.IconSteps-item {
+.FigureBanner-item {
   display: inline-block;
   width: 50%;
   font-size: 18px;
 }
 
-.IconSteps-item:last-child {
+.FigureBanner-item:last-child {
   margin-top: 1em;
 }
 
-.IconSteps-figure {
+.FigureBanner-figure {
   margin: 0 auto;
   width: 70px;
   height: 70px;
@@ -32,29 +33,29 @@
 }
 
 @media (--sm-viewport) {
-  .IconSteps-content {
+  .FigureBanner-content {
     padding: 50px 0;
   }
 
-  .IconSteps-item {
+  .FigureBanner-item {
     width: calc(100% / 3);
   }
 
-  .IconSteps-item:last-child {
+  .FigureBanner-item:last-child {
     margin-top: 0;
   }
 
-  .IconSteps-figure {
+  .FigureBanner-figure {
     width: 100px;
     height: 100px;
   }
 }
 
 @media (--md-viewport) {
-  .IconSteps-item {
+  .FigureBanner-item {
     font-size: 20px;
   }
-  .IconSteps-figure {
+  .FigureBanner-figure {
     width: 115px;
     height: 115px;
   }

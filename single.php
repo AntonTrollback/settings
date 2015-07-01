@@ -5,7 +5,6 @@
     <article>
       <header>
         <?php the_title( '<h1>', '</h1>' ); ?>
-        <?php settings_posted_on(); ?>
       </header>
 
       <div>

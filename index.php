@@ -1,8 +1,4 @@
-<?php
-
-settings_set_post_by_slug( 'start' );
-
-?>
+<?php set_post_by_slug( 'start' ); ?>
 
 <?php get_header(); ?>
 

@@ -50,7 +50,7 @@
 }
 
 .Banner-content {
-  font-size: var(--font-size);
+  font-size: 1rem;
   width: 80%;
   max-width: 500px;
   display: inline-block;

@@ -3,6 +3,16 @@
   --Type-stack-double: calc(var(--Type-stack) * 2);
 }
 
+.Type {
+
+}
+
+@media (--sm-viewport) {
+  .Type {
+    font-size: 18px;
+  }
+}
+
 .Type .Type-preamble {
   letter-spacing: -1px;
   line-height: 1.3;
@@ -14,10 +24,6 @@
 }
 
 @media (--sm-viewport) {
-  .Type {
-    font-size: 18px;
-  }
-
   .Type .Type-preamble {
     font-size: 27px;
     line-height: 1.4;
@@ -26,23 +32,34 @@
 
 /* -------------------------------------------------------------------------- */
 
+@custom-selector :--Type-block-elements
+ blockquote, p, pre, img, video, iframe, embed, object, ul, ol, hr,
+ h1, h2, h3, h4, h5, h6;
+
+@custom-selector :--Type-sub-lists
+  ul ul, ol ol, ul ol, ol ul;
+
+/* Ignores any element with a descendant class (`Type-X`) */
+@custom-selector :--Type-unspecified
+  :not([class|="Type"]);
+
 /**
  * Links
  */
 
-.Type a {
+.Type a:--Type-unspecified {
   outline: 0;
   color: var(--color-link);
 }
 
-.Type a:hover,
-.Type a:focus,
-.Type a:active {
+.Type a:--Type-unspecified:hover,
+.Type a:--Type-unspecified:focus,
+.Type a:--Type-unspecified:active {
   text-decoration: underline;
   color: var(--color-link);
 }
 
-.Type a:active {
+.Type a:--Type-unspecified:active {
   color: color(var(--color-link) b(+ 25%));
 }
 
@@ -50,34 +67,34 @@
  * Headings
  */
 
-.Type h1,
-.Type h2,
-.Type h3 {
+.Type h1:--Type-unspecified,
+.Type h2:--Type-unspecified,
+.Type h3:--Type-unspecified {
   font-family: var(--font-family-alt);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.Type h1 {
+.Type h1:--Type-unspecified {
   font-size: 44px;
   line-height: var(--Type-stack-double);
   letter-spacing: -1px;
 }
 
-.Type h2 {
+.Type h2:--Type-unspecified {
   font-size: 33px;
   line-height: var(--Type-stack-double);
   letter-spacing: -1px;
 }
 
-.Type h3 {
+.Type h3:--Type-unspecified {
   font-size: 23px;
   line-height: var(--Type-stack);
 }
 
-.Type h4,
-.Type h5,
-.Type h6 {
+.Type h4:--Type-unspecified,
+.Type h5:--Type-unspecified,
+.Type h6:--Type-unspecified {
   font: inherit;
   font-weight: bold;
 }
@@ -86,11 +103,7 @@
  * Block content elements
  */
 
-@custom-selector :--Type-block-elements
-  blockquote, p, pre, img, video, iframe, embed, object, ul, ol, hr,
-  h1, h2, h3, h4, h5, h6;
-
-.Type :--Type-block-elements {
+.Type :--Type-block-elements:--Type-unspecified {
   max-width: 100%;
   margin: var(--Type-stack) 0;
 }
@@ -99,20 +112,17 @@
  * Lists
  */
 
-@custom-selector :--Type-sub-lists
-  ul ul, ol ol, ul ol, ol ul;
-
-.Type ol,
-.Type ul {
+.Type ol:--Type-unspecified,
+.Type ul:--Type-unspecified {
   padding-left: 2em;
   list-style: square;
 }
 
-.Type ol {
+.Type ol:--Type-unspecified {
   list-style: decimal;
 }
 
-.Type :--Type-sub-lists {
+.Type :--Type-sub-lists:--Type-unspecified {
   margin-bottom: 0;
 }
 

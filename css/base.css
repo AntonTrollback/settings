@@ -1,12 +1,18 @@
 html {
   height: 100%;
-  font: normal normal normal var(--font-size)/var(--line-height) var(--font-family);
+  font-family: var(--font-family);
+  font-size: 17px;
+  line-height: 1.5;
   color: var(--color-text);
   background: white;
 }
 
 img {
   max-width: 100%;
+}
+
+form {
+  margin: 0;
 }
 
 /**
@@ -29,4 +35,18 @@ a:active {
   color: inherit;
   text-decoration: inherit;
   outline: 0;
+}
+
+/**
+ * Fix browser inconsistencies
+ */
+
+:disabled {
+  color: inherit;
+  opacity: 1;
+  -webkit-text-fill-color: currentColor;
+}
+
+::placeholder {
+  opacity: 1;
 }
