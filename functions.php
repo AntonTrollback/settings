@@ -20,7 +20,7 @@ function cleanup_head () {
 }
 
 add_action( 'after_setup_theme', 'setup_theme' );
-add_action('init', 'fi_head_cleanup');
+add_action('init', 'cleanup_head');
 
 // Third-party libs
 require get_template_directory() . '/inc/bem-menu.php';
