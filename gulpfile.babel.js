@@ -20,7 +20,7 @@ var filesPattern = [
 ]
 
 gulp.task('css', () => {
-  return gulp.src(['css/app.css'])
+  return gulp.src(['css/index.css'])
     .pipe(cssnext({
       compress: { comments: { removeAll: true } },
       url: { url: (url) => { return url; } }

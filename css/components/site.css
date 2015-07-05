@@ -1,8 +1,16 @@
 .Site {
+  font-family: var(--font-family);
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--color-text);
+  background: white;
+}
+
+.Site-body {
   isolation: isolate;
   overflow-x: hidden;
   background-color: #fff;
-  padding-bottom: 70px;
+  padding-bottom: 150px;
 }
 
 .Site-container {

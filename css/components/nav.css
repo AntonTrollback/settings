@@ -137,10 +137,6 @@
   background: linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
 }
 
-.Nav-home:hover + .Nav-inner {
-
-}
-
 .Nav-item.is-active .Nav-action:after {
   content: "";
   display: block;

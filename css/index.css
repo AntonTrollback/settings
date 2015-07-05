@@ -5,9 +5,7 @@
 /* Base */
 
 @import "normalize.css";
-@import "suitcss-base";
-
-@import "base";
+@import "prepare.css";
 
 /* Components */
 

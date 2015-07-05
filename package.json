@@ -7,7 +7,7 @@
   "repository": "https://github.com/antontrollback/settings",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bundle-javascript": "jspm bundle-sfx app dist/settings.js --minify"
+    "bundle-javascript": "jspm bundle-sfx index dist/settings.js --minify"
   },
   "devDependencies": {
     "babel": "^5.6.4",
@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "normalize.css": "^3.0.3",
+    "prepare.css": "^0.1.0",
     "suitcss-base": "^0.8.0",
     "suitcss-utils-display": "^0.4.2",
     "suitcss-utils-layout": "^0.4.2",
