@@ -19,17 +19,7 @@
   margin: 0 auto;
 }
 
-.Site-content {
-  padding: 30px 0;
-}
-
-.Site-content--center {
+.Site-container--narrow {
   margin: 0 auto;
   max-width: 700px;
-}
-
-@media (--sm-viewport) {
-  .Site-content {
-    padding: 42px 0;
-  }
 }

@@ -26,7 +26,6 @@
   height: 126%;
   background-position: center center;
   background-size: cover;
-  background-image: url("clouds.jpg");
   will-change: transform;
 }
 
