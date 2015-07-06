@@ -8,11 +8,13 @@ import shell from 'gulp-shell';
 
 var jshintPattern = [
   'src/scripts/**/*.js',
-  '!src/scripts/jspm_packages/**/*'
+  '!src/scripts/jspm_packages/**/*',
+  '!src/scripts/settings.js'
 ];
 
 var cssPattern = [
-  'src/styles/**/*.css'
+  'src/styles/**/*.css',
+  '!src/styles/settings.css'
 ];
 
 gulp.task('css', () => {

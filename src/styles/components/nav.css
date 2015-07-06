@@ -144,9 +144,9 @@
   border-bottom: 5px solid;
 }
 
-.Nav-action:hover,
-.Nav-action:focus,
-.Nav-action:active {
+.Nav-item:not(.is-active) .Nav-action:hover,
+.Nav-item:not(.is-active) .Nav-action:focus,
+.Nav-item:not(.is-active) .Nav-action:active {
   text-decoration: underline;
 }
 

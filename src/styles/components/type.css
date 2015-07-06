@@ -61,8 +61,11 @@
  */
 
 @custom-selector :--Type-block-elements
- blockquote, p, pre, img, video, iframe, embed, object, ul, ol, hr,
+ blockquote, p, pre, ul, ol, hr,
  h1, h2, h3, h4, h5, h6;
+
+@custom-selector :--Type-inline-block
+  img, video, iframe, embed, object;
 
 @custom-selector :--Type-sub-lists
   ul ul, ol ol, ul ol, ol ul;
@@ -123,11 +126,17 @@
   font-weight: bold;
 }
 
-/* Block content elements */
-
 .Type :--Type-block-elements:--Type-unspecified {
   max-width: 100%;
   margin: var(--Type-margin) 0;
+  display: block;
+}
+
+.Type :--Type-inline-block:--Type-unspecified {
+  max-width: 100%;
+  margin: 0;
+  display: inline-block;
+  vertical-align: bottom;
 }
 
 /* Lists */

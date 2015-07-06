@@ -23,12 +23,3 @@ add_action( 'after_setup_theme', function () {
   add_image_size( 'size-banner', 600 );
   add_image_size( 'size-banner-hq', 1200 );
 });
-
-/*
-add_filter('template_include', function ( $template_path ) {
-  if ( get_post_type() == 'example' ) {
-    $template_path = 'path';
-  }
-  return $template_path;
-}, 1);
-*/
