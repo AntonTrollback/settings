@@ -7,27 +7,23 @@ import rename from 'gulp-rename';
 import shell from 'gulp-shell';
 
 var jshintPattern = [
-  'js/**/*.js',
-  '!js/jspm_packages/**/*'
+  'src/scripts/**/*.js',
+  '!src/scripts/jspm_packages/**/*'
 ];
 
 var cssPattern = [
-  'css/**/*.css'
+  'src/styles/**/*.css'
 ];
 
-var filesPattern = [
-  'img/**/*.{jpg,png,gif,svg}'
-]
-
 gulp.task('css', () => {
-  return gulp.src(['css/index.css'])
+  return gulp.src(['src/styles/index.css'])
     .pipe(cssnext({
       compress: { comments: { removeAll: true } },
       url: { url: (url) => { return url; } }
     }))
     .pipe(rename('settings.css'))
     .pipe(header(fs.readFileSync('style.css', 'utf8')))
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('src/styles/'))
 });
 
 gulp.task('jshint', () => {
@@ -38,17 +34,11 @@ gulp.task('jshint', () => {
 
 gulp.task('js', shell.task('npm run bundle-javascript'));
 
-gulp.task('copyfiles', () => {
-  return gulp.src(filesPattern)
-    .pipe(gulp.dest('dist/'));
-});
-
 gulp.task('watch', () => {
   gulp.watch(jshintPattern, ['jshint', 'js']);
   gulp.watch(cssPattern, ['css']);
-  gulp.watch(filesPattern, ['copyfiles']);
 });
 
-gulp.task('build', ['css', 'jshint', 'js', 'copyfiles']);
+gulp.task('build', ['css', 'jshint', 'js']);
 
 gulp.task('default', ['build']);

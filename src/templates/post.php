@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php partial( 'header' ); ?>
 
 <main role="main">
   <?php while ( have_posts() ) : the_post(); ?>
@@ -14,4 +14,4 @@
   <?php endwhile; ?>
 </main>
 
-<?php get_footer(); ?>
+<?php partial( 'footer' ); ?>

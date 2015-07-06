@@ -14,7 +14,7 @@ $aside_title =  get_field( 'highlight_title' )
   	$post = $aside;
   	setup_postdata( $post );
     set_query_var( 'aside_title', $aside_title );
-    get_template_part( 'partials/article-aside' );
+    partial( 'article-aside' );
     wp_reset_postdata();
   }
   ?>

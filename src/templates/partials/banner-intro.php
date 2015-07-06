@@ -10,7 +10,7 @@
     <div class="Banner-content">
       <div class="BannerLogo">
         <div class="BannerLogo-type">
-          <img src="<?php get_asset_url( 'settings.png' ); ?>" alt="Settings">
+          <img src="<?php get_asset( 'images/settings.png' ); ?>" alt="Settings">
         </div>
         <h1>
           <span class="u-hiddenVisually">Settings:</span>

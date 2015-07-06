@@ -7,7 +7,7 @@
   "repository": "https://github.com/antontrollback/settings",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bundle-javascript": "jspm bundle-sfx index dist/settings.js --minify"
+    "bundle-javascript": "jspm bundle-sfx index src/scripts/settings.js --minify"
   },
   "devDependencies": {
     "babel": "^5.6.4",
@@ -22,7 +22,7 @@
   },
   "jspm": {
     "directories": {
-      "baseURL": "js"
+      "baseURL": "src/scripts"
     },
     "dependencies": {
       "skrollr": "npm:skrollr@^0.6.26",
