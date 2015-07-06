@@ -11,6 +11,7 @@
 
 @import "components/site";
 @import "components/type";
+@import "components/button";
 @import "components/nav";
 @import "components/banner";
 @import "components/banner-logo";
@@ -30,6 +31,7 @@
 :root {
   --color-purple: #493b6f;
   --color-teal: #237d81;
+  --color-pink: #f194bd;
 
   --color-link: blue;
   --color-text: #333;

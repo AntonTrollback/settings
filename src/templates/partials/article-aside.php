@@ -1,8 +1,10 @@
 <?php $title = $aside_title ? $aside_title : get_the_title(); ?>
 
 <aside class="Site-aside">
-  <div class="Type">
+  <a href="<?php the_permalink(); ?>">
+  <div class="Type Type--plain u-colorPurple">
     <?php the_image(); ?>
-    <h1 class="u-colorTeal"><?php echo $title; ?></h1>
+    <p><?php echo $title; ?></p>
   </div>
+  </a>
 </aside>

@@ -25,6 +25,7 @@
       "baseURL": "src/scripts"
     },
     "dependencies": {
+      "lodash": "npm:lodash@^3.10.0",
       "skrollr": "npm:skrollr@^0.6.26",
       "svg4everybody": "npm:svg4everybody@^0.0.2"
     },

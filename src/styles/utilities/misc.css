@@ -29,3 +29,43 @@
 .u-link:active {
   color: color(var(--color-link) b(+ 25%));
 }
+
+/**
+ * Hide at breakpoint
+ */
+
+@media (--xs-viewport) {
+  .u-xs-hide { display: none !important; }
+}
+
+@media (--sm-viewport) {
+  .u-sm-hide { display: none !important; }
+}
+
+@media (--md-viewport) {
+  .u-md-hide { display: none !important; }
+}
+
+@media (--lg-viewport) {
+  .u-lg-hide { display: none !important; }
+}
+
+/**
+ * Show at breakpoint
+ */
+
+@media (--xs-max-viewport) {
+  .u-xs-show { display: none !important; }
+}
+
+@media (--sm-max-viewport) {
+  .u-sm-show { display: none !important; }
+}
+
+@media (--md-max-viewport) {
+  .u-md-show { display: none !important; }
+}
+
+@media (--lg-max-viewport) {
+  .u-lg-show { display: none !important; }
+}

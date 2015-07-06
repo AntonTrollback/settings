@@ -23,3 +23,28 @@
   margin: 0 auto;
   max-width: 700px;
 }
+
+.Site-aside {
+  text-align: center;
+  margin-top: 30px;
+}
+
+@media (--sm-viewport) {
+  .Site-primary {
+    width: 64%;
+    float: left;
+  }
+
+  .Site-aside {
+    width: 31%;
+    float: right;
+    margin-top: 72px;
+    text-align: left;
+  }
+}
+
+@media (--md-viewport) {
+  .Site-aside {
+    width: 24%;
+  }
+}
