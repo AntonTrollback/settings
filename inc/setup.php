@@ -18,8 +18,8 @@ add_action( 'init', function () {
 });
 
 add_action( 'after_setup_theme', function () {
-  add_image_size( 'size-regular', 330, 270 );
-  add_image_size( 'size-regular-hq', 660, 540 );
+  add_image_size( 'size-regular', 330, 290 );
+  add_image_size( 'size-regular-hq', 660, 580 );
   add_image_size( 'size-banner', 600 );
   add_image_size( 'size-banner-hq', 1200 );
 });

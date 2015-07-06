@@ -1,1 +1,1 @@
-<?php template( 'start' ); ?>
+<?php template( 'page' ); ?>

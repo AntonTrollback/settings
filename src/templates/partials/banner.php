@@ -6,7 +6,7 @@
        style="background-image: url(<?php the_image_url( 'size-banner-hq' ); ?>)">
   </div>
 
-  <?php if ($post->post_name === 'start'): ?>
+  <?php if ( $home ): ?>
     <div class="Banner-content">
       <div class="BannerLogo">
         <div class="BannerLogo-type">
