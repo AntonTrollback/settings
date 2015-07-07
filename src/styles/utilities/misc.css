@@ -16,18 +16,20 @@
 
 .u-link {
   outline: 0;
-  color: var(--color-link);
+  color: var(--color-purple);
+  text-decoration: underline;
 }
 
 .u-link:hover,
 .u-link:focus,
 .u-link:active {
+  outline: 0;
   text-decoration: underline;
-  color: var(--color-link);
+  color: var(--color-teal);
 }
 
 .u-link:active {
-  color: color(var(--color-link) b(+ 25%));
+  color: color(var(--color-teal) b(+ 25%));
 }
 
 /**

@@ -13,6 +13,7 @@
 @import "components/type";
 @import "components/button";
 @import "components/nav";
+@import "components/article";
 @import "components/banner";
 @import "components/banner-logo";
 @import "components/figure-banner";
@@ -33,7 +34,6 @@
   --color-teal: #237d81;
   --color-pink: #f194bd;
 
-  --color-link: blue;
   --color-text: #333;
 
   --font-family: "Karla", "Verdana", "Geneva", "sans-serif";

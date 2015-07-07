@@ -1,0 +1,148 @@
+.Article {
+
+}
+
+/**
+ * Main and aside/action layout
+ */
+
+.Article-aside {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.Article-actionLarge {
+  display: none;
+}
+
+.Article-actionInline {
+  float: left;
+  margin: 0px 15px 0px 0;
+}
+
+@media (--sm-viewport) {
+  .Article-main {
+    width: 64%;
+    float: left;
+  }
+
+  .Article-aside,
+  .Article-actionLarge {
+    width: 31%;
+    float: right;
+    margin-top: 72px;
+    text-align: left;
+  }
+
+  .Article-actionInline {
+    display: none !important;
+  }
+
+  .Article-actionLarge {
+    margin-top: 150px;
+    display: block;
+  }
+}
+
+@media (--md-viewport) {
+  .Article-aside {
+    width: 24%;
+  }
+
+  .Article-actionLarge {
+    margin-left: 4%;
+  }
+}
+
+.Article--full .Article-main {
+  width: 100%;
+  float: none;
+}
+
+/**
+ * Toggle content
+ */
+
+.Article-main {
+  max-height: calc(500px + 80px);
+  overflow: hidden;
+  position: relative;
+}
+
+@media (--md-viewport) {
+  .Article-main {
+    max-height: calc(400px + 80px);
+  }
+}
+
+.Article-actionInline {
+  display: none;
+}
+
+.Article-ending {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  box-sizing: border-box;
+  display: block;
+  padding-top: 28px;
+  text-align: left;
+  will-change: transform;
+}
+
+.Article-showMore {
+  position: relative;
+}
+
+.Article-ending:before {
+  content: "";
+  height: 100%;
+  width: 110%;
+  background-color: black;
+  position: absolute;
+  top: 35%;
+  left: -5%;
+  transform: rotate(5deg);
+  transform-origin: top center;
+  background-color: #fff;
+  border-top: 1px solid #dedede;
+}
+
+/* Expand animation */
+
+.Article:not(.is-notTransitioning) .Article-main {
+  transition: max-height 0.5s ease;
+}
+
+.Article:not(.is-notTransitioning) .Article-ending {
+  transition: transform 0.5s ease-in;
+  transition-delay: .2s;
+}
+
+.Article:not(.is-notTransitioning) .Article-ending:before {
+  transition: transform 0.5s ease-in;
+}
+
+/* Expanded state */
+
+html.no-script .Article-main {
+  /* Set using javascript, if enabled */
+  max-height: none;
+}
+
+html.no-script .Article-actionInline,
+.Article.is-expanded .Article-actionInline {
+  display: block;
+}
+
+html.no-script .Article-ending,
+.Article.is-expanded .Article-ending {
+  transform: translateY(70px) rotate(0);
+}
+
+html.no-script .Article-ending:before,
+.Article.is-expanded .Article-ending:before {
+  transform: rotate(0);
+}

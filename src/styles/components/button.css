@@ -6,6 +6,7 @@
   vertical-align: bottom;
   position: relative;
   border-radius: 50%;
+  outline: 0;
 
   text-align: center;
   line-height: 120px;
@@ -15,7 +16,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  shape-margin: 15px;
   shape-outside: circle();
 }
 
@@ -51,9 +51,9 @@
 
 @media (--md-viewport) {
   .Button {
-    width: 180px;
-    height: 180px;
-    line-height: 180px;
+    width: 190px;
+    height: 190px;
+    line-height: 190px;
     font-size: 36px;
   }
 }

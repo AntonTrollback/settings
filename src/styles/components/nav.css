@@ -81,6 +81,7 @@
   box-sizing: border-box;
   display: block;
   position: relative;
+  outline: 0;
 }
 
 .Nav,

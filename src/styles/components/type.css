@@ -78,18 +78,19 @@
 
 .Type a:--Type-unspecified {
   outline: 0;
-  color: var(--color-link);
+  color: inherit;
+  text-decoration: underline;
 }
 
 .Type a:--Type-unspecified:hover,
 .Type a:--Type-unspecified:focus,
 .Type a:--Type-unspecified:active {
   text-decoration: underline;
-  color: var(--color-link);
+  color: var(--color-teal);
 }
 
 .Type a:--Type-unspecified:active {
-  color: color(var(--color-link) b(+ 25%));
+  color: color(var(--color-teal) b(+ 25%));
 }
 
 /* Headings */
