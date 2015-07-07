@@ -6,7 +6,7 @@
 
     <nav class="Nav-inner" role="navigation">
       <?php symbol( 'Nav-logo', 'logo-s' ); ?>
-      <?php navigation('primary', 'Nav'); ?>
+      <?php navigation('primary'); ?>
       <?php symbol( 'Nav-logo', 'logo-s' ); ?>
     </nav>
   </use>

@@ -1,6 +1,5 @@
-:root {
-  --Type-margin: 25px;
-  --Type-margin-double: calc(var(--Type-margin) * 2);
+.Type {
+
 }
 
 .Type:not(.Type--plain) {
@@ -24,7 +23,7 @@
   }
 }
 
-.Type .Type-preamble {
+.Type-preamble {
   letter-spacing: -1px;
   line-height: 1.3;
 
@@ -35,7 +34,7 @@
 }
 
 @media (--sm-viewport) {
-  .Type .Type-preamble {
+  .Type-preamble {
     font-size: 27px;
     line-height: 1.4;
   }
@@ -52,7 +51,6 @@
 .Type > :last-child {
   margin-bottom: 0 !important;
 }
-
 
 /* -------------------------------------------------------------------------- */
 
@@ -74,6 +72,18 @@
 @custom-selector :--Type-unspecified
   :not([class|="Type"]);
 
+.Type :--Type-block-elements:--Type-unspecified {
+  max-width: 100%;
+  margin: 25px 0;
+  display: block;
+}
+
+.Type :--Type-inline-block:--Type-unspecified {
+  margin: 0;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
 /* Links */
 
 .Type a:--Type-unspecified {
@@ -85,7 +95,6 @@
 .Type a:--Type-unspecified:hover,
 .Type a:--Type-unspecified:focus,
 .Type a:--Type-unspecified:active {
-  text-decoration: underline;
   color: var(--color-teal);
 }
 
@@ -99,45 +108,48 @@
 .Type h2:--Type-unspecified,
 .Type h3:--Type-unspecified {
   font-family: var(--font-family-alt);
+  line-height: 1.25;
+  letter-spacing: -1px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.Type h1:--Type-unspecified {
-  font-size: 44px;
-  line-height: var(--Type-margin-double);
-  letter-spacing: -1px;
-}
-
-.Type h2:--Type-unspecified {
-  font-size: 33px;
-  line-height: var(--Type-margin-double);
-  letter-spacing: -1px;
-}
-
-.Type h3:--Type-unspecified {
-  font-size: 23px;
-  line-height: var(--Type-margin);
 }
 
 .Type h4:--Type-unspecified,
 .Type h5:--Type-unspecified,
 .Type h6:--Type-unspecified {
-  font: inherit;
   font-weight: bold;
 }
 
-.Type :--Type-block-elements:--Type-unspecified {
-  max-width: 100%;
-  margin: var(--Type-margin) 0;
-  display: block;
+.Type h1:--Type-unspecified {
+  font-size: 36px;
 }
 
-.Type :--Type-inline-block:--Type-unspecified {
-  max-width: 100%;
-  margin: 0;
-  display: inline-block;
-  vertical-align: bottom;
+.Type h2:--Type-unspecified {
+  font-size: 30px;
+}
+
+.Type h3:--Type-unspecified {
+  font-size: 25px;
+}
+
+@media (--md-viewport) {
+  .Type h1:--Type-unspecified,
+  .Type h2:--Type-unspecified,
+  .Type h3:--Type-unspecified {
+    line-height: 1.15;
+  }
+
+  .Type h1:--Type-unspecified {
+    font-size: 44px;
+  }
+
+  .Type h2:--Type-unspecified {
+    font-size: 33px;
+  }
+
+  .Type h3:--Type-unspecified {
+    font-size: 23px;
+  }
 }
 
 /* Lists */
@@ -145,7 +157,7 @@
 .Type ol:--Type-unspecified,
 .Type ul:--Type-unspecified {
   padding-left: 2em;
-  list-style: square;
+  list-style: disc;
 }
 
 .Type ol:--Type-unspecified {

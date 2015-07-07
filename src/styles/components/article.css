@@ -108,11 +108,17 @@
 }
 
 .Article-ending:hover:before {
-  transform: translateY(13%) rotate(5deg);
+  transform: translateY(10%) rotate(5deg);
 }
 
 .Article-showMore {
   position: relative;
+}
+
+@media (--sm-viewport) {
+  .Article-showMore {
+    font-size: 18px;
+  }
 }
 
 /* Expand animation */

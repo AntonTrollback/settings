@@ -1,5 +1,14 @@
 <?php
 
+add_action( 'template_redirect', function () {
+  global $post;
+
+  if ( is_404() ) {
+    wp_redirect( get_home_url() );
+    exit();
+  }
+});
+
 add_action( 'after_setup_theme', function () {
   add_theme_support( 'automatic-feed-links' );
   add_theme_support( 'post-thumbnails' );
