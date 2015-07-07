@@ -2,13 +2,14 @@ import fs from 'fs';
 import gulp from 'gulp';
 import header from 'gulp-header';
 import cssnext from 'gulp-cssnext';
-import jshint from 'gulp-jshint';
+import eslint from 'gulp-eslint';
 import rename from 'gulp-rename';
 import shell from 'gulp-shell';
 
-var jshintPattern = [
+var lintPattern = [
   'src/scripts/**/*.js',
   '!src/scripts/jspm_packages/**/*',
+  '!src/scripts/config.js',
   '!src/scripts/settings.js'
 ];
 
@@ -28,19 +29,19 @@ gulp.task('css', () => {
     .pipe(gulp.dest('src/styles/'))
 });
 
-gulp.task('jshint', () => {
-  return gulp.src(jshintPattern)
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'));
+gulp.task('eslint', () => {
+  return gulp.src(lintPattern)
+    .pipe(eslint())
+    .pipe(eslint.format());
 });
 
 gulp.task('js', shell.task('npm run bundle-javascript'));
 
 gulp.task('watch', () => {
-  gulp.watch(jshintPattern, ['jshint', 'js']);
+  gulp.watch(lintPattern, ['eslint', 'js']);
   gulp.watch(cssPattern, ['css']);
 });
 
-gulp.task('build', ['css', 'jshint', 'js']);
+gulp.task('build', ['css', 'eslint', 'js']);
 
 gulp.task('default', ['build']);
