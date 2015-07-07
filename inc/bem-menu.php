@@ -81,13 +81,13 @@ class walker_texas_ranger extends Walker_Nav_Menu {
 }
 
 /**
- * bem_menu returns an instance of the walker_texas_ranger class with the following arguments
+ * navigation returns an instance of the walker_texas_ranger class with the following arguments
  * @param  string $location This must be the same as what is set in wp-admin/settings/menus for menu location.
  * @param  string $css_class_prefix This string will prefix all of the menu's classes, BEM syntax friendly
  * @return [type]
  */
 
-function bem_menu($location = "main_menu", $css_class_prefix = 'main-menu'){
+function navigation($location = "main_menu", $css_class_prefix = 'main-menu'){
     $args = array(
       'theme_location'    => $location,
       //'menu_class'        => $css_class_prefix,

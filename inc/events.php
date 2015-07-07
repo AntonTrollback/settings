@@ -1,6 +1,6 @@
 <?php
 
-function get_events_data() {
+function get_events() {
   global $fb_token;
 
   $fields =  'id,name,description,start_time,end_time,location,timezone';
@@ -17,8 +17,8 @@ function get_events_data() {
   return $events;
 }
 
-function get_events() {
-  $events = get_events_data();
+function show_events() {
+  $events = get_events();
 
   foreach ( $events as $event ) {
     echo '<div class="Type">';

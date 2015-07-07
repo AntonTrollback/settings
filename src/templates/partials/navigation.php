@@ -5,9 +5,9 @@
     </a>
 
     <nav class="Nav-inner" role="navigation">
-      <?php get_symbol( 'Nav-logo', 'logo-s' ); ?>
-      <?php bem_menu('primary', 'Nav'); ?>
-      <?php get_symbol( 'Nav-logo', 'logo-s' ); ?>
+      <?php symbol( 'Nav-logo', 'logo-s' ); ?>
+      <?php navigation('primary', 'Nav'); ?>
+      <?php symbol( 'Nav-logo', 'logo-s' ); ?>
     </nav>
   </use>
 </header>

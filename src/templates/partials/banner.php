@@ -3,14 +3,14 @@
        data-anchor-target=".Banner"
        data-top="transform: translateY(0%)"
        data-top-center="transform: translateY(-20%)"
-       style="background-image: url(<?php the_image_url( 'size-banner-hq' ); ?>)">
+       style="background-image: url(<?php image_url( 'size-banner-hq' ); ?>)">
   </div>
 
   <?php if ( $home ): ?>
     <div class="Banner-content">
       <div class="BannerLogo">
         <div class="BannerLogo-type">
-          <img src="<?php get_asset( 'images/settings.png' ); ?>" alt="Settings">
+          <img src="<?php asset_url( 'images/settings.png' ); ?>" alt="Settings">
         </div>
         <h1>
           <span class="u-hiddenVisually">Settings:</span>

@@ -3,7 +3,7 @@
 <aside class="Article-aside">
   <a href="<?php the_permalink(); ?>">
   <div class="Type Type--plain u-colorPurple">
-    <?php the_image(); ?>
+    <?php image(); ?>
     <p><?php echo $title; ?></p>
   </div>
   </a>

@@ -92,10 +92,6 @@
   will-change: transform;
 }
 
-.Article-showMore {
-  position: relative;
-}
-
 .Article-ending:before {
   content: "";
   height: 100%;
@@ -108,6 +104,15 @@
   transform-origin: top center;
   background-color: #fff;
   border-top: 1px solid #dedede;
+  will-change: transform;
+}
+
+.Article-ending:hover:before {
+  transform: translateY(13%) rotate(5deg);
+}
+
+.Article-showMore {
+  position: relative;
 }
 
 /* Expand animation */
@@ -118,11 +123,10 @@
 
 .Article:not(.is-notTransitioning) .Article-ending {
   transition: transform 0.5s ease-in;
-  transition-delay: .2s;
 }
 
 .Article:not(.is-notTransitioning) .Article-ending:before {
-  transition: transform 0.5s ease-in;
+  transition: transform 0.2s ease;
 }
 
 /* Expanded state */

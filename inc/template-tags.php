@@ -5,11 +5,11 @@ function get_asset_url ( $asset ) {
   return get_template_directory_uri() . '/src/' . $asset;
 }
 
-function get_asset ( $asset ) {
+function asset_url ( $asset ) {
   echo get_asset_url( $asset );
 }
 
-function get_symbol ( $class, $id ) {
+function symbol ( $class, $id ) {
   $url = get_asset_url( 'images/sprite.svg' );
   echo '<svg class="' . $class . '"><use xlink:href="' . $url . '#' . $id . '"></svg>';
 }
@@ -34,11 +34,11 @@ function get_image_url ( $size ) {
   return $img_id ? wp_get_attachment_image_src( $img_id, $size )[0] : '';
 }
 
-function the_image_url ( $size ) {
+function image_url ( $size ) {
   echo get_image_url( $size );
 }
 
-function the_image () {
+function image () {
   $url = get_image_url( 'size-regular' );
   $url_hq = get_image_url( 'size-regular-hq' );
 
