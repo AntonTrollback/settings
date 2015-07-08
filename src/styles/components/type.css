@@ -62,24 +62,27 @@
  blockquote, p, pre, ul, ol, hr,
  h1, h2, h3, h4, h5, h6;
 
+@custom-selector :--Type-custom-heading-123
+  .Type-h1, .Type-h2, .Type-h3;
+@custom-selector :--Type-custom-heading-345
+  .Type-h4, .Type-h5, .Type-h6;
+
 @custom-selector :--Type-inline-block
   img, video, iframe, embed, object;
 
 @custom-selector :--Type-sub-lists
   ul ul, ol ol, ul ol, ol ul;
 
-/* Ignores any element with a descendant class (`Type-X`) */
-@custom-selector :--Type-unspecified
-  :not([class|="Type"]);
-
-.Type :--Type-block-elements:--Type-unspecified {
+:--Type-custom-heading-123,
+:--Type-custom-heading-345,
+.Type :--Type-block-elements:not([class|="Type"]) {
   max-width: 100%;
   height: auto;
   margin: 25px 0;
   display: block;
 }
 
-.Type :--Type-inline-block:--Type-unspecified {
+.Type :--Type-inline-block:not([class|="Type"]) {
   margin: 0;
   max-width: 100%;
   height: auto;
@@ -89,27 +92,28 @@
 
 /* Links */
 
-.Type a:--Type-unspecified {
+.Type a:not([class|="Type"]) {
   outline: 0;
   color: inherit;
   text-decoration: underline;
 }
 
-.Type a:--Type-unspecified:hover,
-.Type a:--Type-unspecified:focus,
-.Type a:--Type-unspecified:active {
+.Type a:not([class|="Type"]):hover,
+.Type a:not([class|="Type"]):focus,
+.Type a:not([class|="Type"]):active {
   color: var(--color-teal);
 }
 
-.Type a:--Type-unspecified:active {
+.Type a:not([class|="Type"]):active {
   color: color(var(--color-teal) b(+ 25%));
 }
 
 /* Headings */
 
-.Type h1:--Type-unspecified,
-.Type h2:--Type-unspecified,
-.Type h3:--Type-unspecified {
+:--Type-custom-heading-123,
+.Type h1:not([class|="Type"]),
+.Type h2:not([class|="Type"]),
+.Type h3:not([class|="Type"]) {
   font-family: var(--font-family-alt);
   line-height: 1.25;
   letter-spacing: -1px;
@@ -117,56 +121,64 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.Type h4:--Type-unspecified,
-.Type h5:--Type-unspecified,
-.Type h6:--Type-unspecified {
+:--Type-custom-heading-345,
+.Type h4:not([class|="Type"]),
+.Type h5:not([class|="Type"]),
+.Type h6:not([class|="Type"]) {
   font-weight: bold;
 }
 
-.Type h1:--Type-unspecified {
+.Type-h1,
+.Type h1:not([class|="Type"]) {
   font-size: 36px;
 }
 
-.Type h2:--Type-unspecified {
+.Type-h2,
+.Type h2:not([class|="Type"]) {
   font-size: 30px;
 }
 
-.Type h3:--Type-unspecified {
+.Type-h3,
+.Type h3:not([class|="Type"]) {
   font-size: 25px;
 }
 
 @media (--md-viewport) {
-  .Type h1:--Type-unspecified,
-  .Type h2:--Type-unspecified,
-  .Type h3:--Type-unspecified {
+  :--Type-custom-heading-123,
+  .Type h1:not([class|="Type"]),
+  .Type h2:not([class|="Type"]),
+  .Type h3:not([class|="Type"]) {
     line-height: 1.15;
   }
 
-  .Type h1:--Type-unspecified {
+  .Type-h1,
+  .Type h1:not([class|="Type"]) {
     font-size: 44px;
   }
 
-  .Type h2:--Type-unspecified {
+  .Type-h2,
+  .Type h2:not([class|="Type"]) {
     font-size: 33px;
   }
 
-  .Type h3:--Type-unspecified {
+  .Type-h3,
+  .Type h3:not([class|="Type"]) {
     font-size: 23px;
   }
 }
 
 /* Lists */
 
-.Type ol:--Type-unspecified,
-.Type ul:--Type-unspecified {
+.Type ol:not([class|="Type"]),
+.Type ul:not([class|="Type"]) {
   padding-left: 2em;
   list-style: disc;
 }
 
-.Type ol:--Type-unspecified {
+.Type ol:not([class|="Type"]) {
   list-style: decimal;
 }
 
-.Type :--Type-sub-lists:--Type-unspecified {
+.Type :--Type-sub-lists:not([class|="Type"]) {
   margin-bottom: 0;
 }
