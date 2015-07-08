@@ -1,10 +1,10 @@
 <?php
 
 function logga ( $data ) {
-  print_r( '<style>.Nav { display: none } </style>' .
-           '<pre style="font-family: monospace; padding: 40px">' .
-             $data .
-           '</pre>' );
+  echo '<pre style="box-sizing: border-box; height: 50vh; resize: vertical;
+        outline: 2px solid; background: #fff; font: 13px/1.3 monospace">';
+  print_r( $data );
+  echo '</pre>';
 }
 
 $revision = 1;

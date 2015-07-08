@@ -26,9 +26,18 @@ set_query_var( 'home', $home );
     <article class="Site-container <?php echo $has_img ? '' : 'Site-container--withRoomForNav' ?>">
       <?php partial( 'article' ); ?>
 
-      <?php if ( get_field( 'show_calendar' ) ): ?>
-        <?php show_calendar(); ?>
-      <?php endif; ?>
+      <div class="Section u-cf">
+        <?php if ( get_field( 'show_calendar' ) ): ?>
+          <div class="Section-main">
+            <?php calendar(); ?>
+          </div>
+        <?php endif; ?>
+
+        <?php if ( get_field( 'show_email_list_form' ) ): ?>
+          <div class="<?php echo get_field( 'show_calendar' ) ? 'Section-aside' : ''; ?>">
+          </div>
+        <?php endif; ?>
+      </div>
     </article>
   </main>
 <?php endwhile; ?>
