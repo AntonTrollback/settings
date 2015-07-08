@@ -17,6 +17,7 @@
 @import "components/banner";
 @import "components/banner-logo";
 @import "components/figure-banner";
+@import "components/calendar";
 
 /* Utilities */
 
@@ -33,7 +34,8 @@
   --color-purple: #493b6f;
   --color-teal: #237d81;
   --color-pink: #f194bd;
-
+  --color-blue: #160768;
+  --color-green: #13936c;
   --color-text: #333;
 
   --font-family: "Karla", "Verdana", "Geneva", "sans-serif";

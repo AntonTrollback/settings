@@ -10,6 +10,14 @@
   color: var(--color-teal);
 }
 
+.u-colorBlue {
+  color: var(--color-blue);
+}
+
+.u-colorGreen {
+  color: var(--color-green);
+}
+
 /**
  * Display as link
  */

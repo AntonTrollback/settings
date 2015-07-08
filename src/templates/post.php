@@ -1,17 +1,18 @@
 <?php partial( 'header' ); ?>
 
-<main role="main">
-  <?php while ( have_posts() ) : the_post(); ?>
-    <article>
-      <header>
-        <?php the_title( '<h1>', '</h1>' ); ?>
-      </header>
+<?php while ( have_posts() ) : the_post(); ?>
+  <main role="main">
+    <article class="Site-container Site-container--withRoomForNav">
+      <figure class="Article Article--full">
+        <a href="<?php raw_image_url(); ?>">
+          <?php image( 'large', 'Article-photo', true); ?>
+        </a>
+      </figure>
 
-      <div>
-        <?php the_content(); ?>
-      </div>
+      <?php partial( 'article' ); ?>
+
     </article>
-  <?php endwhile; ?>
-</main>
+  </main>
+<?php endwhile; ?>
 
 <?php partial( 'footer' ); ?>

@@ -29,6 +29,8 @@ add_action( 'init', function () {
 add_action( 'after_setup_theme', function () {
   add_image_size( 'size-regular', 330, 290 );
   add_image_size( 'size-regular-hq', 660, 580 );
-  add_image_size( 'size-banner', 600 );
-  add_image_size( 'size-banner-hq', 1200 );
+  add_image_size( 'size-large', 800 );
+  add_image_size( 'size-large-hq', 1600 );
+  add_image_size( 'size-banner', 800, 500, true );
+  add_image_size( 'size-banner-hq', 1600, 1000, true );
 });

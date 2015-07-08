@@ -34,15 +34,21 @@ function get_image_url ( $size ) {
   return $img_id ? wp_get_attachment_image_src( $img_id, $size )[0] : '';
 }
 
-function image_url ( $size ) {
-  echo get_image_url( $size );
+function image_url ( $size = 'regular' ) {
+  echo get_image_url( 'size-' . $size );
 }
 
-function image () {
-  $url = get_image_url( 'size-regular' );
-  $url_hq = get_image_url( 'size-regular-hq' );
+function raw_image_url ( $size = 'regular' ) {
+  echo get_image_url( false );
+}
+
+function image ( $size = 'regular', $class_list = '' ) {
+  $url = get_image_url( 'size-' . $size );
+  $url_hq = get_image_url( 'size-' . $size . '-hq' );
 
   if ( !$url ) { return; }
 
-  echo '<img src="' . $url . '" srcset="' . $url_hq . ' 2x">';
+  $class_list = $class_list ? 'class="' . $class_list . '"' : '';
+
+  echo '<img ' . $class_list . ' src="' . $url . '" srcset="' . $url_hq . ' 2x">';
 }

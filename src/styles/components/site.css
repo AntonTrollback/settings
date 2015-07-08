@@ -23,3 +23,13 @@
   margin: 0 auto;
   max-width: 700px;
 }
+
+.Site-container--withRoomForNav {
+  padding-top: 90px;
+}
+
+@media (--md-viewport) {
+  .Site-container--withRoomForNav {
+    padding-top: 132px;
+  }
+}

@@ -74,12 +74,15 @@
 
 .Type :--Type-block-elements:--Type-unspecified {
   max-width: 100%;
+  height: auto;
   margin: 25px 0;
   display: block;
 }
 
 .Type :--Type-inline-block:--Type-unspecified {
   margin: 0;
+  max-width: 100%;
+  height: auto;
   display: inline-block;
   vertical-align: bottom;
 }

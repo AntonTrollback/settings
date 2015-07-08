@@ -54,7 +54,7 @@ function showMore(items) {
       // expand it
       defer(() => {
         main.style.maxHeight = contentHeight + 'px';
-        article.classList.add('is-expanded');
+        article.classList.remove('is-collapsed');
 
         if (force) {
           article.classList.add('is-notTransitioning');

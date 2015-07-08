@@ -3,7 +3,7 @@
        data-anchor-target=".Banner"
        data-top="transform: translateY(0%)"
        data-top-center="transform: translateY(-20%)"
-       style="background-image: url(<?php image_url( 'size-banner-hq' ); ?>)">
+       style="background-image: url(<?php image_url( 'banner-hq' ); ?>)">
   </div>
 
   <?php if ( $home ): ?>
