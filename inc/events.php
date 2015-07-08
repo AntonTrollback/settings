@@ -3,34 +3,38 @@
 function get_events() {
   global $fb_token;
 
-  $fields =  'id,name,description,start_time,end_time,location,timezone';
-  $query = 'https://graph.facebook.com/celezteriddarholmen/events?fields=' . $fields . '&access_token=' . $fb_token;
-  $events = array();
+  $fields =  'id,name,description,start_time,end_time';
+  $query = 'https://graph.facebook.com/celezteriddarholmen/events?access_token=' . $fb_token . '&fields=' . $fields;
 
-  $raw_events = file_get_contents($query);
-  $raw_events = json_decode($raw_events, true);
+  $data = file_get_contents($query);
 
-  foreach ( $raw_events['data'] as $raw_event ) {
-    array_push($events, $raw_event);
+  if ( empty($data) ) {
+    return array();
   }
 
-  return $events;
+  $data = json_decode($data, true);
+  $events = $data['data']; // array of events
+
+  // add next events to array
+  if ( array_key_exists( 'next', $data['paging'] ) ) {
+    $next = file_get_contents( $data['paging']['next'] . '&fields=' . $fields );
+    $next = json_decode( $next, true );
+    $events = array_reverse( array_merge( $events, $next['data'] ) );
+  }
+
+  $events = array_slice($events, 0, 4);
+
+  return array_map( 'fix_event', $events );
 }
 
-function show_events() {
-  $events = get_events();
+function show_calendar() {
+  set_query_var( 'events', get_events() );
+  partial( 'calendar' );
+}
 
-  foreach ( $events as $event ) {
-    echo '<div class="Type">';
-
-    echo '<h2>' . $event['name'] . '</h2>';
-    echo $event['description'];
-
-    echo '<ul>';
-    echo '<li>' . $event['start_time'] . '</li>';
-    echo '<li>' . $event['end_time'] . '</li>';
-    echo '<li>' . $event['timezone'] . '</li>';
-    echo '<li>' . $event['location'] . '</li>';
-    echo '</ul>';
-  }
+function fix_event($event) {
+  $event['desc'] = wp_trim_words( $event['description'], $num_words = 25, $more = null );
+  $event['day'] = strtolower( date('M', strtotime( $event['start_time'] ) ) );
+  $event['month'] = date( 'j', strtotime( $event['start_time'] ) );
+  return $event;
 }

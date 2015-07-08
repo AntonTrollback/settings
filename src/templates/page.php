@@ -18,9 +18,10 @@ if ( is_home() ) {
 
     <?php partial( 'article' ); ?>
 
-    <?php if ( get_field( 'show_events' ) ): ?>
-      <?php show_events(); ?>
-    <?php endif; ?>
+      <?php if ( get_field( 'show_calendar' ) ): ?>
+        <?php show_calendar(); ?>
+      <?php endif; ?>
+    </article>
   </main>
 <?php endwhile; ?>
 
