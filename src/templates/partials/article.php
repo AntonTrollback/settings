@@ -6,13 +6,13 @@ $highlight_text = get_field( 'highlight_title' );
 $has_aside = $page_link || $highlight;
 $is_collapsed = is_page() || isset($home);
 
-$class_list = $has_aside ? '' : 'Article--full ';
+$class_list = $has_aside ? '' : 'Section--full ';
 $class_list = $is_collapsed ? $class_list . 'is-collapsed' : $class_list;
 ?>
 
-<div class="Article u-cf <?php echo $class_list; ?>">
+<div class="Section u-cf <?php echo $class_list; ?>">
 
-  <div class="Article-main">
+  <div class="Section-main">
     <div class="Type u-colorPurple">
       <h1 class="u-colorTeal"><?php the_title(); ?></h1>
       <?php the_content(); ?>
@@ -23,8 +23,8 @@ $class_list = $is_collapsed ? $class_list . 'is-collapsed' : $class_list;
     </div>
 
     <?php if ( $is_collapsed ): ?>
-      <div class="Article-ending">
-        <button type="button" class="u-link Article-showMore">Läs mer</button>
+      <div class="Section-ending">
+        <button type="button" class="u-link Section-showMore">Läs mer</button>
       </div>
     <?php endif; ?>
   </div>

@@ -3,9 +3,9 @@
 <?php while ( have_posts() ) : the_post(); ?>
   <main role="main">
     <article class="Site-container Site-container--withRoomForNav">
-      <figure class="Article Article--full">
+      <figure class="Section Section--full">
         <a href="<?php raw_image_url(); ?>">
-          <?php image( 'large', 'Article-photo', true); ?>
+          <?php image( 'large', 'Section-photo', true); ?>
         </a>
       </figure>
 

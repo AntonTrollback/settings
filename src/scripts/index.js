@@ -8,7 +8,7 @@ import transitionend from 'transitionend-property';
 
 docReady(() => {
   var moveUpEls = document.querySelectorAll('.js-moveAbovePreviousEl');
-  var showMoreEls = document.querySelectorAll('.Article-showMore');
+  var showMoreEls = document.querySelectorAll('.Section-showMore');
 
   // init
   initSkrollr();
@@ -31,8 +31,8 @@ function moveAbove(items) {
 
 function showMore(items) {
   forEach(items, (el) => {
-    var article = closest(el, '.Article');
-    var main = article.querySelector('.Article-main');
+    var article = closest(el, '.Section');
+    var main = article.querySelector('.Section-main');
     var restrainHeight = parseInt(getComputedStyle(main)['max-height'], 10);
     var contentHeight;
 

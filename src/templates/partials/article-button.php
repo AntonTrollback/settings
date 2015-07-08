@@ -1,7 +1,7 @@
-<div class="Article-actionLarge">
+<div class="Section-actionLarge">
   <a class="Button" href="<?php the_field( 'page_link' ); ?>">
     <div class="Button-gradient"
-         data-anchor-target=".Article"
+         data-anchor-target=".Section"
          data-bottom-top="transform: rotate(-90deg)"
          data-top="transform: rotate(90deg)"></div>
 
