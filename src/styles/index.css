@@ -11,6 +11,7 @@
 
 @import "components/site";
 @import "components/type";
+@import "components/form";
 @import "components/button";
 @import "components/nav";
 @import "components/section";
@@ -36,7 +37,9 @@
   --color-pink: #f194bd;
   --color-blue: #160768;
   --color-green: #13936c;
+  --color-yellow: #e6fe9c;
   --color-text: #333;
+
 
   --font-family: "Karla", "Verdana", "Geneva", "sans-serif";
   --font-family-alt: "Asul", "Karla", "Verdana", "Geneva", "sans-serif";

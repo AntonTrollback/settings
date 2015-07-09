@@ -26,7 +26,7 @@ set_query_var( 'home', $home );
     <article class="Site-container <?php echo $has_img ? '' : 'Site-container--withRoomForNav' ?>">
       <?php partial( 'article' ); ?>
 
-      <div class="Section u-cf">
+      <div class="Section Section--altLayout u-cf">
         <?php if ( get_field( 'show_calendar' ) ): ?>
           <div class="Section-main">
             <?php calendar(); ?>

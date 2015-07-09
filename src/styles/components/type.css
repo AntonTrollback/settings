@@ -117,20 +117,15 @@
   font-family: var(--font-family-alt);
   line-height: 1.25;
   letter-spacing: -1px;
+  font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-:--Type-custom-heading-345,
-.Type h4:not([class|="Type"]),
-.Type h5:not([class|="Type"]),
-.Type h6:not([class|="Type"]) {
-  font-weight: bold;
 }
 
 .Type-h1,
 .Type h1:not([class|="Type"]) {
   font-size: 36px;
+  font-weight: normal;
 }
 
 .Type-h2,

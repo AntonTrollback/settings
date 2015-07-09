@@ -7,16 +7,15 @@
   position: relative;
   border-radius: 50%;
   outline: 0;
-
   text-align: center;
   line-height: 120px;
   font-size: 28px;
   font-family: var(--font-family-alt);
   color: var(--color-pink);
+  transition: transform .15s ease;
+  shape-outside: circle();
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  shape-outside: circle();
 }
 
 .Button-gradient {
@@ -28,16 +27,26 @@
   background: #61c6ce;
   background-repeat: no-repeat;
   background-image: linear-gradient(to right, #154c78 0%, #61c6ce 100%);
-  will-change: transform, background-position;
-  transition: background-position .2s ease;
   border-radius: 50%;
   z-index: -1;
+}
+
+.Button:hover,
+.Button:focus,
+.Button:active {
+  color: var(--color-purple);
 }
 
 .Button:hover .Button-gradient,
 .Button:focus .Button-gradient,
 .Button:active .Button-gradient {
-  background-position: -40px 0;
+  background: var(--color-pink);
+}
+
+.Button:active,
+.Button:active .Button-gradient {
+  transform: scale(0.9);
+  transition: none;
 }
 
 @media (--sm-viewport) {

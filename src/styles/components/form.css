@@ -1,0 +1,50 @@
+.Form {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.Form-header {
+  margin-bottom: 20px;
+}
+
+.Form-button,
+.Form-field {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: 0;
+  padding: 16px 15px;
+  color: var(--color-blue);
+  font-size: 22px;
+  line-height: normal;
+  border-radius: 0;
+  box-shadow: none;
+  outline: 0;
+  background-image: linear-gradient(to bottom, #c1f3e1 0%, #c5edf0 100%);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.Form-field:focus {
+  padding: 14px 13px;
+  border: 2px solid var(--color-purple);
+}
+
+.Form-field::placeholder {
+  opacity: 1;
+}
+
+.Form-button {
+  margin-top: 14px;
+  background: var(--color-yellow);
+  text-align: left;
+}
+
+.Form-button:hover,
+.Form-button:focus,
+.Form-button:active {
+  outline: 0;
+  background: #d9f191;
+}

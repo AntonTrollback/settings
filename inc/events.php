@@ -38,8 +38,8 @@ function remove_ignored( $event ) {
 
 function update_fields( $event ) {
   $event['desc'] = wp_trim_words( $event['description'], $num_words = 25, $more = null );
-  $event['day'] = strtolower( date('M', strtotime( $event['start_time'] ) ) );
-  $event['month'] = date( 'j', strtotime( $event['start_time'] ) );
+  $event['day'] = date( 'j', strtotime( $event['start_time'] ) );
+  $event['month'] = strtolower( date('M', strtotime( $event['start_time'] ) ) );
   return $event;
 }
 

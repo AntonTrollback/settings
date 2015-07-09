@@ -94,6 +94,39 @@
   }
 }
 
+/* Wider aside */
+
+.Section--altLayout .Section-aside {
+  margin: 0;
+}
+
+@media (--sm-viewport) {
+  .Section.Section--altLayout:not(.Section--full) .Section-main {
+    width: 100%;
+    float: none;
+  }
+
+  .Section--altLayout .Section-aside {
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+}
+
+@media (--md-viewport) {
+  .Section.Section--altLayout:not(.Section--full) .Section-main {
+    width: 64%;
+    float: left;
+  }
+
+  .Section--altLayout .Section-aside {
+    width: 30%;
+    text-align: left;
+    float: right;
+    margin-top: 52px;
+  }
+}
+
 /**
  * Toggle content height
  */

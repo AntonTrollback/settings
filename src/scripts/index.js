@@ -58,6 +58,7 @@ function showMore(items) {
 
         if (force) {
           article.classList.add('is-notTransitioning');
+          el.parentNode.removeChild(el);
         }
       });
 
