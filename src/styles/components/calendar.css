@@ -1,13 +1,9 @@
-/**
- * This is a mess. Just roll with it.
- */
-
 .Calendar {
-  isolation: isolate;
   color: var(--color-blue);
+  isolation: isolate;
 }
 
-.Calendar-header {
+.Calendar-heading {
   margin-bottom: 25px;
   text-align: center;
 }
@@ -17,7 +13,7 @@
     margin-bottom: 20px;
   }
 
-  .Calendar-header {
+  .Calendar-heading {
     text-align: left;
     padding-left: 38px;
     margin-bottom: 30px;
@@ -25,219 +21,8 @@
 }
 
 @media (--md-viewport) {
-  .Calendar-header {
+  .Calendar-heading {
     padding-left: 49px;
     margin-bottom: 46px;
-  }
-}
-
-.Calendar-item {
-  position: relative;
-  min-height: 4em;
-}
-
-.Calendar-date {
-  float: left;
-  mix-blend-mode: exclusion;
-}
-
-.Calendar-body {
-  overflow: hidden;
-  display: block;
-
-  /* Ellipse by line, webkit only */
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-}
-
-@media (--sm-viewport) {
-  .Calendar-body {
-    font-size: 18px;
-  }
-}
-
-@media (--md-viewport) {
-  .Calendar-body {
-    -webkit-line-clamp: 2;
-  }
-}
-
-/**
- * Dates
- */
-
-.Calendar-date {
-  background-image: linear-gradient(to bottom, #c8e7fd 0%, #bcfdcc 100%);
-  width: 4em;
-  height: 4em;
-  margin-right: 1em;
-  top: -0.3em;
-  position: relative;
-}
-
-.Calendar-date::before {
-  content: "";
-  background: #fff;
-  width: 2.5em;
-  height: 2.5em;
-  margin: 0.75em;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.Calendar-month {
-  position: absolute;
-  text-align: right;
-  top: 0.5em;
-  right: 2em;
-  line-height: 1.1;
-}
-
-.Calendar-day {
-  position: absolute;
-  top: 37%;
-  left: 37%;
-  font-size: 2em;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -1px;
-  font-family: var(--font-family-alt);
-}
-
-/* Scaling */
-
-@media (--sm-viewport) {
-  .Calendar-date {
-    font-size: 25px;
-  }
-
-  .Calendar-month span {
-    font-size: 18px;
-  }
-
-  .Calendar-day {
-    letter-spacing: -2px;
-  }
-}
-
-@media (--md-viewport) {
-  .Calendar-date {
-    font-size: 32px;
-  }
-}
-
-/**
- * Date types
- */
-
-/* nr 2 */
-
-.Calendar-item:nth-child(2) {
-  top: -0.6em;
-}
-
-.Calendar-item:nth-child(2) .Calendar-date {
-  border-radius: 50%;
-  background: var(--color-yellow);
-}
-
-.Calendar-item:nth-child(2) .Calendar-date:before {
-  content: none;
-}
-
-/* nr 3 */
-
-.Calendar-item:nth-child(3) {
-  top: -1.2em;
-}
-
-.Calendar-item:nth-child(3) .Calendar-body {
-  padding-top: 0.5em;
-}
-
-.Calendar-item:nth-child(3) .Calendar-date {
-  border-radius: 50%;
-  width: 4.5em;
-  height: 4.5em;
-  margin-right: 0.5em;
-}
-
-.Calendar-item:nth-child(3) .Calendar-date:before {
-  border-radius: 50%;
-  width: 3em;
-  height: 3em;
-}
-
-.Calendar-item:nth-child(3) .Calendar-month {
-  top: 1em;
-  right: 2.5em;
-}
-
-/* nr 4 */
-
-.Calendar-item:nth-child(4) {
-  top: -1.8em;
-}
-
-.Calendar-item:nth-child(4) .Calendar-date {
-  width: 4.8em;
-  height: 4em;
-  margin-right: 0.2em;
-  background: var(--color-yellow);
-}
-
-.Calendar-item:nth-child(4) .Calendar-date:before {
-  width: 3.3em;
-  height: 2.5em;
-}
-
-.Calendar-item:nth-child(4) .Calendar-month {
-  right: 2.75em;
-}
-
-@media (--sm-viewport) {
-  .Calendar-body {
-    padding-top: 0.45em;
-  }
-
-  .Calendar-item:nth-child(3) .Calendar-body {
-    padding-top: 1.15em;
-  }
-}
-
-@media (--md-viewport) {
-  .Calendar-month {
-    margin-right: 0.7em;
-  }
-
-  .Calendar-item .Calendar-day {
-    top: 18%;
-    left: 34%;
-  }
-  .Calendar-item:nth-child(3) .Calendar-day {
-    top: 26%;
-  }
-  .Calendar-item:nth-child(4) .Calendar-day {
-    top: 16%;
-  }
-
-  .Calendar-item:nth-child(2) {
-    top: -1em;
-  }
-  .Calendar-item:nth-child(3) {
-    top: -2.6em;
-  }
-  .Calendar-item:nth-child(4) {
-    top: -3.9em;
-  }
-
-  .Calendar-body {
-    padding-top: 0.85em;
-  }
-
-  .Calendar-item:nth-child(3) .Calendar-body {
-    padding-top: 1.75em;
   }
 }

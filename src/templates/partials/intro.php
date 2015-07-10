@@ -6,18 +6,18 @@
   </div>
 <?php endif; ?>
 
-<div class="FigureBanner">
-  <div class="FigureBanner-content">
-    <div class="FigureBanner-item">
-      <div class="FigureBanner-figure"></div>
+<div class="IconSection">
+  <div class="IconSection-content">
+    <div class="IconSection-item">
+      <div class="IconSection-figure"></div>
       Normen
     </div>
-    <div class="FigureBanner-item">
-      <div class="FigureBanner-figure"></div>
+    <div class="IconSection-item">
+      <div class="IconSection-figure"></div>
       Normkritiken
     </div>
-    <div class="FigureBanner-item">
-      <div class="FigureBanner-figure"></div>
+    <div class="IconSection-item">
+      <div class="IconSection-figure"></div>
       Normkreativiteten
     </div>
   </div>

@@ -1,0 +1,231 @@
+.Event {
+  position: relative;
+  min-height: 4em;
+  display: block;
+  clear: both;
+}
+
+/**
+ * Text body
+ */
+
+.Event-body {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  /* Ellipse by line, webkit/blink only */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+@media (--sm-viewport) {
+  .Event-body {
+    padding-top: 0.45em;
+  }
+}
+
+@media (--md-viewport) {
+  .Event-body {
+    padding-top: 0.85em;
+    -webkit-line-clamp: 3;
+  }
+}
+
+/**
+ * Date figure
+ */
+
+.Event-figure {
+  float: left;
+  width: 4em;
+  height: 4em;
+  margin-right: 1em;
+  position: relative;
+  top: -0.3em;
+  background-image: linear-gradient(to bottom, #c8e7fd 0%, #bcfdcc 100%);
+  mix-blend-mode: exclusion;
+}
+
+.Event-figure::before {
+  content: "";
+  background: #fff;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0.75em;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Event-month {
+  position: absolute;
+  text-align: right;
+  top: 0.5em;
+  right: 2em;
+  line-height: 1.1;
+}
+
+.Event-day {
+  position: absolute;
+  top: 37%;
+  left: 37%;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1px;
+  font-family: var(--font-family-alt);
+}
+
+@media (--sm-viewport) {
+  .Event-figure {
+    font-size: 25px;
+  }
+
+  .Event-month span {
+    font-size: 18px;
+  }
+
+  .Event-day {
+    letter-spacing: -2px;
+  }
+}
+
+@media (--md-viewport) {
+  .Event-figure {
+    font-size: 32px;
+  }
+
+  .Event-month {
+    margin-right: 0.7em;
+  }
+
+  .Event-day {
+    top: 18%;
+    left: 34%;
+  }
+}
+
+/**
+ * Date types
+ */
+
+/* nr 2 */
+
+.Event:nth-child(2) {
+  top: -0.6em;
+}
+
+.Event:nth-child(2) .Event-figure {
+  border-radius: 50%;
+  background: var(--color-yellow);
+}
+
+.Event:nth-child(2) .Event-figure:before {
+  content: none;
+}
+
+@media (--md-viewport) {
+  .Event:nth-child(2) {
+    top: -1em;
+  }
+}
+
+/* nr 3 */
+
+.Event:nth-child(3) {
+  top: -1.2em;
+}
+
+.Event:nth-child(3) .Event-body {
+  padding-top: 0.5em;
+}
+
+.Event:nth-child(3) .Event-figure {
+  border-radius: 50%;
+  width: 4.5em;
+  height: 4.5em;
+  margin-right: 0.5em;
+}
+
+.Event:nth-child(3) .Event-figure:before {
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
+
+.Event:nth-child(3) .Event-month {
+  top: 1em;
+  right: 2.5em;
+}
+
+@media (--sm-viewport) {
+  .Event:nth-child(3) .Event-body {
+    padding-top: 1.15em;
+  }
+}
+
+@media (--md-viewport) {
+  .Event:nth-child(3) {
+    top: -2.6em;
+  }
+  .Event:nth-child(3) .Event-day {
+    top: 26%;
+  }
+  .Event:nth-child(3) .Calendar-body {
+    padding-top: 1.75em;
+  }
+}
+
+/* nr 4 */
+
+.Event:nth-child(4) {
+  top: -1.8em;
+}
+
+.Event:nth-child(4) .Event-figure {
+  width: 4.8em;
+  height: 4em;
+  margin-right: 0.2em;
+  background: var(--color-yellow);
+}
+
+.Event:nth-child(4) .Event-figure:before {
+  width: 3.3em;
+  height: 2.5em;
+}
+
+.Event:nth-child(4) .Event-month {
+  right: 2.75em;
+}
+
+@media (--md-viewport) {
+  .Event:nth-child(4) {
+    top: -3.9em;
+  }
+  .Event:nth-child(4) .Event-day {
+    top: 16%;
+  }
+}
+
+/**
+ * Mouse states
+ */
+
+.Event:hover .Event-title,
+.Event:focus .Event-title,
+.Event:active .Event-title {
+  text-decoration: underline;
+}
+
+.Event-figure {
+  transition: transform .14s ease;
+}
+
+.Event:hover .Event-figure,
+.Event:focus .Event-figure,
+.Event:active .Event-figure {
+  transform: scale(1.2);
+}

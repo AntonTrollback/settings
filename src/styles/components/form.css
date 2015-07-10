@@ -47,4 +47,5 @@
 .Form-button:active {
   outline: 0;
   background: #d9f191;
+  text-decoration: underline;
 }

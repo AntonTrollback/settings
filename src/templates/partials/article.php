@@ -5,29 +5,33 @@ $highlight_text = get_field( 'highlight_title' );
 
 $has_aside = $page_link || $highlight;
 $is_collapsed = is_page() || isset($home);
-
-$class_list = $has_aside ? '' : 'Section--full ';
-$class_list = $is_collapsed ? $class_list . 'is-collapsed' : $class_list;
 ?>
 
-<div class="Section u-cf <?php echo $class_list; ?>">
+<div class="Section u-cf <?php echo $has_aside ? '' : 'Section--full '; ?>">
 
-  <div class="Section-main">
-    <div class="Type u-colorPurple">
-      <h1 class="u-colorTeal"><?php the_title(); ?></h1>
-      <?php the_content(); ?>
 
-      <?php if ( $page_link ) { ?>
-        <?php partial( 'article-button-inline' ); ?>
-      <?php } ?>
+    <div class="Section-main">
+      <?php if ( $is_collapsed ): ?>
+      <div class="Expander">
+      <?php endif; ?>
+
+        <div class="Type u-colorPurple">
+          <h1 class="u-colorTeal"><?php the_title(); ?></h1>
+          <?php the_content(); ?>
+
+          <?php if ( $page_link ): ?>
+          <?php partial( 'article-button-inline' ); ?>
+          <?php endif; ?>
+        </div>
+        
+      <?php if ( $is_collapsed ): ?>
+        <div class="Expander-action">
+          <button type="button" class="Expander-actionText u-link">Läs mer</button>
+        </div>
+      </div>
+      <?php endif; ?>
     </div>
 
-    <?php if ( $is_collapsed ): ?>
-      <div class="Section-ending">
-        <button type="button" class="u-link Section-showMore">Läs mer</button>
-      </div>
-    <?php endif; ?>
-  </div>
 
   <?php
   if ( $page_link ) {

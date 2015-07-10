@@ -130,12 +130,12 @@
 
 .Type-h2,
 .Type h2:not([class|="Type"]) {
-  font-size: 30px;
+  font-size: 32px;
 }
 
 .Type-h3,
 .Type h3:not([class|="Type"]) {
-  font-size: 25px;
+  font-size: 26px;
 }
 
 @media (--md-viewport) {
@@ -153,12 +153,12 @@
 
   .Type-h2,
   .Type h2:not([class|="Type"]) {
-    font-size: 33px;
+    font-size: 34px;
   }
 
   .Type-h3,
   .Type h3:not([class|="Type"]) {
-    font-size: 23px;
+    font-size: 26px;
   }
 }
 

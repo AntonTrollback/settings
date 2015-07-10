@@ -1,10 +1,10 @@
-.FigureBanner {
+.IconSection {
   background: #111;
   color: #fff;
   font-family: var(--font-family-alt);
 }
 
-.FigureBanner-content {
+.IconSection-content {
   padding: 30px 0;
   width: 88%;
   max-width: 700px;
@@ -14,17 +14,17 @@
   cursor: default;
 }
 
-.FigureBanner-item {
+.IconSection-item {
   display: inline-block;
   width: 50%;
   font-size: 18px;
 }
 
-.FigureBanner-item:last-child {
+.IconSection-item:last-child {
   margin-top: 1em;
 }
 
-.FigureBanner-figure {
+.IconSection-figure {
   margin: 0 auto;
   width: 70px;
   height: 70px;
@@ -33,29 +33,29 @@
 }
 
 @media (--sm-viewport) {
-  .FigureBanner-content {
+  .IconSection-content {
     padding: 50px 0;
   }
 
-  .FigureBanner-item {
+  .IconSection-item {
     width: calc(100% / 3);
   }
 
-  .FigureBanner-item:last-child {
+  .IconSection-item:last-child {
     margin-top: 0;
   }
 
-  .FigureBanner-figure {
+  .IconSection-figure {
     width: 100px;
     height: 100px;
   }
 }
 
 @media (--md-viewport) {
-  .FigureBanner-item {
+  .IconSection-item {
     font-size: 20px;
   }
-  .FigureBanner-figure {
+  .IconSection-figure {
     width: 115px;
     height: 115px;
   }

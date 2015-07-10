@@ -17,8 +17,10 @@
 @import "components/section";
 @import "components/banner";
 @import "components/banner-logo";
-@import "components/figure-banner";
+@import "components/icon-section";
 @import "components/calendar";
+@import "components/event";
+@import "components/expander";
 
 /* Utilities */
 
@@ -39,7 +41,6 @@
   --color-green: #13936c;
   --color-yellow: #e6fe9c;
   --color-text: #333;
-
 
   --font-family: "Karla", "Verdana", "Geneva", "sans-serif";
   --font-family-alt: "Asul", "Karla", "Verdana", "Geneva", "sans-serif";

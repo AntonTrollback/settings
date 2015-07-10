@@ -17,7 +17,6 @@ System.config({
   "map": {
     "babel": "npm:babel-core@5.5.8",
     "babel-runtime": "npm:babel-runtime@5.5.8",
-    "closest": "npm:closest@0.0.1",
     "core-js": "npm:core-js@0.9.17",
     "doc-ready": "npm:doc-ready@1.0.3",
     "lodash": "npm:lodash@3.10.0",
@@ -29,9 +28,6 @@ System.config({
     },
     "npm:babel-runtime@5.5.8": {
       "process": "github:jspm/nodelibs-process@0.1.1"
-    },
-    "npm:closest@0.0.1": {
-      "matches-selector": "npm:matches-selector@0.0.1"
     },
     "npm:core-js@0.9.17": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",

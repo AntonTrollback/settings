@@ -1,0 +1,104 @@
+.Expander {
+  max-height: calc(500px + 80px);
+  overflow: hidden;
+  position: relative;
+}
+
+@media (--md-viewport) {
+  .Expander {
+    max-height: calc(400px + 80px);
+  }
+}
+
+/**
+ * Expand action button
+ */
+
+.Expander-action {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  box-sizing: border-box;
+  display: block;
+  padding-top: 28px;
+  text-align: left;
+  will-change: transform;
+}
+
+.Expander-action:before {
+  content: "";
+  height: 100%;
+  width: 110%;
+  background-color: black;
+  position: absolute;
+  top: 35%;
+  left: -5%;
+  transform: rotate(5deg);
+  transform-origin: top center;
+  background-color: #fff;
+  border-top: 1px solid #dedede;
+  will-change: transform;
+}
+
+.Expander-action:hover:before {
+  transform: translateY(10%) rotate(5deg);
+}
+
+.Expander-actionText {
+  position: relative;
+}
+
+@media (--sm-viewport) {
+  .Expander-actionText {
+    font-size: 18px;
+  }
+}
+
+/* Expand animation */
+
+.Expander:not(.is-notTransitioning) {
+  transition: max-height 0.5s ease;
+}
+
+.Expander:not(.is-notTransitioning) .Expander-action {
+  transition: transform 0.5s ease-in;
+}
+
+.Expander:not(.is-notTransitioning) .Expander-action:before {
+  transition: transform 0.2s ease;
+}
+
+/**
+ *  Expanded state
+ */
+
+html.no-script .Expander,
+.Expander.is-expanded {
+  /* Set using javascript, if enabled */
+  max-height: none;
+}
+
+html.no-script .Expander-action,
+.Expander.is-expanded .Expander-action {
+  transform: translateY(70px) rotate(0);
+}
+
+html.no-script .Expander-action:before,
+.Expander.is-expanded .Expander-action:before {
+  transform: rotate(0);
+}
+
+/**
+ * Hide an element while collapsed
+ */
+
+.Expander .Expander-hide {
+  display: none;
+}
+
+html.no-script .Expander-hide,
+.Expander.is-expanded .Expander-hide {
+  display: block;
+}

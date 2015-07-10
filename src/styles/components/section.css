@@ -3,23 +3,7 @@
 }
 
 .Section-main {
-  overflow: hidden;
   position: relative;
-}
-
-/* Without aside */
-
-.Section--full {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-@media (--md-viewport) {
-  .Section--full {
-    max-width: 600px;
-    padding-right: 100px;
-    margin: 0 auto;
-  }
 }
 
 /**
@@ -41,7 +25,7 @@
 }
 
 /**
- * Main and aside/action layout
+ * Main/aside/action layout
  */
 
 .Section-aside {
@@ -94,7 +78,9 @@
   }
 }
 
-/* Wider aside */
+/**
+ * Alternative main/aside/action layout
+ */
 
 .Section--altLayout .Section-aside {
   margin: 0;
@@ -128,102 +114,18 @@
 }
 
 /**
- * Toggle content height
+ *  One column, main only, layout
  */
 
-.Section.is-collapsed .Section-main {
-  max-height: calc(500px + 80px);
+.Section--full {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 @media (--md-viewport) {
-  .Section.is-collapsed .Section-main {
-    max-height: calc(400px + 80px);
+  .Section--full {
+    max-width: 600px;
+    padding-right: 100px;
+    margin: 0 auto;
   }
-}
-
-.Section.is-collapsed .Section-actionInline {
-  display: none;
-}
-
-.Section.is-collapsed .Section-ending {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  box-sizing: border-box;
-  display: block;
-  padding-top: 28px;
-  text-align: left;
-  will-change: transform;
-}
-
-.Section.is-collapsed .Section-ending:before {
-  content: "";
-  height: 100%;
-  width: 110%;
-  background-color: black;
-  position: absolute;
-  top: 35%;
-  left: -5%;
-  transform: rotate(5deg);
-  transform-origin: top center;
-  background-color: #fff;
-  border-top: 1px solid #dedede;
-  will-change: transform;
-}
-
-.Section.is-collapsed .Section-ending:hover:before {
-  transform: translateY(10%) rotate(5deg);
-}
-
-.Section.is-collapsed .Section-showMore {
-  position: relative;
-}
-
-@media (--sm-viewport) {
-  .Section.is-collapsed .Section-showMore {
-    font-size: 18px;
-  }
-}
-
-/* Expand animation */
-
-.Section:not(.is-notTransitioning) .Section-main {
-  transition: max-height 0.5s ease;
-}
-
-.Section:not(.is-notTransitioning) .Section-ending {
-  transition: transform 0.5s ease-in;
-}
-
-.Section:not(.is-notTransitioning) .Section-ending:before {
-  transition: transform 0.2s ease;
-}
-
-/* Expanded state */
-
-html.no-script .Section-main,
-.Section--full .Section-main,
-.Section:not(.is-collapsed) .Section-main {
-  /* Set using javascript, if enabled */
-  max-height: none;
-}
-
-html.no-script .Section-actionInline,
-.Section--full .Section-actionInline,
-.Section:not(.is-collapsed) .Section-actionInline {
-  display: block;
-}
-
-html.no-script .Section-ending,
-.Section--full .Section-ending,
-.Section:not(.is-collapsed) .Section-ending {
-  transform: translateY(70px) rotate(0);
-}
-
-html.no-script .Section-ending:before,
-.Section--full .Section-ending:before,
-.Section .Section-ending:before {
-  transform: rotate(0);
 }
