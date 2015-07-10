@@ -50,3 +50,7 @@ add_action( 'wp_before_admin_bar_render', function () {
   global $wp_admin_bar;
   $wp_admin_bar->remove_menu('comments');
 });
+
+add_filter( 'embed_oembed_html', function ( $html ) {
+  return '<div class="Type-16by9">' . $html . '</div>';
+}, 10, 3 );
