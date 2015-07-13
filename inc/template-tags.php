@@ -1,8 +1,9 @@
 <?php
 
-function get_asset_url ( $asset ) {
+function get_asset_url ( $asset, $include_rev = true ) {
   global $revision;
-  return get_template_directory_uri() . '/src/' . $asset;
+  $rev = $include_rev ? '?v=' . $revision : '';
+  return get_template_directory_uri() . '/src/' . $asset . $rev;
 }
 
 function asset_url ( $asset ) {
@@ -10,7 +11,7 @@ function asset_url ( $asset ) {
 }
 
 function symbol ( $class, $id ) {
-  $url = get_asset_url( 'images/sprite.svg' );
+  $url = get_asset_url( 'images/sprite.svg', false );
   echo '<svg class="' . $class . '"><use xlink:href="' . $url . '#' . $id . '"></svg>';
 }
 
