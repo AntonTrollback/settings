@@ -1,0 +1,22 @@
+/**
+ * Wordpress wysiwyg utils
+ */
+
+.alignleft,
+.alignright {
+  width: auto !important;
+  height: auto !important;
+  max-width: 152px !important;
+  max-height: 201px !important;
+  margin: 7px 13px 0 !important;
+}
+
+.alignleft {
+  float: left !important;
+  margin-left: 0 !important;
+}
+
+.alignright {
+  float: right !important;
+  margin-right: 0 !important;
+}
