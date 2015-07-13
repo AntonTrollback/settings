@@ -30,8 +30,9 @@ function initSkrollr() {
 
 function moveAbove(items) {
   forEach(items, (item) => {
-    var prev = item.previousElementSibling;
-    item.parentNode.insertBefore(item, prev);
+    var parent = item.parentNode;
+    var paragraph = parent.querySelector('p:last-of-type');
+    parent.insertBefore(item, paragraph);
   });
 }
 
@@ -68,6 +69,7 @@ function expander(items) {
       });
 
       target.addEventListener(transitionend, () => {
+        target.classList.add('is-notTransitioning');
         target.style.maxHeight = 'none';
       });
     }
@@ -77,8 +79,6 @@ function expander(items) {
 function postList(actions) {
   forEach(actions, (action) => {
     var posts = document.querySelectorAll('.PostList-item');
-
-    console.log(posts);
 
     action.addEventListener('click', (e) => {
       e.preventDefault();

@@ -58,11 +58,11 @@
 
 /* Expand animation */
 
-.Expander:not(.is-notTransitioning) {
+.Expander.is-expanded:not(.is-notTransitioning) {
   transition: max-height 0.5s ease;
 }
 
-.Expander:not(.is-notTransitioning) .Expander-action {
+.Expander.is-expanded:not(.is-notTransitioning) .Expander-action {
   transition: transform 0.5s ease-in;
 }
 
