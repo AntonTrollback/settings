@@ -1,0 +1,100 @@
+.PostList {
+  color: var(--color-pink-dark);
+  font-size: 0;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.PostList-showMore {
+  font-size: 32px;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  display: block;
+  margin: 100px auto 50px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  font-family: var(--font-family-alt);
+  color: var(--color-green-dark);
+}
+
+.PostList-showMore:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg);
+  background: var(--color-purple-alt);
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.PostList-showMore:hover,
+.PostList-showMore:focus,
+.PostList-showMore:active {
+  color: var(--color-purple-alt);
+  outline: 0;
+}
+
+.PostList-showMore:hover:before,
+.PostList-showMore:focus:before,
+.PostList-showMore:active:before {
+  background: var(--color-green-dark);
+}
+
+.PostList-showMore:active {
+  transform: scale(0.9);
+}
+
+.PostList-showMore.is-hidden {
+  display: none;
+}
+
+.PostList-item {
+  font-size: 1rem;
+  max-width: 330px;
+  text-align: left;
+  margin-top: 3em;
+}
+
+.PostList-item.is-hidden {
+  display: none;
+}
+
+@media (--sm-viewport) {
+  .PostList {
+    margin-left: -35px;
+    margin-right: -35px;
+  }
+
+  .PostList-item {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 35px;
+  }
+}
+
+.PostList-figure {
+  margin-bottom: 1em;
+  padding-bottom: 88%;
+  position: relative;
+}
+
+.PostList-figure > * {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  transform: translateX(-50%);
+}
+
+.PostList-readMore {
+  display: block;
+  margin-top: 1em;
+}

@@ -8,11 +8,13 @@ import transitionend from 'transitionend-property';
 docReady(() => {
   var moveUpItems = document.querySelectorAll('.js-moveAbovePreviousEl');
   var expanderActions = document.querySelectorAll('.Expander-action');
+  var postListAction = document.querySelectorAll('.PostList-showMore');
 
   // init
   initSkrollr();
   moveAbove(moveUpItems);
   expander(expanderActions);
+  postList(postListAction);
 });
 
 function initSkrollr() {
@@ -39,8 +41,6 @@ function expander(items) {
     contentHeight = target.clientHeight;
     target.style.maxHeight = restrainHeight + 'px';
 
-    console.log(contentHeight, restrainHeight);
-
     if (contentHeight < restrainHeight + 100) {
       return expand(true);
     }
@@ -64,6 +64,27 @@ function expander(items) {
 
       target.addEventListener(transitionend, () => {
         target.style.maxHeight = 'none';
+      });
+    }
+  });
+}
+
+function postList(actions) {
+  forEach(actions, (action) => {
+    var posts = document.querySelectorAll('.PostList-item');
+
+    console.log(posts);
+
+    action.addEventListener('click', (e) => {
+      e.preventDefault();
+      expand();
+    });
+
+    function expand() {
+      action.classList.add('is-hidden');
+
+      forEach(posts, (post) => {
+        post.classList.remove('is-hidden');
       });
     }
   });

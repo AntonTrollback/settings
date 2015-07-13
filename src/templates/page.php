@@ -39,6 +39,10 @@ set_query_var( 'home', $home );
           </div>
         <?php endif; ?>
       </div>
+
+      <?php if ( get_field( 'show_post_list' ) ): ?>
+        <?php post_list(); ?>
+      <?php endif; ?>
     </article>
   </main>
 <?php endwhile; ?>

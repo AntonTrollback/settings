@@ -59,8 +59,9 @@
  */
 
 @custom-selector :--Type-block-elements
- blockquote, p, pre, ul, ol, hr,
- h1, h2, h3, h4, h5, h6;
+  img, video, iframe, embed, object,
+  blockquote, p, pre, ul, ol, hr,
+  h1, h2, h3, h4, h5, h6;
 
 @custom-selector :--Type-custom-heading-123
   .Type-h1, .Type-h2, .Type-h3;
@@ -82,14 +83,6 @@
   display: block;
 }
 
-.Type :--Type-inline-block:not([class|="Type"]) {
-  margin: 0;
-  max-width: 100%;
-  height: auto;
-  display: inline-block;
-  vertical-align: bottom;
-}
-
 /* Links */
 
 .Type a:not([class|="Type"]) {
@@ -101,11 +94,11 @@
 .Type a:not([class|="Type"]):hover,
 .Type a:not([class|="Type"]):focus,
 .Type a:not([class|="Type"]):active {
-  color: var(--color-teal);
+  color: #111;
 }
 
 .Type a:not([class|="Type"]):active {
-  color: color(var(--color-teal) b(+ 25%));
+  color: #666;
 }
 
 /* Headings */
@@ -186,6 +179,7 @@
   display: block;
   overflow: hidden;
   position: relative;
+  margin: 25px 0;
 }
 
 .Type-16by9:before {
@@ -202,4 +196,5 @@
   left: 0 !important;
   width: 100% !important;
   height: 100% !important;
+  margin: 0 !important;
 }

@@ -1,6 +1,5 @@
 <div class="Section-actionLarge">
-  <a class="Button" href="<?php the_field( 'page_link' ); ?>">
-    <div class="Button-gradient"></div>
-    <?php the_field( 'page_link_text' ); ?>
+  <a class="Button Button--<?php the_field( 'link_color' ); ?>" href="<?php the_field( 'link_url' ); ?>">
+    <?php the_field( 'link_text' ); ?>
   </a>
 </div>

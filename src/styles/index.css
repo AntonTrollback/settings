@@ -21,6 +21,7 @@
 @import "components/calendar";
 @import "components/event";
 @import "components/expander";
+@import "components/post-list";
 
 /* Utilities */
 
@@ -35,11 +36,15 @@
 
 :root {
   --color-purple: #493b6f;
+  --color-purple-alt: #6a2b6d;
   --color-teal: #237d81;
   --color-pink: #f194bd;
+  --color-pink-dark: #a35196;
   --color-blue: #160768;
   --color-green: #13936c;
+  --color-green-dark: #95d386;
   --color-yellow: #e6fe9c;
+  --color-red: #98030a;
   --color-text: #333;
 
   --font-family: "Karla", "Verdana", "Geneva", "sans-serif";

@@ -1,12 +1,10 @@
 <?php
 
-
 function get_events() {
   global $fb_token;
   $page_id = get_field( 'page_id' );
   $fields =  'id,name,description,start_time,end_time';
   $query = 'https://graph.facebook.com/celezteriddarholmen/events?access_token=' . $fb_token . '&fields=' . $fields;
-
 
   $data = json_decode( file_get_contents($query), true );
   $next_events = get_next_events( $data, $fields );
@@ -14,7 +12,6 @@ function get_events() {
   $events = array_merge( $data['data'], $next_events );
   $events = array_reverse( $events );
   $events = array_slice( $events, 0, 4 );
-
   $events = array_filter( $events, 'remove_ignored' );
   $events = array_map( 'update_fields', $events );
 

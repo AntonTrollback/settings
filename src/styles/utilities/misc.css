@@ -18,26 +18,36 @@
   color: var(--color-green);
 }
 
+.u-colorPink {
+  color: var(--color-pink);
+}
+
 /**
  * Display as link
  */
 
+.u-blockLink {
+  display: block;
+}
+
 .u-link {
   outline: 0;
-  color: var(--color-purple);
   text-decoration: underline;
 }
 
 .u-link:hover,
 .u-link:focus,
-.u-link:active {
+.u-link:active,
+.u-blockLink:hover .u-link,
+.u-blockLink:focus .u-link,
+.u-blockLink:active .u-link {
   outline: 0;
-  text-decoration: underline;
-  color: var(--color-teal);
+  color: #111;
 }
 
-.u-link:active {
-  color: color(var(--color-teal) b(+ 25%));
+.u-link:active,
+.u-blockLink:active .u-link {
+  color: #999;
 }
 
 /**

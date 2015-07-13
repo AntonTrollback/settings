@@ -1,4 +1,3 @@
-<a class="Type-ignore Button Section-actionInline js-moveAbovePreviousEl" href="<?php the_field( 'page_link' ); ?>">
-  <div class="Button-gradient"></div>
-  <?php the_field( 'page_link_text' ); ?>
+<a class="Type-ignore Button Button--<?php the_field( 'link_color' ); ?> Section-actionInline js-moveAbovePreviousEl" href="<?php the_field( 'link_url' ); ?>">
+  <?php the_field( 'link_text' ); ?>
 </a>
