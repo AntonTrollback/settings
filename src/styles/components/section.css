@@ -25,12 +25,33 @@
 }
 
 /**
+ * Footer
+ */
+
+.Section-footer {
+  margin-top: 40px;
+  text-align: left;
+}
+
+/**
  * Main/aside/action layout
  */
 
 .Section-aside {
   text-align: center;
   margin-top: 30px;
+}
+
+.Section-asideFigure {
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Section-asideFigure > img {
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: bottom;
 }
 
 .Section-actionInline {

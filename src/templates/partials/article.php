@@ -4,7 +4,7 @@ $highlight = get_field( 'highlight' );
 $highlight_text = get_field( 'highlight_title' );
 
 $has_aside = $link_url || $highlight;
-$is_collapsed = is_page() || isset($home);
+$is_collapsed = ( is_page() || isset($home) ) && $has_aside;
 ?>
 
 <div class="Section u-cf <?php echo $has_aside ? '' : 'Section--full '; ?>">
@@ -23,7 +23,7 @@ $is_collapsed = is_page() || isset($home);
       </div>
 
     <?php if ( $is_collapsed ): ?>
-      <div class="Expander-action">
+      <div class="Expander-action u-colorPurple">
         <button type="button" class="Expander-actionText u-link">Läs mer</button>
       </div>
     </div>

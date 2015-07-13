@@ -171,6 +171,16 @@
   margin-bottom: 0;
 }
 
+/* Divider */
+
+.Type hr:not([class|="Type"]) {
+  height: 1px;
+  border: 0;
+  width: 180px;
+  background-color: #ccc;
+  margin: 50px auto;
+}
+
 /**
  * Responsive videos
  */

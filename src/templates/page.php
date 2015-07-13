@@ -34,7 +34,7 @@ set_query_var( 'home', $home );
         <?php endif; ?>
 
         <?php if ( get_field( 'show_newsletter_form' ) ): ?>
-          <div class="<?php echo get_field( 'show_calendar' ) ? 'Section-aside' : ''; ?>">
+          <div class="<?php echo get_field( 'show_calendar' ) ? 'Section-aside' : 'Section-footer'; ?>">
             <?php partial( 'newsletter-form' ); ?>
           </div>
         <?php endif; ?>

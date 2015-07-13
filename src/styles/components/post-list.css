@@ -1,7 +1,7 @@
 .PostList {
   color: var(--color-pink-dark);
   font-size: 0;
-  margin: 40px 0;
+  margin: 20px 0;
   text-align: center;
 }
 
@@ -17,6 +17,8 @@
   position: relative;
   font-family: var(--font-family-alt);
   color: var(--color-green-dark);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .PostList-showMore:before {
@@ -56,17 +58,25 @@
   font-size: 1rem;
   max-width: 330px;
   text-align: left;
-  margin-top: 3em;
+  margin-bottom: 3em;
 }
 
 .PostList-item.is-hidden {
   display: none;
 }
 
+.PostList-readMore {
+  display: block;
+  margin-top: 1em;
+}
+
+.PostList-figure {
+  margin-bottom: 1em;
+}
+
 @media (--sm-viewport) {
   .PostList {
-    margin-left: -35px;
-    margin-right: -35px;
+    margin: 40px -35px;
   }
 
   .PostList-item {
@@ -75,26 +85,20 @@
     vertical-align: top;
     padding: 0 35px;
   }
-}
 
-.PostList-figure {
-  margin-bottom: 1em;
-  padding-bottom: 88%;
-  position: relative;
-}
+  .PostList-figure {
+    padding-bottom: 88%;
+    position: relative;
+  }
 
-.PostList-figure > * {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  transform: translateX(-50%);
-}
-
-.PostList-readMore {
-  display: block;
-  margin-top: 1em;
+  .PostList-figure > * {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    transform: translateX(-50%);
+  }
 }
