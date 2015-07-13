@@ -4,6 +4,7 @@ import skrollr from 'skrollr';
 import forEach from 'lodash/collection/forEach';
 import defer from 'lodash/function/defer';
 import transitionend from 'transitionend-property';
+import attachFastClick from 'fastclick';
 
 docReady(() => {
   var moveUpItems = document.querySelectorAll('.js-moveAbovePreviousEl');
@@ -15,6 +16,8 @@ docReady(() => {
   moveAbove(moveUpItems);
   expander(expanderActions);
   postList(postListAction);
+
+  attachFastClick(document.body);
 });
 
 function initSkrollr() {

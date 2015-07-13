@@ -19,6 +19,7 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.5.8",
     "core-js": "npm:core-js@0.9.17",
     "doc-ready": "npm:doc-ready@1.0.3",
+    "fastclick": "npm:fastclick@1.0.6",
     "lodash": "npm:lodash@3.10.0",
     "skrollr": "npm:skrollr@0.6.26",
     "svg4everybody": "npm:svg4everybody@0.0.2",
