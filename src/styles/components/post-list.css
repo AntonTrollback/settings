@@ -74,6 +74,12 @@
   margin-bottom: 1em;
 }
 
+.PostList-figure > img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
 @media (--sm-viewport) {
   .PostList {
     margin: 40px -35px;
@@ -91,13 +97,10 @@
     position: relative;
   }
 
-  .PostList-figure > * {
+  .PostList-figure > img {
     position: absolute;
     bottom: 0;
     left: 50%;
-    width: auto;
-    height: auto;
-    max-width: 100%;
     max-height: 100%;
     transform: translateX(-50%);
   }

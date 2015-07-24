@@ -7,15 +7,17 @@ import transitionend from 'transitionend-property';
 import attachFastClick from 'fastclick';
 
 docReady(() => {
-  var moveUpItems = document.querySelectorAll('.js-moveAbovePreviousEl');
-  var expanderActions = document.querySelectorAll('.Expander-action');
-  var postListAction = document.querySelectorAll('.PostList-showMore');
+  const moveUpItems = document.querySelectorAll('.js-moveAbovePreviousEl');
+  const expanderActions = document.querySelectorAll('.Expander-action');
+  const postListAction = document.querySelectorAll('.PostList-showMore');
+  const nav = document.querySelector('.Nav');
 
   // init
   initSkrollr();
   moveAbove(moveUpItems);
   expander(expanderActions);
   postList(postListAction);
+  hintNavScroll(nav, 400);
 
   attachFastClick(document.body);
 });
@@ -30,17 +32,17 @@ function initSkrollr() {
 
 function moveAbove(items) {
   forEach(items, (item) => {
-    var parent = item.parentNode;
-    var paragraph = parent.querySelector('p:last-of-type');
+    const parent = item.parentNode;
+    const paragraph = parent.querySelector('p:last-of-type');
     parent.insertBefore(item, paragraph);
   });
 }
 
 function expander(items) {
   forEach(items, (action) => {
-    var target = action.parentNode;
-    var restrainHeight = parseInt(getComputedStyle(target)['max-height'], 10);
-    var contentHeight;
+    const target = action.parentNode;
+    const restrainHeight = parseInt(getComputedStyle(target)['max-height'], 10);
+    let contentHeight;
 
     // get expanded content height
     target.style.maxHeight = 'none';
@@ -78,7 +80,7 @@ function expander(items) {
 
 function postList(actions) {
   forEach(actions, (action) => {
-    var posts = document.querySelectorAll('.PostList-item');
+    let posts = document.querySelectorAll('.PostList-item');
 
     action.addEventListener('click', (e) => {
       e.preventDefault();
@@ -93,4 +95,23 @@ function postList(actions) {
       });
     }
   });
+}
+
+function hintNavScroll (nav) {
+  const contentEl = nav.querySelector('.Nav-inner');
+  let hintFired = localStorage.getItem('navScrollHint');
+  let navWidth = nav.clientWidth;
+  let contentWidth = contentEl.clientWidth;
+
+  if (hintFired !== '1') {
+    if ((contentWidth - 50) > navWidth) {
+      nav.classList.add('is-hintingScroll');
+
+      nav.querySelector('.Nav-inner').addEventListener(transitionend, () => {
+        nav.classList.remove('is-hintingScroll');
+      });
+    }
+
+    localStorage.setItem('navScrollHint', '1');
+  }
 }
