@@ -25,11 +25,16 @@
 }
 
 .IconSection-figure {
+  display: block;
   margin: 0 auto;
   width: 70px;
   height: 70px;
-  background: #64b0ad;
   margin-bottom: 0.6em;
+}
+
+.IconSection-item:last-child .IconSection-figure {
+  width: 108px;
+  height: 90px;
 }
 
 @media (--sm-viewport) {
@@ -49,14 +54,27 @@
     width: 100px;
     height: 100px;
   }
+
+  .IconSection-item:last-child .IconSection-figure {
+    width: 141px;
+    height: 117px;
+    margin-bottom: 0.2em;
+  }
 }
 
 @media (--md-viewport) {
   .IconSection-item {
     font-size: 20px;
   }
+
   .IconSection-figure {
     width: 115px;
     height: 115px;
+  }
+
+  .IconSection-item:last-child .IconSection-figure {
+    width: 180px;
+    height: 136px;
+    margin-bottom: 0.1em;
   }
 }
