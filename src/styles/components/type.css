@@ -12,6 +12,12 @@
   }
 }
 
+@media (--md-viewport) {
+  .Type:not(.Type--plain) {
+    padding: 55px 0;
+  }
+}
+
 /**
  * Base typography
  * inherits from .Site component
@@ -115,7 +121,6 @@
   font-family: var(--font-family-alt);
   line-height: 1.25;
   letter-spacing: -1px;
-  font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -123,7 +128,6 @@
 .Type-h1,
 .Type h1:not([class|="Type"]) {
   font-size: 36px;
-  font-weight: normal;
 }
 
 .Type-h2,
@@ -181,9 +185,11 @@
 .Type hr:not([class|="Type"]) {
   height: 1px;
   border: 0;
-  width: 180px;
-  background-color: #ccc;
+  width: 250px;
+  background-color: #dedede;
   margin: 50px auto;
+  transform: rotate(-3deg);
+  transform-origin: top center;
 }
 
 /**
