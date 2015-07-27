@@ -76,6 +76,7 @@
   background: #fff;
   mix-blend-mode: exclusion;
   will-change: transform;
+  z-index: 110;
 }
 
 @media (--lg-viewport) {
