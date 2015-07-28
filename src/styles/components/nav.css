@@ -81,7 +81,6 @@
   display: block;
   position: relative;
   outline: 0;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -143,7 +142,7 @@
   content: "";
   display: block;
   margin-top: -5px;
-  border-bottom: 5px solid;
+  border-bottom: 4px solid;
 }
 
 .Nav-item:not(.is-active) .Nav-action:hover,

@@ -28,8 +28,8 @@
 
 .u-blockLink,
 .u-link {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
+  outline: 0;
 }
 
 .u-blockLink {
@@ -37,7 +37,6 @@
 }
 
 .u-link {
-  outline: 0;
   text-decoration: underline;
 }
 

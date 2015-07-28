@@ -3,7 +3,6 @@
   min-height: 4em;
   display: block;
   clear: both;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -47,6 +46,7 @@
   margin-right: 1em;
   position: relative;
   top: -0.3em;
+  user-select: none;
   background-image: linear-gradient(to bottom, #c8e7fd 0%, #bcfdcc 100%);
   mix-blend-mode: exclusion;
 }

@@ -25,6 +25,9 @@
   padding-top: 28px;
   text-align: left;
   will-change: transform;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 .Expander-action:before {
@@ -42,7 +45,9 @@
   will-change: transform;
 }
 
-.Expander-action:hover:before {
+.Expander-action:hover:before,
+.Expander-action:focus:before,
+.Expander-action:active:before {
   transform: translateY(10%) rotate(5deg);
 }
 

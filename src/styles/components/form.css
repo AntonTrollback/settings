@@ -1,6 +1,7 @@
 .Form {
   max-width: 350px;
   margin: 0 auto;
+  user-select: none;
 }
 
 .Form-header {
@@ -23,7 +24,6 @@
   background-image: linear-gradient(to bottom, #c1f3e1 0%, #c5edf0 100%);
   -webkit-appearance: none;
   -moz-appearance: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
 }
 
