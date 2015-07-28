@@ -15,6 +15,18 @@ function symbol ( $class, $id ) {
   echo '<svg class="' . $class . '"><use xlink:href="' . $url . '#' . $id . '"></svg>';
 }
 
+function handle_start_page_content () {
+  $is_home = false;
+  if ( is_home() ) {
+    $is_home = true;
+    set_post_by_slug( 'start' );
+  }
+  // make the state available in partials
+  set_query_var( 'is_home', $is_home );
+
+  return $is_home;
+}
+
 function set_post_by_slug ( $slug ) {
   query_posts(array(
     'name' => $slug,
