@@ -10,11 +10,6 @@ function asset_url ( $asset ) {
   echo get_asset_url( $asset );
 }
 
-function symbol ( $class, $id ) {
-  $url = get_asset_url( 'images/sprite.svg', false );
-  echo '<svg class="' . $class . '"><use xlink:href="' . $url . '#' . $id . '"></svg>';
-}
-
 function handle_start_page_content () {
   $is_home = false;
   if ( is_home() ) {

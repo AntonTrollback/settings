@@ -9,6 +9,7 @@
 
 .Swoosh-figure {
   position: absolute;
+  width: 2000px;
   height: 100%;
   left: 50%;
   transform: translateX(-50%);
@@ -84,23 +85,28 @@
 
 .Swoosh--3 .Swoosh-figure,
 .Swoosh--4 .Swoosh-figure {
-  left: initial;
-  right: -32%;
+  left: 80%;
   margin-top: 0;
 }
 
 .Swoosh--4 {
   margin-bottom: 1.1em;
   margin-top: 0.3em;
-  right: 3%;
   transform: rotate(-13deg);
+}
+
+.Swoosh--4 .Swoosh-figure {
+  left: 55%;
 }
 
 @media (--sm-viewport) {
   .Swoosh--4 {
     margin-bottom: -0.3em;
     margin-top: -1.2em;
-    right: 3.3%;
     transform: rotate(0deg);
+  }
+
+  .Swoosh--4 .Swoosh-figure {
+    left: 80%;
   }
 }

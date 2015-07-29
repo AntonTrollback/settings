@@ -8,5 +8,7 @@
 
   <script src="<?php asset_url( 'scripts/settings.js' ); ?>"></script>
 
+  <?php partial( 'svg-sprite' ); ?>
+
   <?php wp_footer(); ?>
 </body>
