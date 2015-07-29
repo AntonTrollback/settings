@@ -6,6 +6,10 @@
   color: var(--color-purple);
 }
 
+.u-colorPurpleAlt {
+  color: var(--color-purple-alt);
+}
+
 .u-colorTeal {
   color: var(--color-teal);
 }
@@ -18,8 +22,28 @@
   color: var(--color-green);
 }
 
+.u-colorGreenDark {
+  color: var(--color-green-dark);
+}
+
 .u-colorPink {
   color: var(--color-pink);
+}
+
+.u-colorPinkDark {
+  color: var(--color-pink-dark);
+}
+
+.u-colorYellow {
+  color: var(--color-yellow);
+}
+
+.u-colorRed {
+  color: var(--color-red);
+}
+
+.u-colorOrange {
+  color: var(--color-orange);
 }
 
 /**

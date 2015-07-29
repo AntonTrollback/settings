@@ -1,6 +1,6 @@
 /* Fonts */
 
-@import url("http://fonts.googleapis.com/css?family=Asul:400,700|Karla:400,400italic,700,700italic");
+@import url("http://fonts.googleapis.com/css?family=Asul:400|Karla:400,400italic,700,700italic");
 
 /* Base */
 
@@ -22,6 +22,7 @@
 @import "components/event";
 @import "components/expander";
 @import "components/post-list";
+@import "components/swoosh";
 @import "components/footer";
 
 /* Utilities */

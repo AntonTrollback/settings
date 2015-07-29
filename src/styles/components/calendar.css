@@ -21,6 +21,10 @@
 }
 
 @media (--md-viewport) {
+  .Calendar {
+    margin-bottom: -300px;
+  }
+
   .Calendar-heading {
     padding-left: 49px;
     margin-bottom: 46px;

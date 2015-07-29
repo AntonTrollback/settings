@@ -1,12 +1,12 @@
 .Expander {
-  max-height: calc(500px + 80px);
+  max-height: calc(480px + 80px);
   overflow: hidden;
   position: relative;
 }
 
 @media (--md-viewport) {
   .Expander {
-    max-height: calc(400px + 80px);
+    max-height: calc(380px + 80px);
   }
 }
 

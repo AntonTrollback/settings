@@ -1,0 +1,106 @@
+.Swoosh {
+  position: relative;
+  max-width: 800px;
+  isolation: isolate;
+  margin: 0 auto;
+  pointer-events: none;
+  font-size: 20px;
+}
+
+.Swoosh-figure {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (--sm-viewport) {
+  .Swoosh {
+    font-size: 25px;
+  }
+}
+
+@media (--md-viewport) {
+  .Swoosh {
+    font-size: 30px;
+  }
+}
+
+/**
+ * Style 1
+ */
+
+.Swoosh--1 {
+  height: 4.5em;
+  margin-top: 2.2em;
+  margin-bottom: 0;
+}
+
+.Swoosh--1 .Swoosh-figure:first-child {
+  margin-left: -1.5em;
+  will-change: transform;
+}
+
+.Swoosh--1 .Swoosh-figure:last-child {
+  height: 3.5em;
+  top: 0.3em;
+  margin-left: 0.6em;
+  mix-blend-mode: exclusion;
+  will-change: transform;
+}
+
+/**
+ * Style 2
+ */
+
+.Swoosh--2 {
+  height: 6.8em;
+  margin-top: .1em;
+  margin-bottom: -1.3em;
+}
+
+.Swoosh--2 .Swoosh-figure:first-child {
+  margin-left: -0.6em;
+}
+
+.Swoosh--2 .Swoosh-figure:last-child {
+  height: 5.2em;
+  top: -0.5em;
+  margin-left: 10.6em;
+  mix-blend-mode: difference;
+  will-change: transform;
+}
+
+/**
+ * Style 3 & 4 (same svg)
+ */
+
+.Swoosh--3,
+.Swoosh--4 {
+  height: 4.1em;
+  margin-bottom: -2em;
+  margin-top: -1em;
+}
+
+.Swoosh--3 .Swoosh-figure,
+.Swoosh--4 .Swoosh-figure {
+  left: initial;
+  right: -32%;
+  margin-top: 0;
+}
+
+.Swoosh--4 {
+  margin-bottom: 1.1em;
+  margin-top: 0.3em;
+  right: 3%;
+  transform: rotate(-13deg);
+}
+
+@media (--sm-viewport) {
+  .Swoosh--4 {
+    margin-bottom: -0.3em;
+    margin-top: -1.2em;
+    right: 3.3%;
+    transform: rotate(0deg);
+  }
+}

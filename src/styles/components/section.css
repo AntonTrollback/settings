@@ -1,5 +1,11 @@
 .Section {
+  margin-top: 5px;
+}
 
+@media (--md-viewport) {
+  .Section {
+    margin-top: 15px;
+  }
 }
 
 .Section-main {
@@ -29,7 +35,7 @@
  */
 
 .Section-footer {
-  margin-top: 40px;
+  margin-top: 20px;
   text-align: left;
 }
 

@@ -185,9 +185,9 @@
 .Type hr:not([class|="Type"]) {
   height: 1px;
   border: 0;
-  width: 250px;
+  width: 300px;
   background-color: #dedede;
-  margin: 50px auto;
+  margin: 40px auto;
   transform: rotate(-3deg);
   transform-origin: top center;
 }
