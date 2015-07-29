@@ -1,21 +1,13 @@
 <?php
 
-function get_asset_url ( $asset, $include_rev = true ) {
-  global $revision;
-  $rev = $include_rev ? '?v=' . $revision : '';
-  return get_template_directory_uri() . '/src/' . $asset . $rev;
-}
-
-function asset_url ( $asset ) {
-  echo get_asset_url( $asset );
-}
-
 function handle_start_page_content () {
   $is_home = false;
+
   if ( is_home() ) {
     $is_home = true;
     set_post_by_slug( 'start' );
   }
+
   // make the state available in partials
   set_query_var( 'is_home', $is_home );
 
@@ -27,6 +19,11 @@ function set_post_by_slug ( $slug ) {
     'name' => $slug,
     'post_type' => 'page'
   ));
+}
+
+function asset_url ( $asset ) {
+  global $revision;
+  echo get_template_directory_uri() . '/src/' . $asset . '?v=' . $revision;
 }
 
 function template ( $name ) {

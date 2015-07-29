@@ -4,6 +4,8 @@
   line-height: 1.5;
   color: var(--color-text);
   background: white;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .Site-body {

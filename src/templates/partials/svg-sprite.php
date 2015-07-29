@@ -1,41 +1,41 @@
 <svg class="u-hiddenVisually" xmlns="http://www.w3.org/2000/svg">
 
   <defs>
-    <linearGradient id="figure-1-gradient-a" x1="0%" x2="100.001%" y1="50%" y2="50%"><stop offset="0%" stop-color="#7EBEAB"/><stop offset="100%" stop-color="#4AA5AF"/></linearGradient>
-    <linearGradient id="figure-2-gradient-a" x1=".001%" x2="100.001%" y1="50.001%" y2="50.001%"><stop offset="0%" stop-color="#BAFECA"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
-    <linearGradient id="figure-2-gradient-b" x1="0%" y1="50.001%" y2="50.001%"><stop offset="0%" stop-color="#7EBEAB"/><stop offset="100%" stop-color="#4AA5AF"/></linearGradient>
-    <linearGradient id="figure-2-gradient-c" x1="0%" x2="100.001%" y1="50.001%" y2="50.001%"><stop offset="0%" stop-color="#BAFECA"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
+    <linearGradient id="figure-1-gradient-a" x1="0%" x2="100%" y1="50%" y2="50%"><stop offset="0%" stop-color="#7EBEAB"/><stop offset="100%" stop-color="#4AA5AF"/></linearGradient>
+    <linearGradient id="figure-2-gradient-a" x1="0%" x2="100%" y1="50%" y2="50%"><stop offset="0%" stop-color="#BAFECA"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
+    <linearGradient id="figure-2-gradient-b" x1="0%" y1="50%" y2="50%"><stop offset="0%" stop-color="#7EBEAB"/><stop offset="100%" stop-color="#4AA5AF"/></linearGradient>
+    <linearGradient id="figure-2-gradient-c" x1="0%" x2="100%" y1="50%" y2="50%"><stop offset="0%" stop-color="#BAFECA"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
     <linearGradient id="figure-3-gradient-a" x1="0%" y1="50%" y2="50%"><stop offset="0%" stop-color="#BAFECA"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
     <linearGradient id="figure-3-gradient-b" x1="0%" y1="50%" y2="50%"><stop offset="0%" stop-color="#7EBEAB"/><stop offset="100%" stop-color="#4AA5AF"/></linearGradient>
-    <linearGradient id="figure-3-gradient-c" x1="0%" y1="49.999%" y2="49.999%"><stop offset="0%" stop-color="#BAFECA"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
+    <linearGradient id="figure-3-gradient-c" x1="0%" y1="50%" y2="50%"><stop offset="0%" stop-color="#BAFECA"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
 
     <linearGradient id="swoosh-1a-gradient-a" x1="0%" y1="50%" y2="50%"><stop offset="0%" stop-color="#FFFEA2"/><stop offset="100%" stop-color="#4AA5AF"/></linearGradient>
     <linearGradient id="swoosh-1b-gradient-a" x1="0%" y1="50%" y2="50%"><stop offset=".54%" stop-color="#2E002C"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
 
-    <linearGradient id="swoosh-2a-gradient-a" x1="100%" x2="0%" y1="49.999%" y2="49.999%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
+    <linearGradient id="swoosh-2a-gradient-a" x1="100%" x2="0%" y1="50%" y2="50%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
     <linearGradient id="swoosh-2a-gradient-b" x1="50%" x2="50%" y1="-137.035%" y2="177.78%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
-    <linearGradient id="swoosh-2a-gradient-c" x1="49.999%" x2="49.999%" y1="-8.882%" y2="100.001%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
+    <linearGradient id="swoosh-2a-gradient-c" x1="50%" x2="50%" y1="-8.882%" y2="100%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
     <linearGradient id="swoosh-2a-gradient-d" x1="50%" x2="50%" y1="-48.83%" y2="152.704%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
-    <linearGradient id="swoosh-2a-gradient-e" x1="49.999%" x2="49.999%" y1="-48.83%" y2="152.696%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
-    <linearGradient id="swoosh-2a-gradient-f" x1="49.999%" x2="49.999%" y1="-143.641%" y2="100.002%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
-    <linearGradient id="swoosh-2a-gradient-g" x1="50.001%" x2="50.001%" y1="-29.999%" y2="271.77%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
+    <linearGradient id="swoosh-2a-gradient-e" x1="50%" x2="50%" y1="-48.83%" y2="152.696%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
+    <linearGradient id="swoosh-2a-gradient-f" x1="50%" x2="50%" y1="-143.641%" y2="100%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
+    <linearGradient id="swoosh-2a-gradient-g" x1="50%" x2="50%" y1="-29.999%" y2="271.77%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
     <linearGradient id="swoosh-2a-gradient-h" x1="50%" x2="50%" y1="0%" y2="314.822%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
-    <linearGradient id="swoosh-2a-gradient-i" x1="49.999%" x2="49.999%" y1="0%" y2="211.301%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
+    <linearGradient id="swoosh-2a-gradient-i" x1="50%" x2="50%" y1="0%" y2="211.301%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
     <linearGradient id="swoosh-2a-gradient-j" x1="100%" x2="0%" y1="50%" y2="50%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
     <linearGradient id="swoosh-2a-gradient-k" x1="100%" x2="0%" y1="50%" y2="50%"><stop offset="0%" stop-color="#A17CB4"/><stop offset="100%" stop-color="#1D67A2"/></linearGradient>
     <linearGradient id="swoosh-2a-gradient-l" x1="0%" y1="50%" y2="50%"><stop offset="0%" stop-color="#6773AC"/><stop offset="100%" stop-color="#DF86BD"/></linearGradient>
-    <linearGradient id="swoosh-2a-gradient-m" x1="100%" x2=".001%" y1="50.001%" y2="50.001%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
-    <linearGradient id="swoosh-2a-gradient-n" x1="49.998%" x2="49.998%" y1="0%" y2="314.825%"><stop offset="0%" stop-color="#BAFECA"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
-    <linearGradient id="swoosh-2a-gradient-o" x1="49.999%" x2="49.999%" y1="0%" y2="314.822%"><stop offset="0%" stop-color="#BAFECA"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
-    <linearGradient id="swoosh-2a-gradient-p" x1="100%" x2="-.001%" y1="49.999%" y2="49.999%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
+    <linearGradient id="swoosh-2a-gradient-m" x1="100%" x2=".001%" y1="50%" y2="50%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
+    <linearGradient id="swoosh-2a-gradient-n" x1="50%" x2="50%" y1="0%" y2="314.825%"><stop offset="0%" stop-color="#BAFECA"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
+    <linearGradient id="swoosh-2a-gradient-o" x1="50%" x2="50%" y1="0%" y2="314.822%"><stop offset="0%" stop-color="#BAFECA"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
+    <linearGradient id="swoosh-2a-gradient-p" x1="100%" x2="-.001%" y1="50%" y2="50%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
     <linearGradient id="swoosh-2a-gradient-q" x1="50%" x2="50%" y1="-44.002%" y2="147.251%"><stop offset="0%" stop-color="#BAFECA"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
-    <linearGradient id="swoosh-2a-gradient-r" x1="49.999%" x2="49.999%" y1="-53.999%" y2="162.521%"><stop offset="0%" stop-color="#BAFECA"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
+    <linearGradient id="swoosh-2a-gradient-r" x1="50%" x2="50%" y1="-53.999%" y2="162.521%"><stop offset="0%" stop-color="#BAFECA"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
     <linearGradient id="swoosh-2a-gradient-s" x1="50%" x2="50%" y1="-8.758%" y2="208.733%"><stop offset="0%" stop-color="#BAFECA"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
-    <linearGradient id="swoosh-2a-gradient-t" x1="50.001%" x2="50.001%" y1="-214.812%" y2="100.003%"><stop offset="0%" stop-color="#BAFECA"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
+    <linearGradient id="swoosh-2a-gradient-t" x1="50%" x2="50%" y1="-214.812%" y2="100%"><stop offset="0%" stop-color="#BAFECA"/><stop offset="100%" stop-color="#C7E7FE"/></linearGradient>
 
     <linearGradient id="swoosh-3-gradient-a" x1="0%" y1="50%" y2="50%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
     <linearGradient id="swoosh-3-gradient-b" x1="0%" y1="50%" y2="50%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
-    <linearGradient id="swoosh-3-gradient-c" x1="100%" x2="-.001%" y1="49.999%" y2="49.999%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
+    <linearGradient id="swoosh-3-gradient-c" x1="100%" x2="-.001%" y1="50%" y2="50%"><stop offset="0%" stop-color="#4AA5AF"/><stop offset="100%" stop-color="#19393C"/></linearGradient>
   </defs>
 
 
@@ -103,3 +103,14 @@
   </symbol>
 
 </svg>
+
+<script>
+  // Trigger svg redraw (safari issue)
+  document.addEventListener('DOMContentLoaded', function(){
+    var elms = document.getElementsByTagName('use');
+    Array.prototype.forEach.call(elms, function(el, i){
+      var href = el.getAttribute('xlink:href');
+      el.setAttribute('xlink:href', href);
+    });
+  });
+</script>
