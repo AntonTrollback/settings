@@ -51,6 +51,21 @@ add_action( 'wp_before_admin_bar_render', function () {
   $wp_admin_bar->remove_menu('comments');
 });
 
+// Responsive videos
+
 add_filter( 'embed_oembed_html', function ( $html ) {
   return '<div class="Type-16by9">' . $html . '</div>';
 }, 10, 3 );
+
+// Get an uniqe theme key for each request
+
+session_start();
+$theme_keys = array( 0, 1, 2, 3 );
+
+if ( isset( $_SESSION['prev_theme'] ) ) {
+  $_SESSION['prev_theme'] = ( $_SESSION['prev_theme'] + 1 ) % count( $theme_keys );
+} else {
+  $_SESSION['prev_theme'] = 0;
+}
+
+$theme_key = $theme_keys[$_SESSION['prev_theme']];

@@ -5,6 +5,12 @@ $highlight_text = get_field( 'highlight_title' );
 
 $has_aside = $link_url || $highlight;
 $is_collapsed = ( is_page() || isset($is_home) ) && $has_aside;
+
+// Define text color theme
+global $theme_key;
+if ( is_page() ) { $theme_key = 0; }
+$title_theme = array( 'u-colorTeal', 'u-colorPinkDark', 'u-colorGreen', 'u-colorOrange' );
+$body_theme = array( 'u-colorPurple', '', 'u-colorPurpleAlt', 'u-colorBlue' );
 ?>
 
 <div class="Section u-cf <?php echo $has_aside ? '' : 'Section--full '; ?>">
@@ -13,8 +19,8 @@ $is_collapsed = ( is_page() || isset($is_home) ) && $has_aside;
     <div class="Expander">
     <?php endif; ?>
 
-      <div class="Type u-colorPurple">
-        <h1 class="u-colorTeal"><?php the_title(); ?></h1>
+      <div class="Type <?php echo $body_theme[$theme_key]; ?>">
+        <h1 class="<?php echo $title_theme[$theme_key]; ?>"><?php the_title(); ?></h1>
         <?php the_content(); ?>
 
         <?php if ( $link_url ): ?>
