@@ -4,7 +4,7 @@
   <main role="main">
     <article class="Site-container Site-container--withRoomForNav">
       <figure class="Section Section--full">
-        <a href="<?php raw_image_url(); ?>">
+        <a class="u-inlineBlock" href="<?php raw_image_url(); ?>">
           <?php image( 'large', 'Section-photo', true); ?>
         </a>
       </figure>

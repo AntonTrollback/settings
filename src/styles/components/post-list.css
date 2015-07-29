@@ -1,7 +1,6 @@
 .PostList {
   color: var(--color-pink-dark);
   font-size: 0;
-  margin: 20px 0;
   text-align: center;
 }
 
@@ -15,7 +14,7 @@
   height: 120px;
   line-height: 120px;
   display: block;
-  margin: 50px auto;
+  margin: 40px auto;
   text-align: center;
   color: #fff;
   position: relative;
@@ -62,19 +61,19 @@
  */
 
 .PostList-title {
-  margin: 60px 0;
-  color: #8b398b;
+  margin: 50px 0 40px;
+  color: var(--color-pink-dark);
 }
 
 @media (--sm-viewport) {
   .PostList-title {
-    margin: 70px 0;
+    margin: 60px 0 50px;
   }
 }
 
 @media (--md-viewport) {
   .PostList-title {
-    margin: 90px 0;
+    margin: 80px 0 70px;
   }
 }
 
@@ -86,7 +85,7 @@
   font-size: 1rem;
   max-width: 330px;
   text-align: left;
-  margin-bottom: 3em;
+  margin: 0 auto 3em;
 }
 
 .PostList-item.is-hidden {
@@ -137,7 +136,8 @@
 .PostList--small {
   color: inherit;
   overflow: hidden;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .PostList--small .PostList-item {
@@ -236,6 +236,7 @@
 .PostList--dark {
   background: #111;
   color: #fff;
+  margin-bottom: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
