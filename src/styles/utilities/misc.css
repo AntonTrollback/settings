@@ -55,6 +55,21 @@
   color: #999;
 }
 
+.u-linkOnDark:hover,
+.u-linkOnDark:focus,
+.u-linkOnDark:active,
+.u-blockLink:hover .u-linkOnDark,
+.u-blockLink:focus .u-linkOnDark,
+.u-blockLink:active .u-linkOnDark {
+  outline: 0;
+  color: #fff;
+}
+
+.u-linkOnDark:active,
+.u-blockLink:active .u-linkOnDark {
+  color: #999;
+}
+
 /**
  * Hide at breakpoint
  */

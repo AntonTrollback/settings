@@ -48,11 +48,9 @@
     <?php endif; ?>
 
     <?php if ( get_field( 'show_post_list' ) ): ?>
-      <div class="Site-container">
-        <?php post_list(); ?>
-      </div>
+      <?php post_list(); ?>
     <?php endif; ?>
-
+    
   </main>
 <?php endwhile; ?>
 
