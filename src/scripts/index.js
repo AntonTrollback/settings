@@ -6,6 +6,8 @@ import defer from 'lodash/function/defer';
 import transitionend from 'transitionend-property';
 import attachFastClick from 'fastclick';
 
+let mainSkrollr;
+
 docReady(() => {
   const moveUpItems = document.querySelectorAll('.js-moveAbovePreviousEl');
   const expanderActions = document.querySelectorAll('.Expander-action');
@@ -24,8 +26,9 @@ docReady(() => {
 
 function initSkrollr() {
   if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
-    skrollr.init({
-      forceHeight: false
+    mainSkrollr = skrollr.init({
+      forceHeight: false,
+      smoothScrolling: false
     });
   }
 }
@@ -67,12 +70,14 @@ function expander(items) {
         if (force) {
           target.classList.add('is-notTransitioning');
           action.parentNode.removeChild(action);
+          mainSkrollr.refresh();
         }
       });
 
       target.addEventListener(transitionend, () => {
         target.classList.add('is-notTransitioning');
         target.style.maxHeight = 'none';
+        mainSkrollr.refresh();
       });
     }
   });
