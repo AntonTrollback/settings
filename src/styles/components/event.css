@@ -20,6 +20,9 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+
+  /* Prevent text flickering in safari */
+  -webkit-font-smoothing: antialiased;
 }
 
 @media (--sm-viewport) {
@@ -49,6 +52,7 @@
   user-select: none;
   background-image: linear-gradient(to bottom, #c8e7fd 0%, #bcfdcc 100%);
   mix-blend-mode: exclusion;
+  will-change: transform;
 }
 
 .Event-figure::before {

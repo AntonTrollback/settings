@@ -135,7 +135,6 @@
   }
 }
 
-
 @media (--md-viewport) {
   .PostList-item {
     max-width: 350px;
@@ -163,13 +162,26 @@
   padding-left: 64px;
   position: relative;
   padding-right: 0;
-  max-width: none;
+  max-width: 580px;
+}
+
+
+@media (--sm-viewport) {
+  .PostList--small .PostList-item {
+    width: 100%;
+    display: block;
+  }
 }
 
 @media (--md-viewport) {
   .PostList--small .PostList-item {
     padding-left: 70px;
     padding-right: 30px;
+  }
+
+  .PostList--small .PostList-item {
+    width: 50%;
+    display: inline-block;
   }
 }
 

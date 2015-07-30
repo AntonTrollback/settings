@@ -26,11 +26,11 @@
 }
 
 .Site-container--withRoomForNav {
-  padding-top: 90px;
+  padding-top: 70px;
 }
 
 @media (--md-viewport) {
   .Site-container--withRoomForNav {
-    padding-top: 132px;
+    padding-top: 100px;
   }
 }

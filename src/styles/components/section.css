@@ -20,13 +20,13 @@
   max-width: 100%;
   max-height: 95vh;
   vertical-align: bottom;
-  margin: 0 auto;
+  margin: 12px auto 0;
   display: block;
 }
 
 @media (--sm-viewport) {
   .Section-photo {
-    margin: 0;
+    margin: 14px 0 -10px;
   }
 }
 
