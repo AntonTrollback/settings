@@ -56,13 +56,13 @@
 
   <symbol id="figure-2" viewBox="0 0 96 96">
     <g fill-rule="evenodd" fill="none">
-      <g><path d="M24.093 72.093l23.83-23.828L71.75 72.093l-23.828 23.83z" fill="#E87C91"/><path d="M71.78 72.07L47.945 48.238l23.833-23.83V72.07z" fill="#2C0A5B" id="Shape"/><path d="M95.61 95.902V48.238L71.78 72.07 47.945 95.902H95.61z" fill="url(#figure-2-gradient-a)" id="Shape"/><path d="M.285 48.238v47.664l23.83-23.833 23.832-23.832-23.83-23.83L.284.573v47.664z" fill="#2C0A5B" id="Shape"/><path d="M47.946.575H.283l23.83 23.832 23.833 23.83 23.833-23.83L95.61.575H47.946z" fill="url(#figure-2-gradient-b)" id="Shape"/><path d="M.285 95.902l23.83-23.832 23.832 23.832H.285z" fill="url(#figure-2-gradient-c)" id="Shape"/><path d="M95.61 48.238V.575L71.78 24.408V72.07l23.83-23.832z" fill="#E85946"/></g>
+      <g><path d="M24.093 72.093l23.83-23.828L71.75 72.093l-23.828 23.83z" fill="#E87C91"/><path d="M71.78 72.07L47.945 48.238l23.833-23.83V72.07z" fill="#6a2b6d" id="Shape"/><path d="M95.61 95.902V48.238L71.78 72.07 47.945 95.902H95.61z" fill="url(#figure-2-gradient-a)" id="Shape"/><path d="M.285 48.238v47.664l23.83-23.833 23.832-23.832-23.83-23.83L.284.573v47.664z" fill="#6a2b6d" id="Shape"/><path d="M47.946.575H.283l23.83 23.832 23.833 23.83 23.833-23.83L95.61.575H47.946z" fill="url(#figure-2-gradient-b)" id="Shape"/><path d="M.285 95.902l23.83-23.832 23.832 23.832H.285z" fill="url(#figure-2-gradient-c)" id="Shape"/><path d="M95.61 48.238V.575L71.78 24.408V72.07l23.83-23.832z" fill="#E85946"/></g>
     </g>
   </symbol>
 
   <symbol id="figure-3" viewBox="0 0 144 120">
     <g fill-rule="evenodd" fill="none">
-      <g><path d="M48.092 96.05L71.92 72.223 95.75 96.05l-23.83 23.83z" fill="#E87C91"/><path d="M48.09 48.424l23.83 23.832-23.83 23.832V48.424z" fill="#2C0A5B" id="Shape"/><path d="M48.09 48.424H.426L24.26 72.256l23.83 23.832V48.424z" fill="url(#figure-3-gradient-a)" id="Shape"/><path d="M48.09 48.425h47.663L71.92 24.595 48.09.76 24.26 24.594.426 48.424H48.09z" fill="#2C0A5B" id="Shape"/><path d="M95.753 48.424H48.09l23.83 23.832 23.833 23.832 23.832-23.832 23.83-23.832H95.754z" fill="url(#figure-3-gradient-b)" id="Shape"/><path d="M71.92 24.594L95.753.762l23.832 23.832H71.92z" fill="url(#figure-3-gradient-c)" id="Shape"/><path d="M119.583 24.594H71.92l23.833 23.83h47.663l-23.833-23.83z" fill="#E85946"/></g>
+      <g><path d="M48.092 96.05L71.92 72.223 95.75 96.05l-23.83 23.83z" fill="#E87C91"/><path d="M48.09 48.424l23.83 23.832-23.83 23.832V48.424z" fill="#6a2b6d" id="Shape"/><path d="M48.09 48.424H.426L24.26 72.256l23.83 23.832V48.424z" fill="url(#figure-3-gradient-a)" id="Shape"/><path d="M48.09 48.425h47.663L71.92 24.595 48.09.76 24.26 24.594.426 48.424H48.09z" fill="#6a2b6d" id="Shape"/><path d="M95.753 48.424H48.09l23.83 23.832 23.833 23.832 23.832-23.832 23.83-23.832H95.754z" fill="url(#figure-3-gradient-b)" id="Shape"/><path d="M71.92 24.594L95.753.762l23.832 23.832H71.92z" fill="url(#figure-3-gradient-c)" id="Shape"/><path d="M119.583 24.594H71.92l23.833 23.83h47.663l-23.833-23.83z" fill="#E85946"/></g>
     </g>
   </symbol>
 

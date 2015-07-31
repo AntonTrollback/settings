@@ -67,9 +67,8 @@
   background: var(--color-pink);
 }
 
-
 .Button--pink {
-  color: var(--color-red);
+  color: #fff;
   background: var(--color-pink);
   background-image: linear-gradient(to right, #6c8bfc 0%, var(--color-pink) 100%);
 }
@@ -77,6 +76,6 @@
 .Button--pink:hover,
 .Button--pink:focus,
 .Button--pink:active {
-  color: #6c8bfc;
+  color: #fff;
   background: var(--color-red);
 }
