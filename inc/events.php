@@ -4,7 +4,7 @@ function get_events() {
   global $fb_token;
   $page_id = get_field( 'page_id' );
   $fields =  'id,name,description,start_time,end_time';
-  $query = 'https://graph.facebook.com/celezteriddarholmen/events?access_token=' . $fb_token . '&fields=' . $fields;
+  $query = 'https://graph.facebook.com/' . get_field( 'page_id' ) . '/events?access_token=' . $fb_token . '&fields=' . $fields;
 
   $data = json_decode( file_get_contents($query), true );
   $next_events = get_next_events( $data, $fields );
@@ -19,10 +19,7 @@ function get_events() {
 }
 
 function get_next_events( $data, $fields ) {
-  if (count($data) == 1) {
-    return array();
-  }
-  if ( array_key_exists( 'next', $data['paging'] ) ) {
+  if ( count($data) !== 1 && array_key_exists( 'next', $data['paging'] ) ) {
     $next = file_get_contents( $data['paging']['next'] . '&fields=' . $fields );
     return json_decode( $next, true )['data'];
   }
