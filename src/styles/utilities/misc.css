@@ -2,6 +2,10 @@
  * Colors
  */
 
+ .u-colorWhite {
+   color: #fff;
+ }
+
 .u-colorPurple {
   color: var(--color-purple);
 }
@@ -22,8 +26,8 @@
   color: var(--color-green);
 }
 
-.u-colorGreenDark {
-  color: var(--color-green-dark);
+.u-colorGreenLight {
+  color: var(--color-green-light);
 }
 
 .u-colorPink {
