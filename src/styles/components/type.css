@@ -186,7 +186,7 @@
   height: 1px;
   border: 0;
   width: 300px;
-  background-color: #dedede;
+  background-color: var(--color-gray);
   margin: 40px auto;
   transform: rotate(-3deg);
   transform-origin: top center;

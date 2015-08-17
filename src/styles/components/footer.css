@@ -3,22 +3,90 @@
   padding: 60px 0px 30px;
   margin-top: 70px;
   background: #E6E6E6;
+  cursor: default;
+}
+
+.Footer-content {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ccc;
+  margin-top: -20px;
+  margin-bottom: 40px;
+}
+
+.Footer-heading,
+.Footer-body {
+  max-width: 600px;
+  color: var(--color-blue-strong);
+}
+
+.Footer-heading {
+  font-size: 24px;
+  line-height: 1.4;
+  font-family: var(--font-family-alt);
+}
+
+.Footer-body {
+  margin-top: 20px;
+}
+
+.Footer-body a,
+.Footer-body strong {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.Footer-body a {
+  text-decoration: underline;
+}
+
+.Footer-body a:focus,
+.Footer-body a:active {
+  opacity: 0.6;
+}
+
+.Footer-column {
+  margin-bottom: 30px;
   text-align: center;
   font-size: 18px;
   font-family: var(--font-family-alt);
   color: var(--color-teal);
   line-height: 1.3;
-  cursor: default;
 }
 
-.Footer-column {
-  margin-bottom: 30px;
+
+@media (--sm-viewport) {
+  .Footer-content {
+    padding-bottom: 50px;
+    margin-top: -5px;
+    margin-bottom: 57px;
+  }
+
+  .Footer-heading {
+    font-size: 26px;
+  }
+
+  .Footer-body {
+    font-size: 18px;
+    line-height: 1.5;
+  }
 }
+
 
 @media (--md-viewport) {
   .Footer {
     padding: 80px 0px 50px;
     margin-top: 100px;
+  }
+
+  .Footer-content {
+    padding-bottom: 70px;
+    margin-top: -20px;
+    margin-bottom: 75px;
+  }
+
+  .Footer-heading {
+    font-size: 32px;
+    line-height: 1.32;
   }
 
   .Footer-column {

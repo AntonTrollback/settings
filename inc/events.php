@@ -19,6 +19,9 @@ function get_events() {
 }
 
 function get_next_events( $data, $fields ) {
+  if (count($data) == 1) {
+    return array();
+  }
   if ( array_key_exists( 'next', $data['paging'] ) ) {
     $next = file_get_contents( $data['paging']['next'] . '&fields=' . $fields );
     return json_decode( $next, true )['data'];

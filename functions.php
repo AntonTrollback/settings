@@ -7,7 +7,7 @@ function logga ( $data ) {
   echo '</pre>';
 }
 
-$revision = '0.6';
+$revision = '0.7';
 $fb_token = file_get_contents(get_template_directory() . '/fb-token.txt');
 
 require get_template_directory() . '/inc/setup.php';
