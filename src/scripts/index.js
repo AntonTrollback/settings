@@ -6,7 +6,7 @@ import defer from 'lodash/function/defer';
 import transitionend from 'transitionend-property';
 import attachFastClick from 'fastclick';
 
-let mainSkrollr;
+let mainSkrollr = false;
 
 docReady(() => {
   const moveUpItems = document.querySelectorAll('.js-moveAbovePreviousEl');
@@ -70,14 +70,20 @@ function expander(items) {
         if (force) {
           target.classList.add('is-notTransitioning');
           action.parentNode.removeChild(action);
-          mainSkrollr.refresh();
+
+          if (mainSkrollr) {
+            mainSkrollr.refresh();
+          }
         }
       });
 
       target.addEventListener(transitionend, () => {
         target.classList.add('is-notTransitioning');
         target.style.maxHeight = 'none';
-        mainSkrollr.refresh();
+
+        if (mainSkrollr) {
+          mainSkrollr.refresh();
+        }
       });
     }
   });
@@ -104,12 +110,15 @@ function postList(actions) {
 
 function hintNavScroll (nav) {
   const contentEl = nav.querySelector('.Nav-inner');
-  let hintFired = localStorage.getItem('navScrollHint');
+  const scrollEl = nav.querySelector('.Nav-wrap');
+  let hintFired = localStorage.getItem('navScrollHinter');
   let navWidth = nav.clientWidth;
   let contentWidth = contentEl.clientWidth;
+  const scrollMode = (contentWidth - 50) > navWidth;
 
+  // Animation
   if (hintFired !== '1') {
-    if ((contentWidth - 50) > navWidth) {
+    if (scrollMode) {
       nav.classList.add('is-hintingScroll');
 
       nav.querySelector('.Nav-inner').addEventListener(transitionend, () => {
@@ -117,6 +126,20 @@ function hintNavScroll (nav) {
       });
     }
 
-    localStorage.setItem('navScrollHint', '1');
+    localStorage.setItem('navScrollHinter', '1');
+  }
+
+  // Clean up background when scrolling
+  if (scrollMode) {
+    scrollEl.addEventListener('touchmove', (e) => {
+      e.stopPropagation();
+      nav.classList.add('is-stale');
+      document.addEventListener('touchmove', resetStale);
+    });
+  }
+
+  function resetStale () {
+    nav.classList.remove('is-stale');
+    document.removeEventListener('touchmove', resetStale);
   }
 }

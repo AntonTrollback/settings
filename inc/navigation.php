@@ -72,7 +72,7 @@ class walker_bem_nav extends Walker_Nav_Menu {
     $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
     $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
 
-    $item_output = sprintf( '%1$s<a class="Nav-action"%2$s>%3$s%4$s%5$s</a>%6$s', $args->before, $attributes, $args->link_before, apply_filters( 'the_title', $item->title, $item->ID), $args->link_after, $args->after );
+    $item_output = sprintf( '%1$s<a class="Nav-action needsclick"%2$s>%3$s%4$s%5$s</a>%6$s', $args->before, $attributes, $args->link_before, apply_filters( 'the_title', $item->title, $item->ID), $args->link_after, $args->after );
 
     // Filter <li>
     $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );

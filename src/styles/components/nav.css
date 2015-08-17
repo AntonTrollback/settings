@@ -12,6 +12,7 @@
   margin-right: auto;
   margin-left: auto;
   z-index: 100;
+  will-change: transform;
 
   font-family: var(--font-family-alt);
   color: #000;
@@ -129,14 +130,17 @@
  * States
  */
 
-.Nav:hover {
+.Nav:hover,
+.Nav.is-stale {
   mix-blend-mode: initial;
   background: #000;
   color: #fff;
 }
 
 .Nav:hover:before,
-.Nav:hover:after {
+.Nav:hover:after,
+.Nav.is-stale:before,
+.Nav.is-stale:after {
   background: linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
 }
 
