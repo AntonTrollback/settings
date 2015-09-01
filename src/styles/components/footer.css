@@ -1,28 +1,28 @@
 .Footer {
-  overflow: hidden;
-  padding: 60px 0px 30px;
-  margin-top: 70px;
   background: #e6e6e6;
   cursor: default;
+  margin-top: 70px;
+  overflow: hidden;
+  padding: 60px 0 30px;
 }
 
 .Footer-content {
-  padding-bottom: 40px;
   border-bottom: 1px solid #b9b9b9;
-  margin-top: -20px;
   margin-bottom: 40px;
+  margin-top: -20px;
+  padding-bottom: 40px;
 }
 
 .Footer-heading,
 .Footer-body {
-  max-width: 600px;
   color: var(--color-blue-strong);
+  max-width: 600px;
 }
 
 .Footer-heading {
+  font-family: var(--font-family-alt);
   font-size: 24px;
   line-height: 1.4;
-  font-family: var(--font-family-alt);
 }
 
 .Footer-body {
@@ -45,20 +45,19 @@
 }
 
 .Footer-column {
+  color: var(--color-teal);
+  font-family: var(--font-family-alt);
+  font-size: 18px;
+  line-height: 1.3;
   margin-bottom: 30px;
   text-align: center;
-  font-size: 18px;
-  font-family: var(--font-family-alt);
-  color: var(--color-teal);
-  line-height: 1.3;
 }
-
 
 @media (--sm-viewport) {
   .Footer-content {
-    padding-bottom: 50px;
-    margin-top: -5px;
     margin-bottom: 57px;
+    margin-top: -5px;
+    padding-bottom: 50px;
   }
 
   .Footer-heading {
@@ -71,17 +70,16 @@
   }
 }
 
-
 @media (--md-viewport) {
   .Footer {
-    padding: 80px 0px 50px;
     margin-top: 100px;
+    padding: 80px 0 50px;
   }
 
   .Footer-content {
-    padding-bottom: 70px;
-    margin-top: -20px;
     margin-bottom: 75px;
+    margin-top: -20px;
+    padding-bottom: 70px;
   }
 
   .Footer-heading {
@@ -100,6 +98,6 @@
 
 @media (--lg-viewport) {
   .Footer {
-    padding: 100px 0px 70px;
+    padding: 100px 0 70px;
   }
 }

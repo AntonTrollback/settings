@@ -9,21 +9,22 @@
 
 /* Components */
 
-@import "components/site";
-@import "components/type";
-@import "components/form";
-@import "components/button";
-@import "components/nav";
-@import "components/section";
 @import "components/banner";
 @import "components/banner-logo";
-@import "components/icon-section";
+@import "components/button";
 @import "components/calendar";
+@import "components/colored-section";
 @import "components/event";
 @import "components/expander";
-@import "components/post-list";
-@import "components/swoosh";
 @import "components/footer";
+@import "components/form";
+@import "components/icon-section";
+@import "components/nav";
+@import "components/post-list";
+@import "components/section";
+@import "components/site";
+@import "components/swoosh";
+@import "components/type";
 
 /* Utilities */
 
@@ -38,20 +39,20 @@
 /* Global props */
 
 :root {
-  --color-purple: #493b6f;
-  --color-purple-alt: #6a2b6d;
-  --color-teal: #237d81;
-  --color-pink: #f194bd;
-  --color-pink-dark: #a35196;
   --color-blue: #160768;
   --color-blue-strong: #0020a2;
+  --color-gray: #dedede;
   --color-green: #13936c;
   --color-green-light: #95d386;
-  --color-yellow: #e6fe9c;
-  --color-red: #98030a;
   --color-orange: #e65a4b;
-  --color-gray: #dedede;
+  --color-pink: #f194bd;
+  --color-pink-dark: #a35196;
+  --color-purple: #493b6f;
+  --color-purple-alt: #6a2b6d;
+  --color-red: #98030a;
+  --color-teal: #237d81;
   --color-text: #333;
+  --color-yellow: #e6fe9c;
 
   --font-family: "Karla", "Verdana", "Geneva", "sans-serif";
   --font-family-alt: "Asul", "Karla", "Verdana", "Geneva", "sans-serif";
@@ -64,7 +65,6 @@
 @custom-media --md-viewport  (width >= 760px);
 @custom-media --lg-viewport  (width >= 1000px);
 @custom-media --xl-viewport  (width >= 1260px);
-
 @custom-media --xs-max-viewport  (width <= 329px);
 @custom-media --sm-max-viewport  (width <= 459px);
 @custom-media --md-max-viewport  (width <= 759px);

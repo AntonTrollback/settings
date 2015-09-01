@@ -1,0 +1,21 @@
+.ColoredSection {
+  background: #154c78;
+  background: linear-gradient(to bottom right, #154c78 0%, #61c6ce 100%);
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0 30px;
+}
+
+@media (--sm-viewport) {
+  .ColoredSection {
+    padding: 0 40px;
+  }
+}
+
+@media (--md-viewport) {
+  .ColoredSection {
+    margin-txop: 80px;
+    padding: 0 60px;
+  }
+}

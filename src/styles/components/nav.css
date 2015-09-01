@@ -1,77 +1,75 @@
 .Nav {
+  background: #000;
   box-sizing: border-box;
-  width: 88%;
-  max-width: 838px;
-  user-select: none;
-  overflow: hidden;
-
-  position: fixed;
-  top: 15px;
-  right: 0;
-  left: 0;
-  margin-right: auto;
-  margin-left: auto;
-  z-index: 100;
-  will-change: transform;
-
+  color: #fff;
   font-family: var(--font-family-alt);
-  color: #000;
-  background: #fff;
-  white-space: nowrap;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  mix-blend-mode: exclusion;
-
-  /* Prevent inline block white-space */
   font-size: 0;
+  -webkit-font-smoothing: antialiased;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 838px;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 15px;
+  user-select: none;
+  white-space: nowrap;
+  width: calc(100% - 30px);
+  will-change: transform;
+  z-index: 20;
 }
 
 .Nav-home,
 .Nav-wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 100%;
+  left: 0;
+  position: absolute;
+  -webkit-tap-highlight-color: transparent;
+  top: 0;
+  width: 100%;
 }
 
 .Nav-logo {
-  width: 28px;
   box-sizing: border-box;
-  position: absolute;
-  margin: 0 14px;
   left: 0;
-  top: 0;
+  margin: 0 14px;
   pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 28px;
 }
 
 .Nav-logo:last-child {
+  display: none;
   left: auto;
   right: 0;
-  display: none;
 }
 
 .Nav-inner {
-  position: relative;
   display: inline-block;
-  min-width: 100%;
   height: 0;
+  min-width: 100%;
+  position: relative;
 }
 
 .Nav-list {
   display: inline-block;
-  vertical-align: top;
-  max-width: calc(100% - 90px);
-  margin: 0 -8px;
   height: 0;
+  margin: 0 -8px;
+  max-width: calc(100% - 90px);
+  vertical-align: top;
 }
 
+/* Let's skip sub navigations for now */
+
 .Nav-sub {
-  /* Let's skip sub navigations for now */
   display: none;
 }
+
+/* Items & actions */
 
 .Nav-item {
   display: inline-block;
@@ -79,11 +77,11 @@
 }
 
 .Nav-action {
-  padding: 14px 12px;
   box-sizing: border-box;
   display: block;
-  position: relative;
   outline: 0;
+  padding: 14px 12px;
+  position: relative;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -94,33 +92,32 @@
 }
 
 /**
- * Scrolling
+ * Horizontal scrolling
  */
 
 .Nav-wrap {
-  /* Horizontal scrolling */
-  overflow-y: hidden;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
   backface-visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 /* Shadows */
 
-.Nav:before,
-.Nav:after {
+.Nav::before,
+.Nav::after {
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
   content: "";
   height: 100%;
-  width: 16px;
+  left: 0;
+  pointer-events: none;
   position: absolute;
   top: 0;
-  left: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 100%);
+  width: 16px;
   z-index: 1;
-  pointer-events: none;
 }
 
-.Nav:after {
+.Nav::after {
   left: auto;
   right: 0;
   transform: rotate(180deg);
@@ -130,30 +127,14 @@
  * States
  */
 
-.Nav:hover,
-.Nav.is-stale {
-  mix-blend-mode: initial;
-  background: #000;
-  color: #fff;
-}
-
-.Nav:hover:before,
-.Nav:hover:after,
-.Nav.is-stale:before,
-.Nav.is-stale:after {
-  background: linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
-}
-
-.Nav-item.is-active .Nav-action:after {
+.Nav-item.is-active .Nav-action::after {
+  border-bottom: 4px solid;
   content: "";
   display: block;
   margin-top: -5px;
-  border-bottom: 4px solid;
 }
 
-.Nav-item:not(.is-active) .Nav-action:hover,
-.Nav-item:not(.is-active) .Nav-action:focus,
-.Nav-item:not(.is-active) .Nav-action:active {
+.Nav-item:not(.is-active) .Nav-action:matches(:hover, :focus, :active) {
   text-decoration: underline;
 }
 
@@ -176,6 +157,7 @@
 
   .Nav {
     top: 25px;
+    width: calc(100% - 50px);
   }
 
   .Nav-logo {
@@ -200,11 +182,43 @@
  */
 
 .Nav-inner {
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
   will-change: transform;
 }
 
 .Nav.is-hintingScroll .Nav-inner {
   transform: translateX(-190px);
-  transition-delay: .5s;
+  transition-delay: 0.5s;
+}
+
+/**
+ * Add blend modes
+ */
+
+html.with-blendModes .Nav {
+  background: #fff;
+  color: #000;
+  mix-blend-mode: exclusion;
+  z-index: 10;
+}
+
+html.with-blendModes .Nav:matches(::before, ::after) {
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 100%);
+}
+
+html.with-blendModes .Nav:matches(:hover, .is-solid) {
+  background: #000;
+  color: #fff;
+  mix-blend-mode: hard-light;
+}
+
+@media (--md-viewport) {
+  html.with-blendModes .Nav:matches(:hover, .is-solid) {
+    mix-blend-mode: luminosity;
+  }
+}
+
+html.with-blendModes .Nav:hover:matches(::before, ::after),
+html.with-blendModes .Nav.is-solid:matches(::before, ::after) {
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
 }

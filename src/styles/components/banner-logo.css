@@ -1,86 +1,106 @@
 .BannerLogo {
   color: #000;
-  position: relative;
-  margin-top: 10%;
   cursor: default;
+  margin-top: 10%;
+  position: relative;
 }
 
 .BannerLogo-type {
+  position: relative;
   width: 100%;
+  z-index: 10;
 }
 
 .BannerLogo-type > * {
-  max-width: 100%
+  max-width: 100%;
 }
 
-/* Border */
+/**
+ * Horizontal line with way specific positioning
+ */
 
-.BannerLogo-type:after {
+.BannerLogo-type::after {
+  background: currentColor;
   content: "";
   display: block;
   height: 4px;
-  background: currentColor;
-  margin: 1.5% 0 2%;
-
-  /* Align with the the logo type */
+  margin: 1.5% 0 2% 2%;
   width: 98%;
-  margin-left: 2%;
 }
 
 @media (--sm-viewport) {
-  .BannerLogo-type:after {
+  .BannerLogo-type::after {
     height: 8px;
     margin-top: 2.5%;
   }
 }
 
 @media (--sm-viewport) {
-  .BannerLogo-type:after {
+  .BannerLogo-type::after {
     height: 8px;
     margin-top: 2.5%;
   }
 }
+
+/**
+ * Sub text with dimentions specific for an exact string and font
+ */
 
 .BannerLogo-sub {
   display: block;
   font-family: var(--font-family-alt);
-  text-transform: uppercase;
-  text-align: center;
-  white-space: nowrap;
-
-  /* Responsive text, specific for an exact string and font */
-  letter-spacing: 0.15vw;
   font-size: 5.25vw;
+  letter-spacing: 0.15vw;
   margin-left: 1.5vw;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 10;
 }
 
 @media (--sm-viewport) {
   .BannerLogo-sub {
-    letter-spacing: 2px;
     font-size: 22px;
+    letter-spacing: 2px;
     margin-left: 2%;
   }
 }
 
 .BannerLogo-diamond {
+  background: #fff;
+  border: 2px solid black;
+  height: 27vw;
+  left: 50%;
+  max-height: 170px;
+  max-width: 170px;
   position: absolute;
   top: 30%;
-  left: 50%;
-  width: 27vw;
-  height: 27vw;
-  max-width: 170px;
-  max-height: 170px;
   transform: rotate(45deg) translate(-50%, -50%);
   transform-origin: top left;
-  background: #fff;
-  mix-blend-mode: exclusion;
+  width: 27vw;
   will-change: transform;
-  z-index: 110;
+  z-index: 0;
 }
 
 @media (--lg-viewport) {
   .BannerLogo-diamond {
-    max-width: 205px;
     max-height: 205px;
+    max-width: 205px;
   }
+}
+
+/**
+ * Add blend modes
+ */
+
+html.with-blendModes .BannerLogo-type,
+html.with-blendModes .BannerLogo-sub {
+  position: relative;
+  z-index: 0;
+}
+
+html.with-blendModes .BannerLogo-diamond {
+  border: 0;
+  mix-blend-mode: exclusion;
 }

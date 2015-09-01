@@ -1,7 +1,7 @@
 <?php
 
 function get_events() {
-  global $fb_token;
+  $fb_token = trim( file_get_contents( get_template_directory() . '/fb-token.txt' ) );
   $page_id = get_field( 'page_id' );
   $fields =  'id,name,description,start_time,end_time';
   $query = 'https://graph.facebook.com/' . get_field( 'page_id' ) . '/events?access_token=' . $fb_token . '&fields=' . $fields;

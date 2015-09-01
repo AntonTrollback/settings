@@ -21,8 +21,16 @@ var cssPattern = [
 gulp.task('css', () => {
   return gulp.src(['src/styles/index.css'])
     .pipe(cssnext({
-      compress: { comments: { removeAll: true } },
-      url: { url: (url) => { return url; } }
+      compress: {
+        comments: {
+          removeAll: true
+        }
+      },
+      url: {
+        url: (url) => {
+          return url;
+        }
+      }
     }))
     .pipe(rename('settings.css'))
     .pipe(header(fs.readFileSync('style.css', 'utf8')))

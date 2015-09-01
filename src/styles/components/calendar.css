@@ -14,9 +14,9 @@
   }
 
   .Calendar-heading {
-    text-align: left;
-    padding-left: 38px;
     margin-bottom: 30px;
+    padding-left: 38px;
+    text-align: left;
   }
 }
 
@@ -26,7 +26,7 @@
   }
 
   .Calendar-heading {
-    padding-left: 49px;
     margin-bottom: 46px;
+    padding-left: 49px;
   }
 }

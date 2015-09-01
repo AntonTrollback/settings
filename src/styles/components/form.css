@@ -1,6 +1,6 @@
 .Form {
-  max-width: 350px;
   margin: 0 auto;
+  max-width: 350px;
   user-select: none;
 }
 
@@ -10,26 +10,24 @@
 
 .Form-button,
 .Form-field {
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
+  appearance: none;
+  background-image: linear-gradient(to bottom, #c1f3e1 0%, #c5edf0 100%);
   border: 0;
-  padding: 16px 15px;
-  color: var(--color-blue);
-  font-size: 22px;
-  line-height: normal;
   border-radius: 0;
   box-shadow: none;
+  box-sizing: border-box;
+  color: var(--color-blue);
+  display: block;
+  font-size: 22px;
+  line-height: normal;
   outline: 0;
-  background-image: linear-gradient(to bottom, #c1f3e1 0%, #c5edf0 100%);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -webkit-tap-highlight-color: transparent;
+  padding: 16px 15px;
+  width: 100%;
 }
 
 .Form-field:focus {
-  padding: 14px 13px;
   border: 2px solid var(--color-purple);
+  padding: 14px 13px;
 }
 
 .Form-field::placeholder {
@@ -37,15 +35,15 @@
 }
 
 .Form-button {
-  margin-top: 14px;
   background: var(--color-yellow);
+  margin-top: 14px;
   text-align: left;
 }
 
 .Form-button:hover,
 .Form-button:focus,
 .Form-button:active {
-  outline: 0;
   background: #d9f191;
+  outline: 0;
   text-decoration: underline;
 }

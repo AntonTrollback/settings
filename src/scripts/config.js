@@ -20,8 +20,10 @@ System.config({
     "core-js": "npm:core-js@0.9.17",
     "doc-ready": "npm:doc-ready@1.0.3",
     "fastclick": "npm:fastclick@1.0.6",
+    "ismobilejs": "npm:ismobilejs@0.3.9",
     "lodash": "npm:lodash@3.10.0",
     "skrollr": "npm:skrollr@0.6.26",
+    "sniffr": "npm:sniffr@0.1.1",
     "svg4everybody": "npm:svg4everybody@0.0.2",
     "transitionend-property": "npm:transitionend-property@0.0.2",
     "github:jspm/nodelibs-process@0.1.1": {

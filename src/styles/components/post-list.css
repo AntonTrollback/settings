@@ -9,30 +9,29 @@
  */
 
 .PostList-showMore {
+  color: var(--color-green-light);
+  display: block;
+  font-family: var(--font-family-alt);
   font-size: 32px;
-  width: 120px;
   height: 120px;
   line-height: 120px;
-  display: block;
-  margin: 40px auto;
-  text-align: center;
-  color: #fff;
+  margin: 40px auto 80px;
   position: relative;
-  font-family: var(--font-family-alt);
-  color: var(--color-green-light);
   -webkit-tap-highlight-color: transparent;
+  text-align: center;
+  width: 120px;
 }
 
-.PostList-showMore:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform: rotate(45deg);
+.PostList-showMore::before {
   background: var(--color-purple-alt);
-  z-index: -1;
-  top: 0;
+  content: "";
+  height: 100%;
   left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate(45deg);
+  width: 100%;
+  z-index: -1;
 }
 
 .PostList-showMore:hover,
@@ -42,9 +41,9 @@
   outline: 0;
 }
 
-.PostList-showMore:hover:before,
-.PostList-showMore:focus:before,
-.PostList-showMore:active:before {
+.PostList-showMore:hover::before,
+.PostList-showMore:focus::before,
+.PostList-showMore:active::before {
   background: var(--color-green-light);
 }
 
@@ -61,8 +60,8 @@
  */
 
 .PostList-title {
-  margin: 50px 0 40px;
   color: var(--color-pink-dark);
+  margin: 50px 0 40px;
 }
 
 @media (--sm-viewport) {
@@ -82,11 +81,11 @@
  */
 
 .PostList-item {
+  box-sizing: border-box;
   font-size: 1rem;
+  margin: 0 auto 3em;
   max-width: 330px;
   text-align: left;
-  margin: 0 auto 3em;
-  box-sizing: border-box;
 }
 
 .PostList-item.is-hidden {
@@ -99,9 +98,9 @@
 }
 
 .PostList-figure > img {
-  width: auto;
   height: auto;
   max-width: 100%;
+  width: auto;
 }
 
 @media (--sm-viewport) {
@@ -110,11 +109,11 @@
   }
 
   .PostList-item {
-    width: 50%;
-    max-width: 300px;
     display: inline-block;
-    vertical-align: top;
+    max-width: 300px;
     padding: 0 17px 0 0;
+    vertical-align: top;
+    width: 50%;
   }
 
   .PostList-item:nth-child(even) {
@@ -127,10 +126,10 @@
   }
 
   .PostList-figure > img {
-    position: absolute;
     bottom: 0;
     left: 50%;
     max-height: 100%;
+    position: absolute;
     transform: translateX(-50%);
   }
 }
@@ -153,23 +152,22 @@
 
 .PostList--small {
   color: inherit;
-  overflow: hidden;
-  margin-top: 0;
   margin-bottom: 0;
+  margin-top: 0;
+  overflow: hidden;
 }
 
 .PostList--small .PostList-item {
-  padding-left: 64px;
-  position: relative;
-  padding-right: 0;
   max-width: 580px;
+  padding-left: 64px;
+  padding-right: 0;
+  position: relative;
 }
-
 
 @media (--sm-viewport) {
   .PostList--small .PostList-item {
-    width: 100%;
     display: block;
+    width: 100%;
   }
 }
 
@@ -180,83 +178,83 @@
   }
 
   .PostList--small .PostList-item {
-    width: 50%;
     display: inline-block;
+    width: 50%;
   }
 }
 
-.PostList--small .PostList-item:before {
+.PostList--small .PostList-item::before {
+  background: #50a6ae;
   content: "";
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
-  background: #50a6ae;
 }
 
 /* Diamond */
 
-.PostList--small .PostList-item:nth-child(2):before,
-.PostList--small .PostList-item:nth-child(n+7):before {
-  transform: rotate(45deg);
-  top: 10px;
-  left: 6px;
-  width: 35px;
-  height: 35px;
+.PostList--small .PostList-item:nth-child(2)::before,
+.PostList--small .PostList-item:nth-child(n+7)::before {
   background: var(--color-pink);
+  height: 35px;
+  left: 6px;
+  top: 10px;
+  transform: rotate(45deg);
+  width: 35px;
 }
 
 /* Skew */
 
-.PostList--small .PostList-item:nth-child(3):before {
-  transform: skew(45deg);
+.PostList--small .PostList-item:nth-child(3)::before {
+  background: var(--color-orange);
   height: 25px;
-  width: 40px;
   left: 3px;
   top: 6px;
-  background: var(--color-orange);
+  transform: skew(45deg);
+  width: 40px;
 }
 
 /* Arrow up */
 
-.PostList--small .PostList-item:nth-child(4):before,
-.PostList--small .PostList-item:nth-child(n+8):before {
-  width: 0;
-  height: 0;
+.PostList--small .PostList-item:nth-child(4)::before,
+.PostList--small .PostList-item:nth-child(n+8)::before {
   background: transparent;
+  border-bottom: 27px solid var(--color-purple);
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  border-bottom: 27px solid var(--color-purple);
+  height: 0;
   left: -2px;
   top: 9px;
+  width: 0;
 }
 
 /* Arrow right */
 
-.PostList--small .PostList-item:nth-child(5):before,
-.PostList--small .PostList-item:nth-child(n+10):before {
-  width: 0;
-  height: 0;
+.PostList--small .PostList-item:nth-child(5)::before,
+.PostList--small .PostList-item:nth-child(n+10)::before {
   background: transparent;
-  border-right: 24px solid transparent;
   border-bottom: 24px solid transparent;
-  border-top: 24px solid transparent;
   border-left: 27px solid #80beab;
+  border-right: 24px solid transparent;
+  border-top: 24px solid transparent;
+  height: 0;
   left: 21px;
   top: 2px;
+  width: 0;
 }
 
 /* Arrow top right */
 
-.PostList--small .PostList-item:nth-child(6):before,
-.PostList--small .PostList-item:nth-child(n+9):before {
-  width: 0;
-  height: 0;
+.PostList--small .PostList-item:nth-child(6)::before,
+.PostList--small .PostList-item:nth-child(n+9)::before {
   background: transparent;
+  border-bottom: 37px solid transparent;
   border-left: 24px solid transparent;
   border-right: 37px solid #80beab;
-  border-bottom: 37px solid transparent;
+  height: 0;
   left: -13px;
   top: 4px;
+  width: 0;
 }
 
 /**
@@ -266,8 +264,8 @@
 .PostList--dark {
   background: #111;
   color: #fff;
-  margin-bottom: 20px;
   -webkit-font-smoothing: antialiased;
+  margin-bottom: 20px;
   -moz-osx-font-smoothing: grayscale;
   padding-bottom: 20px;
 }
@@ -276,6 +274,6 @@
   padding-left: 0;
 }
 
-.PostList--dark .PostList-item:before {
+.PostList--dark .PostList-item::before {
   display: none;
 }

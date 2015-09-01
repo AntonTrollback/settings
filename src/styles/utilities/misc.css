@@ -2,9 +2,9 @@
  * Colors
  */
 
- .u-colorWhite {
-   color: #fff;
- }
+.u-colorWhite {
+  color: #fff;
+}
 
 .u-colorPurple {
   color: var(--color-purple);
@@ -56,8 +56,8 @@
 
 .u-blockLink,
 .u-link {
-  -webkit-tap-highlight-color: transparent;
   outline: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .u-blockLink {
@@ -68,14 +68,10 @@
   text-decoration: underline;
 }
 
-.u-link:hover,
-.u-link:focus,
-.u-link:active,
-.u-blockLink:hover .u-link,
-.u-blockLink:focus .u-link,
-.u-blockLink:active .u-link {
-  outline: 0;
+.u-link:matches(:hover, :focus, :active),
+.u-blockLink:matches(:hover, :focus, :active) .u-link {
   color: #111;
+  outline: 0;
 }
 
 .u-link:active,
@@ -83,14 +79,10 @@
   color: #999;
 }
 
-.u-linkOnDark:hover,
-.u-linkOnDark:focus,
-.u-linkOnDark:active,
-.u-blockLink:hover .u-linkOnDark,
-.u-blockLink:focus .u-linkOnDark,
-.u-blockLink:active .u-linkOnDark {
-  outline: 0;
+.u-linkOnDark:matches(:hover, :focus, :active),
+.u-blockLink:matches(:hover, :focus, :active) .u-linkOnDark {
   color: #fff;
+  outline: 0;
 }
 
 .u-linkOnDark:active,

@@ -5,7 +5,7 @@
     </div>
     <h1>
       <span class="u-hiddenVisually">Settings:</span>
-      <div class="BannerLogo-sub">Normkreativa möjligheter</div>
+      <span class="BannerLogo-sub">Normkreativa möjligheter</span>
     </h1>
     <div class="BannerLogo-diamond"
      data-anchor-target=".Banner"

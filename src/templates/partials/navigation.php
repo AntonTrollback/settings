@@ -5,9 +5,9 @@
     </a>
 
     <nav class="Nav-inner" role="navigation">
-      <svg class="Nav-logo"><use xlink:href="#logo-s"></svg>
+      <svg class="Nav-logo"><use xlink:href="#logo-s" /></svg>
       <?php navigation('primary'); ?>
-      <svg class="Nav-logo"><use xlink:href="#logo-s"></svg>
+      <svg class="Nav-logo"><use xlink:href="#logo-s" /></svg>
     </nav>
-  </use>
+  </div>
 </header>

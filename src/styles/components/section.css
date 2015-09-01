@@ -17,11 +17,11 @@
  */
 
 .Section-photo {
-  max-width: 100%;
-  max-height: 95vh;
-  vertical-align: bottom;
-  margin: 12px auto 0;
   display: block;
+  margin: 12px auto 0;
+  max-height: 95vh;
+  max-width: 100%;
+  vertical-align: bottom;
 }
 
 @media (--sm-viewport) {
@@ -44,45 +44,47 @@
  */
 
 .Section-aside {
-  text-align: center;
   margin-top: 30px;
+  text-align: center;
 }
 
 .Section-asideFigure {
+  margin-bottom: 20px;
   max-width: 100%;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .Section-asideFigure > img {
-  max-width: 100%;
   display: inline-block;
+  max-width: 100%;
   vertical-align: bottom;
 }
 
+/* Action on narrow viewports */
+
 .Section-actionInline {
-  /* action on narrow viewports */
   float: right;
   margin: 0 0 0 20px;
 }
 
+/* Action on wide viewports */
+
 .Section-actionLarge {
-  /* action on wide viewports */
   display: none;
 }
 
 @media (--sm-viewport) {
   .Section:not(.Section--full) .Section-main {
-    width: 64%;
     float: left;
+    width: 64%;
   }
 
   .Section-aside,
   .Section-actionLarge {
-    width: 31%;
     float: right;
     margin-top: 72px;
     text-align: left;
+    width: 31%;
   }
 
   .Section-actionInline {
@@ -90,8 +92,8 @@
   }
 
   .Section-actionLarge {
-    margin-top: 150px;
     display: block;
+    margin-top: 150px;
   }
 }
 
@@ -115,28 +117,28 @@
 
 @media (--sm-viewport) {
   .Section.Section--altLayout:not(.Section--full) .Section-main {
-    width: 100%;
     float: none;
+    width: 100%;
   }
 
   .Section--altLayout .Section-aside {
-    width: 100%;
-    text-align: center;
     float: none;
+    text-align: center;
+    width: 100%;
   }
 }
 
 @media (--md-viewport) {
   .Section.Section--altLayout:not(.Section--full) .Section-main {
-    width: 64%;
     float: left;
+    width: 64%;
   }
 
   .Section--altLayout .Section-aside {
-    width: 30%;
-    text-align: left;
     float: right;
     margin-top: 52px;
+    text-align: left;
+    width: 30%;
   }
 }
 
@@ -145,14 +147,14 @@
  */
 
 .Section--full {
-  max-width: 600px;
   margin: 0 auto;
+  max-width: 600px;
 }
 
 @media (--md-viewport) {
   .Section--full {
+    margin: 0 auto;
     max-width: 600px;
     padding-right: 100px;
-    margin: 0 auto;
   }
 }

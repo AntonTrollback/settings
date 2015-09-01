@@ -17,13 +17,15 @@
       <?php partial( 'intro-icons' ); ?>
     <?php endif; ?>
 
+
     <?php // Primary page content ------------------------------------------- ?>
 
     <article class="Site-container <?php echo has_post_thumbnail() ? '' : 'Site-container--withRoomForNav' ?>">
       <?php partial( 'article' ); ?>
     </article>
 
-          <?php /* Swoosh */ if ( $is_home ) { partial( 'swoosh-1' ); } ?>
+    <?php /* Swoosh */ if ( $is_home ) { partial( 'swoosh-1' ); } ?>
+
 
     <?php // Page specific components --------------------------------------- ?>
 
@@ -33,7 +35,7 @@
 
     <?php if ( get_field( 'show_calendar' ) || get_field( 'show_newsletter_form' ) ): ?>
 
-            <?php /* Swoosh */ if ( get_field( 'show_calendar' ) ) { partial( 'swoosh-4' ); } ?>
+      <?php /* Swoosh */ if ( get_field( 'show_calendar' ) ) { partial( 'swoosh-4' ); } ?>
 
       <div class="Site-container">
         <div class="Section Section--altLayout u-cf">
@@ -52,7 +54,7 @@
       </div>
     <?php endif; ?>
 
-          <?php /* Swoosh */ if ( ( get_field( 'show_post_list' ) || get_field( 'show_large_post_list' ) ) && !get_field( 'show_intro_icons' ) ) { echo partial( 'swoosh-2' ); } ?>
+    <?php /* Swoosh */ if ( ( get_field( 'show_post_list' ) || get_field( 'show_large_post_list' ) ) && !get_field( 'show_intro_icons' ) ) { echo partial( 'swoosh-2' ); } ?>
 
     <?php if ( get_field( 'show_post_list' ) ): ?>
       <?php post_list(); ?>
@@ -63,6 +65,12 @@
     <?php endif; ?>
 
     <?php /* Swoosh */ if ( !get_field( 'show_post_list' ) && !get_field( 'show_large_post_list' ) && !get_field( 'show_calendar' ) && !get_field( 'show_newsletter_form' ) && !get_field( 'highlight' ) && !get_field( 'link_url' ) ) { partial( 'swoosh-3' ); } ?>
+
+    <?php if ( get_field( 'show_clients' ) ): ?>
+      <div class="Site-container">
+        <?php partial( 'clients' ); ?>
+      </div>
+    <?php endif; ?>
 
   </main>
 <?php endwhile; ?>

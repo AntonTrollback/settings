@@ -55,5 +55,5 @@ function image ( $size = 'regular', $class_list = '' ) {
 
   $class_list = $class_list ? 'class="' . $class_list . '"' : '';
 
-  echo '<img ' . $class_list . ' src="' . $url . '" srcset="' . $url_hq . ' 2x">';
+  echo '<img ' . $class_list . ' src="' . $url . '" srcset="' . $url_hq . ' 2x" alt="">';
 }

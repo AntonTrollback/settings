@@ -7,19 +7,19 @@
 }
 
 .IconSection-content {
-  padding: 30px 0;
-  width: 88%;
-  max-width: 700px;
-  font-size: 0;
-  text-align: center;
-  margin: 0 auto;
   cursor: default;
+  font-size: 0;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 30px 0;
+  text-align: center;
+  width: 88%;
 }
 
 .IconSection-item {
   display: inline-block;
-  width: 50%;
   font-size: 18px;
+  width: 50%;
 }
 
 .IconSection-item:last-child {
@@ -28,15 +28,14 @@
 
 .IconSection-figure {
   display: block;
-  margin: 0 auto;
-  width: 70px;
   height: 70px;
-  margin-bottom: 0.6em;
+  margin: 0 auto 0.6em auto;
+  width: 70px;
 }
 
 .IconSection-item:last-child .IconSection-figure {
-  width: 108px;
   height: 90px;
+  width: 108px;
 }
 
 @media (--sm-viewport) {
@@ -53,14 +52,14 @@
   }
 
   .IconSection-figure {
-    width: 100px;
     height: 100px;
+    width: 100px;
   }
 
   .IconSection-item:last-child .IconSection-figure {
-    width: 141px;
     height: 117px;
     margin-bottom: 0.2em;
+    width: 141px;
   }
 }
 
@@ -70,13 +69,13 @@
   }
 
   .IconSection-figure {
-    width: 115px;
     height: 115px;
+    width: 115px;
   }
 
   .IconSection-item:last-child .IconSection-figure {
-    width: 180px;
     height: 136px;
     margin-bottom: 0.1em;
+    width: 180px;
   }
 }

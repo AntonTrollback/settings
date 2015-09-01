@@ -15,39 +15,38 @@
  */
 
 .Expander-action {
-  position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
   box-sizing: border-box;
-  display: block;
-  padding-top: 28px;
-  text-align: left;
-  will-change: transform;
   cursor: pointer;
+  display: block;
+  height: 70px;
+  left: 0;
+  padding-top: 28px;
+  position: absolute;
   -webkit-tap-highlight-color: transparent;
+  text-align: left;
   user-select: none;
+  width: 100%;
+  will-change: transform;
 }
 
-.Expander-action:before {
-  content: "";
-  height: 100%;
-  width: 110%;
-  background-color: black;
-  position: absolute;
-  top: 35%;
-  left: -5%;
-  transform: rotate(5deg);
-  transform-origin: top center;
+.Expander-action::before {
   background-color: #fff;
   border-top: 1px solid var(--color-gray);
+  content: "";
+  height: 100%;
+  left: -5%;
+  position: absolute;
+  top: 35%;
+  transform: rotate(5deg);
+  transform-origin: top center;
+  width: 110%;
   will-change: transform;
 }
 
-.Expander-action:hover:before,
-.Expander-action:focus:before,
-.Expander-action:active:before {
+.Expander-action:hover::before,
+.Expander-action:focus::before,
+.Expander-action:active::before {
   transform: translateY(10%) rotate(5deg);
 }
 
@@ -71,17 +70,16 @@
   transition: transform 0.5s ease-in;
 }
 
-.Expander:not(.is-notTransitioning) .Expander-action:before {
+.Expander:not(.is-notTransitioning) .Expander-action::before {
   transition: transform 0.2s ease;
 }
 
 /**
- *  Expanded state
+ * Expanded state. Depentend on JS
  */
 
 html.no-script .Expander,
 .Expander.is-expanded {
-  /* Set using javascript, if enabled */
   max-height: none;
 }
 
@@ -90,8 +88,8 @@ html.no-script .Expander-action,
   transform: translateY(70px) rotate(0);
 }
 
-html.no-script .Expander-action:before,
-.Expander.is-expanded .Expander-action:before {
+html.no-script .Expander-action::before,
+.Expander.is-expanded .Expander-action::before {
   transform: rotate(0);
 }
 

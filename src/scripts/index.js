@@ -1,31 +1,55 @@
-import svg4everybody from 'svg4everybody';
-import docReady from 'doc-ready';
-import skrollr from 'skrollr';
-import forEach from 'lodash/collection/forEach';
-import defer from 'lodash/function/defer';
-import transitionend from 'transitionend-property';
 import attachFastClick from 'fastclick';
+import defer from 'lodash/function/defer';
+import docReady from 'doc-ready';
+import forEach from 'lodash/collection/forEach';
+import isMobile from 'ismobilejs';
+import skrollr from 'skrollr';
+import svg4everybody from 'svg4everybody';
+import transitionend from 'transitionend-property';
+import Sniffr from 'sniffr';
+
+blendModeTest();
+
+docReady(() => {
+  attachFastClick(document.body);
+  initSkrollr();
+
+  expander('.Expander-action');
+  hintNavScroll('.Nav');
+  moveAbove('.js-moveAbove');
+  postList('.PostList-showMore');
+});
+
+/**
+ * Test support for mix-blend-modes
+ */
+
+function blendModeTest() {
+  let support = false;
+
+  if ('CSS' in window && 'supports' in window.CSS) {
+    support = window.CSS.supports('mix-blend-mode', 'exclusion');
+  } else {
+    // Work around for Safari
+    const sniffr = new Sniffr();
+    sniffr.sniff(navigator.userAgent);
+
+    if (sniffr.browser.name === 'safari' && (sniffr.browser.version[0] >= 7.1)) {
+      support = true;
+    }
+  }
+
+  document.documentElement.classList.add(support ? 'with-blendModes' : '');
+}
+
+/**
+ * Skrollr
+ */
 
 let mainSkrollr = false;
 
-docReady(() => {
-  const moveUpItems = document.querySelectorAll('.js-moveAbovePreviousEl');
-  const expanderActions = document.querySelectorAll('.Expander-action');
-  const postListAction = document.querySelectorAll('.PostList-showMore');
-  const nav = document.querySelector('.Nav');
-
-  // init
-  initSkrollr();
-  moveAbove(moveUpItems);
-  expander(expanderActions);
-  postList(postListAction);
-  hintNavScroll(nav, 400);
-
-  attachFastClick(document.body);
-});
-
 function initSkrollr() {
-  if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+  if (!isMobile.any) {
     mainSkrollr = skrollr.init({
       forceHeight: false,
       smoothScrolling: false
@@ -33,16 +57,24 @@ function initSkrollr() {
   }
 }
 
-function moveAbove(items) {
-  forEach(items, (item) => {
+/**
+ * Move an element up in the post content
+ */
+
+function moveAbove(selector) {
+  forEach(document.querySelectorAll(selector), (item) => {
     const parent = item.parentNode;
     const paragraph = parent.querySelector('p:last-of-type');
     parent.insertBefore(item, paragraph);
   });
 }
 
-function expander(items) {
-  forEach(items, (action) => {
+/**
+ * Expandable content area
+ */
+
+function expander(selector) {
+  forEach(document.querySelectorAll(selector), (action) => {
     const target = action.parentNode;
     const restrainHeight = parseInt(getComputedStyle(target)['max-height'], 10);
     let contentHeight;
@@ -89,8 +121,12 @@ function expander(items) {
   });
 }
 
-function postList(actions) {
-  forEach(actions, (action) => {
+/**
+ * Show more items in a list of posts
+ */
+
+function postList(selector) {
+  forEach(document.querySelectorAll(selector), (action) => {
     let posts = document.querySelectorAll('.PostList-item');
 
     action.addEventListener('click', (e) => {
@@ -108,17 +144,33 @@ function postList(actions) {
   });
 }
 
-function hintNavScroll (nav) {
-  const contentEl = nav.querySelector('.Nav-inner');
-  const scrollEl = nav.querySelector('.Nav-wrap');
-  let hintFired = localStorage.getItem('navScrollHinter');
-  let navWidth = nav.clientWidth;
-  let contentWidth = contentEl.clientWidth;
-  const scrollMode = (contentWidth - 50) > navWidth;
+/**
+ * Quick scrolling animation to make it clear that the navigation is scrollable
+ */
 
-  // Animation
-  if (hintFired !== '1') {
-    if (scrollMode) {
+function hintNavScroll(selector) {
+  forEach(document.querySelectorAll(selector), (nav) => {
+    const contentElm = nav.querySelector('.Nav-inner');
+    const scrollElm = nav.querySelector('.Nav-wrap');
+    let hasHinted = localStorage.getItem('navScrollHinter');
+    let navWidth = nav.clientWidth;
+    let contentWidth = contentElm.clientWidth;
+    const inScrollMode = (contentWidth - 50) > navWidth;
+
+    if (hasHinted !== '1') {
+      if (inScrollMode) {
+        hintScroll();
+      }
+      localStorage.setItem('navScrollHinter', '1');
+    }
+
+    // Also.. Improve the scrolling a little bit
+
+    if (inScrollMode) {
+      waitForScroll();
+    }
+
+    function hintScroll() {
       nav.classList.add('is-hintingScroll');
 
       nav.querySelector('.Nav-inner').addEventListener(transitionend, () => {
@@ -126,20 +178,26 @@ function hintNavScroll (nav) {
       });
     }
 
-    localStorage.setItem('navScrollHinter', '1');
-  }
+    function waitForScroll() {
+      scrollElm.addEventListener('touchstart', (e) => {
+        e.stopPropagation();
+        makeSolid();
+      });
 
-  // Clean up background when scrolling
-  if (scrollMode) {
-    scrollEl.addEventListener('touchmove', (e) => {
-      e.stopPropagation();
-      nav.classList.add('is-stale');
-      document.addEventListener('touchmove', resetStale);
-    });
-  }
+      document.addEventListener('touchstart', makeDynamic);
+    }
 
-  function resetStale () {
-    nav.classList.remove('is-stale');
-    document.removeEventListener('touchmove', resetStale);
-  }
+    function makeSolid() {
+      nav.classList.add('is-solid');
+    }
+
+    function makeDynamic() {
+      nav.classList.remove('is-solid');
+
+      // Quick and dirty redraw
+      nav.style.display = 'none';
+      nav.offsetHeight;
+      nav.style.display = '';
+    }
+  });
 }
