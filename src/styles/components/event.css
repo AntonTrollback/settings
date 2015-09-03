@@ -219,18 +219,14 @@
  * Mouse states
  */
 
-.Event:hover .Event-title,
-.Event:focus .Event-title,
-.Event:active .Event-title {
-  text-decoration: underline;
-}
-
 .Event-figure {
   transition: transform 0.14s ease;
 }
 
-.Event:hover .Event-figure,
-.Event:focus .Event-figure,
-.Event:active .Event-figure {
+.Event--linked:matches(:hover, :focus, :active) .Event-figure {
   transform: scale(1.2);
+}
+
+.Event--linked:matches(:hover, :focus, :active) .Event-title {
+  text-decoration: underline;
 }

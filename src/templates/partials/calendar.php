@@ -1,7 +1,7 @@
 <div class="Calendar">
   <div class="Calendar-heading">
     <div class="Type Type--plain">
-      <h2 for="email">Settings kalender</h2>
+      <h2 for="email">Settings tipsar</h2>
     </div>
   </div>
 
