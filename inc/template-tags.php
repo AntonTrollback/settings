@@ -22,8 +22,7 @@ function set_post_by_slug ( $slug ) {
 }
 
 function asset_url ( $asset ) {
-  global $revision;
-  echo get_template_directory_uri() . '/src/' . $asset . '?v=' . $revision;
+  echo get_template_directory_uri() . '/src/' . $asset;
 }
 
 function template ( $name ) {
