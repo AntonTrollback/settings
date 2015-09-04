@@ -1,5 +1,3 @@
-/* Fonts */
-
 @import url("http://fonts.googleapis.com/css?family=Asul:400|Karla:400,400italic,700,700italic");
 
 /* Base */
@@ -11,6 +9,7 @@
 
 @import "components/banner";
 @import "components/banner-logo";
+@import "components/blog";
 @import "components/button";
 @import "components/calendar";
 @import "components/colored-section";

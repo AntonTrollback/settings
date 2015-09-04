@@ -10,6 +10,7 @@ function show ( $data ) {
 require get_template_directory() . '/inc/setup.php';
 require get_template_directory() . '/inc/navigation.php';
 require get_template_directory() . '/inc/template-tags.php';
+require get_template_directory() . '/inc/blog.php';
 require get_template_directory() . '/inc/calendar.php';
 require get_template_directory() . '/inc/post-list.php';
 require get_template_directory() . '/inc/large-post-list.php';

@@ -3,7 +3,6 @@
   display: block;
   min-height: 4em;
   position: relative;
-  -webkit-tap-highlight-color: transparent;
 }
 
 /**
@@ -15,7 +14,8 @@
   display: block;
   display: -webkit-box;
   -webkit-font-smoothing: antialiased;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
+  line-height: 1.3;
   overflow: hidden;
   position: relative;
   z-index: 1;

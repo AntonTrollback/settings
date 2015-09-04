@@ -6,6 +6,10 @@
   color: #fff;
 }
 
+.u-colorGray {
+  color: var(--color-gray);
+}
+
 .u-colorPurple {
   color: var(--color-purple);
 }
@@ -57,7 +61,6 @@
 .u-blockLink,
 .u-link {
   outline: 0;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .u-blockLink {

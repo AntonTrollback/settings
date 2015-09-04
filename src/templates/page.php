@@ -35,8 +35,6 @@
 
     <?php if ( get_field( 'show_calendar' ) || get_field( 'show_newsletter_form' ) ): ?>
 
-      <?php /* Swoosh */ if ( get_field( 'show_calendar' ) ) { partial( 'swoosh-4' ); } ?>
-
       <div class="Site-container">
         <div class="Section Section--altLayout u-cf">
           <?php if ( get_field( 'show_calendar' ) ): ?>
@@ -52,6 +50,12 @@
           <?php endif; ?>
         </div>
       </div>
+    <?php endif; ?>
+
+    <?php if ( get_field( 'show_blog' ) ): ?>
+      <?php /* Swoosh */ if ( get_field( 'show_calendar' ) ) { partial( 'swoosh-4' ); } ?>
+      
+      <?php blog(); ?>
     <?php endif; ?>
 
     <?php /* Swoosh */ if ( ( get_field( 'show_post_list' ) || get_field( 'show_large_post_list' ) ) && !get_field( 'show_intro_icons' ) ) { echo partial( 'swoosh-2' ); } ?>

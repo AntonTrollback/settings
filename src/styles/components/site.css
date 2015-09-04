@@ -8,6 +8,11 @@
   width: 100%;
 }
 
+.Site * {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
 .Site-body {
   background-color: #fff;
   isolation: isolate;

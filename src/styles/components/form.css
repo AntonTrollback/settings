@@ -1,7 +1,9 @@
 .Form {
   margin: 0 auto;
   max-width: 350px;
+  position: relative;
   user-select: none;
+  z-index: 1;
 }
 
 .Form-header {

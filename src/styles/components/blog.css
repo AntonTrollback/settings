@@ -1,0 +1,32 @@
+.Blog {
+
+}
+
+.Blog-heading {
+  margin-bottom: 45px;
+}
+
+.Blog-item {
+  margin: 35px 0;
+}
+
+.Blog-itemTitle {
+  margin-bottom: 10px;
+}
+
+@media (--md-viewport) {
+  .Blog-item {
+    margin: 50px 0;
+  }
+
+  .Blog-heading {
+    margin-bottom: 60px;
+    padding-left: 49px;
+  }
+}
+
+@media (--md-viewport) {
+  .Blog-heading {
+    padding-left: 0;
+  }
+}

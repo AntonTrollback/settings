@@ -90,9 +90,10 @@
 }
 
 .Swoosh--4 {
-  margin-bottom: 1.1em;
-  margin-top: 0.3em;
-  transform: rotate(-13deg);
+  margin-bottom: -2.1em;
+  margin-right: -4em;
+  margin-top: 2.3em;
+  transform: rotate(10deg);
 }
 
 .Swoosh--4 .Swoosh-figure {
@@ -101,12 +102,28 @@
 
 @media (--sm-viewport) {
   .Swoosh--4 {
-    margin-bottom: -0.3em;
-    margin-top: -1.2em;
-    transform: rotate(0deg);
+    margin-bottom: -1.1em;
+    margin-right: 4em;
+    margin-top: 1.3em;
   }
 
   .Swoosh--4 .Swoosh-figure {
     left: 80%;
+  }
+}
+
+@media (--md-viewport) {
+  .Swoosh--4 {
+    margin-top: -1.5em;
+  }
+}
+
+@media (--md-viewport) {
+  .Swoosh--4 {
+    left: -50%;
+    margin-bottom: -4.5em;
+    margin-right: -14.5em;
+    margin-top: 0.5em;
+    transform: rotate(-20deg);
   }
 }

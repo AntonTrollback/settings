@@ -67,17 +67,17 @@
   img, video, iframe, embed, object,
   blockquote, p, pre, ul, ol, hr,
   h1, h2, h3, h4, h5, h6;
-@custom-selector :--Type-custom-heading-123
-  .Type-h1, .Type-h2, .Type-h3;
-@custom-selector :--Type-custom-heading-345
-  .Type-h4, .Type-h5, .Type-h6;
 @custom-selector :--Type-inline-block
   img, video, iframe, embed, object;
 @custom-selector :--Type-sub-lists
   ul ul, ol ol, ul ol, ol ul;
 
-:--Type-custom-heading-123,
-:--Type-custom-heading-345,
+.Type-h1,
+.Type-h2,
+.Type-h3,
+.Type-h4,
+.Type-h5,
+.Type-h6,
 .Type :--Type-block-elements:not([class|="Type"]) {
   display: block;
   height: auto;
@@ -108,7 +108,9 @@
 
 /* Headings */
 
-:--Type-custom-heading-123,
+.Type-h1,
+.Type-h2,
+.Type-h3,
 .Type h1:not([class|="Type"]),
 .Type h2:not([class|="Type"]),
 .Type h3:not([class|="Type"]) {
@@ -127,15 +129,19 @@
 .Type-h2,
 .Type h2:not([class|="Type"]) {
   font-size: 32px;
+  line-height: 1.2;
 }
 
 .Type-h3,
 .Type h3:not([class|="Type"]) {
   font-size: 26px;
+  line-height: 1.3;
 }
 
 @media (--md-viewport) {
-  :--Type-custom-heading-123,
+  .Type-h1,
+  .Type-h2,
+  .Type-h3,
   .Type h1:not([class|="Type"]),
   .Type h2:not([class|="Type"]),
   .Type h3:not([class|="Type"]) {
@@ -155,6 +161,7 @@
   .Type-h3,
   .Type h3:not([class|="Type"]) {
     font-size: 26px;
+    line-height: 1.2;
   }
 }
 

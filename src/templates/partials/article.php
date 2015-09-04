@@ -8,7 +8,7 @@ $is_collapsed = ( is_page() || isset($is_home) ) && $has_aside;
 
 // Define text color theme (for posts only)
 global $theme_key;
-if ( is_page() || $is_home ) { $theme_key = 0; }
+if ( is_page() || isset($is_home) ) { $theme_key = 0; }
 $title_theme = array( 'u-colorTeal', 'u-colorPinkDark', 'u-colorGreen', 'u-colorOrange' );
 $body_theme = array( 'u-colorPurple', '', 'u-colorPurpleAlt', 'u-colorBlue' );
 ?>
