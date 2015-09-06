@@ -1,30 +1,28 @@
 System.config({
-  "baseURL": "/",
-  "transpiler": "babel",
-  "babelOptions": {
+  baseURL: "/",
+  defaultJSExtensions: true,
+  transpiler: "babel",
+  babelOptions: {
     "optional": [
       "runtime"
     ]
   },
-  "paths": {
-    "*": "*.js",
-    "github:*": "jspm_packages/github/*.js",
-    "npm:*": "jspm_packages/npm/*.js"
-  }
-});
+  paths: {
+    "github:*": "jspm_packages/github/*",
+    "npm:*": "jspm_packages/npm/*"
+  },
 
-System.config({
-  "map": {
+  map: {
     "babel": "npm:babel-core@5.5.8",
     "babel-runtime": "npm:babel-runtime@5.5.8",
     "core-js": "npm:core-js@0.9.17",
     "doc-ready": "npm:doc-ready@1.0.3",
     "fastclick": "npm:fastclick@1.0.6",
     "ismobilejs": "npm:ismobilejs@0.3.9",
-    "lodash": "npm:lodash@3.10.0",
+    "lodash": "npm:lodash@3.10.1",
     "skrollr": "npm:skrollr@0.6.26",
     "sniffr": "npm:sniffr@0.1.1",
-    "svg4everybody": "npm:svg4everybody@0.0.2",
+    "svg4everybody": "npm:svg4everybody@2.0.0",
     "transitionend-property": "npm:transitionend-property@0.0.2",
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
@@ -41,7 +39,7 @@ System.config({
       "eventie": "npm:eventie@1.0.6",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
-    "npm:lodash@3.10.0": {
+    "npm:lodash@3.10.1": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:skrollr@0.6.26": {
@@ -49,4 +47,3 @@ System.config({
     }
   }
 });
-

@@ -10,15 +10,15 @@
     "bundle-javascript": "jspm bundle-sfx index src/scripts/settings.js --minify"
   },
   "devDependencies": {
-    "babel": "^5.6.4",
-    "cssnext": "^1.6.0",
+    "babel": "^5.8.23",
+    "cssnext": "^1.8.4",
     "gulp": "^3.9.0",
-    "gulp-eslint": "^0.15.0",
-    "gulp-header": "^1.2.2",
-    "gulp-postcss": "^5.1.8",
+    "gulp-eslint": "^1.0.0",
+    "gulp-header": "^1.7.1",
+    "gulp-postcss": "^6.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-shell": "^0.4.2",
-    "jspm": "^0.15.7"
+    "gulp-shell": "^0.4.3",
+    "jspm": "^0.16.2"
   },
   "jspm": {
     "directories": {
@@ -28,10 +28,10 @@
       "doc-ready": "npm:doc-ready@^1.0.3",
       "fastclick": "npm:fastclick@^1.0.6",
       "ismobilejs": "npm:ismobilejs@^0.3.9",
-      "lodash": "npm:lodash@^3.10.0",
+      "lodash": "npm:lodash@^3.10.1",
       "skrollr": "npm:skrollr@^0.6.26",
       "sniffr": "npm:sniffr@^0.1.1",
-      "svg4everybody": "npm:svg4everybody@^0.0.2",
+      "svg4everybody": "npm:svg4everybody@^2.0.0",
       "transitionend-property": "npm:transitionend-property@^0.0.2"
     },
     "devDependencies": {

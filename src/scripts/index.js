@@ -11,11 +11,17 @@ import Sniffr from 'sniffr';
 blendModeTest();
 
 docReady(() => {
+  // Trigger svg redraw (safari issue)
+  var els = document.getElementsByTagName('use');
+  Array.prototype.forEach.call(els, function(el) {
+    el.setAttribute('xlink:href', el.getAttribute('xlink:href'));
+  });
+
   attachFastClick(document.body);
   initSkrollr();
 
   expander('.Expander-action');
-  hintNavScroll('.Nav');
+  navigation('.Nav');
   moveAbove('.js-moveAbove');
   postList('.PostList-showMore');
 });
@@ -145,26 +151,39 @@ function postList(selector) {
 }
 
 /**
- * Quick scrolling animation to make it clear that the navigation is scrollable
+ * Navigation related
  */
 
-function hintNavScroll(selector) {
+function navigation(selector) {
+  // Test localStorage support
+  let supportsLocalStorage;
+  try {
+    window.sessionStorage.setItem('test', '1');
+    window.sessionStorage.removeItem('test');
+    supportsLocalStorage = true;
+  } catch (error) {
+    supportsLocalStorage = false;
+  }
+
   forEach(document.querySelectorAll(selector), (nav) => {
     const contentElm = nav.querySelector('.Nav-inner');
     const scrollElm = nav.querySelector('.Nav-wrap');
-    let hasHinted = localStorage.getItem('navScrollHinter');
-    let navWidth = nav.clientWidth;
-    let contentWidth = contentElm.clientWidth;
-    const inScrollMode = (contentWidth - 50) > navWidth;
+    const inScrollMode = (contentElm.clientWidth - 50) > nav.clientWidth;
 
-    if (hasHinted !== '1') {
-      if (inScrollMode) {
+    /**
+     * Animate scrolling to make it clear it's scrollable
+     */
+
+    if (supportsLocalStorage) {
+      if (localStorage.getItem('navScrollHinter') !== '1' && inScrollMode) {
         hintScroll();
+        localStorage.setItem('navScrollHinter', '1');
       }
-      localStorage.setItem('navScrollHinter', '1');
     }
 
-    // Also.. Improve the scrolling a little bit
+    /**
+     * Improve the scrolling a little bit
+     */
 
     if (inScrollMode) {
       waitForScroll();
@@ -196,7 +215,7 @@ function hintNavScroll(selector) {
 
       // Quick and dirty redraw
       nav.style.display = 'none';
-      nav.offsetHeight;
+      let redraw = nav.offsetHeight;
       nav.style.display = '';
     }
   });

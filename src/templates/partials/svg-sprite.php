@@ -102,14 +102,3 @@
   </symbol>
 
 </svg>
-
-<script>
-  // Trigger svg redraw (safari issue)
-  document.addEventListener('DOMContentLoaded', function(){
-    var elms = document.getElementsByTagName('use');
-    Array.prototype.forEach.call(elms, function(el, i){
-      var href = el.getAttribute('xlink:href');
-      el.setAttribute('xlink:href', href);
-    });
-  });
-</script>
