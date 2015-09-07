@@ -1,3 +1,16 @@
+.Nav,
+.Nav-backdrop {
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 838px;
+  position: fixed;
+  right: 0;
+  top: 15px;
+  width: calc(100% - 30px);
+  z-index: 20;
+}
+
 .Nav {
   background: #000;
   box-sizing: border-box;
@@ -5,21 +18,12 @@
   font-family: var(--font-family-alt);
   font-size: 0;
   -webkit-font-smoothing: antialiased;
-  left: 0;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 838px;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
-  position: fixed;
-  right: 0;
   text-align: center;
-  top: 15px;
   user-select: none;
   white-space: nowrap;
-  width: calc(100% - 30px);
   will-change: transform;
-  z-index: 20;
 }
 
 .Nav-home,
@@ -84,6 +88,7 @@
 }
 
 .Nav,
+.Nav-backdrop,
 .Nav-logo,
 .Nav-action {
   height: 52px;
@@ -141,19 +146,22 @@
  */
 
 @media (--sm-viewport) {
-  .Nav {
+  .Nav,
+  .Nav-backdrop {
     width: 95%;
   }
 }
 
 @media (--md-viewport) {
   .Nav,
+  .Nav-backdrop,
   .Nav-logo,
   .Nav-action {
     height: 64px;
   }
 
-  .Nav {
+  .Nav,
+  .Nav-backdrop {
     top: 25px;
     width: calc(100% - 50px);
   }
@@ -204,19 +212,13 @@ html.with-blendModes .Nav:matches(::before, ::after) {
   background: linear-gradient(to right, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 100%);
 }
 
-html.with-blendModes .Nav:matches(:hover, .is-solid) {
-  background: #000;
-  color: #fff;
-  mix-blend-mode: hard-light;
+.Nav-backdrop {
+  display: none;
+  background: #fff;
+  outline: 10px red;
+  z-index: 9;
 }
 
-@media (--md-viewport) {
-  html.with-blendModes .Nav:matches(:hover, .is-solid) {
-    mix-blend-mode: luminosity;
-  }
-}
-
-html.with-blendModes .Nav:hover:matches(::before, ::after),
-html.with-blendModes .Nav.is-solid:matches(::before, ::after) {
-  background: linear-gradient(to right, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
+html.with-blendModes .Nav:matches(:hover, .is-solid) + .Nav-backdrop {
+  display: block;
 }

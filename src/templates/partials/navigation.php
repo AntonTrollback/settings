@@ -11,3 +11,6 @@
     </nav>
   </div>
 </header>
+
+<?php // Todo: move into .Nav ?>
+<div class="Nav-backdrop"></div>
