@@ -30,7 +30,7 @@ add_action( 'after_setup_theme', function () {
 });
 
 add_action( 'init', function () {
-  // Clean up wp head
+  // Clean-up wp head
   remove_action('wp_head', 'wp_generator');
   remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 });
@@ -57,7 +57,7 @@ add_filter( 'embed_oembed_html', function ( $html ) {
   return '<div class="Type-16by9">' . $html . '</div>';
 }, 10, 3 );
 
-// Get an uniqe theme key for each request
+// Get an unique theme key for each request
 
 session_start();
 $theme_keys = array( 0, 1, 2, 3 );

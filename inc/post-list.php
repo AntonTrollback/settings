@@ -3,9 +3,9 @@
 function get_post_list() {
   $categories = get_field( 'post_list_category' );
   $args = array(
-  	'posts_per_page' => 99999,
-  	'orderby' => 'menu_order',
-  	'post_status' => 'publish'
+    'posts_per_page' => 99999,
+    'orderby' => 'menu_order',
+    'post_status' => 'publish'
   );
 
   $result = array();

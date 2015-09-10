@@ -1,5 +1,6 @@
 <?php
 
+// Use a custom page as the home page without wordpress knowing
 function handle_start_page_content () {
   $is_home = false;
 
@@ -8,7 +9,7 @@ function handle_start_page_content () {
     set_post_by_slug( 'start' );
   }
 
-  // make the state available in partials
+  // Make sure the state available in partials
   set_query_var( 'is_home', $is_home );
 
   return $is_home;
@@ -42,7 +43,7 @@ function image_url ( $size = 'regular' ) {
   echo get_image_url( 'size-' . $size );
 }
 
-function raw_image_url ( $size = 'regular' ) {
+function raw_image_url () {
   echo get_image_url( false );
 }
 

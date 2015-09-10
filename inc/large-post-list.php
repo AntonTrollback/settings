@@ -3,10 +3,10 @@
 function get_large_post_list() {
   $category = get_field( 'large_post_list_category' );
   $args = array(
-  	'posts_per_page' => 99999,
-  	'orderby' => 'menu_order',
+    'posts_per_page' => 99999,
+    'orderby' => 'menu_order',
     'category' => $category,
-  	'post_status' => 'publish'
+    'post_status' => 'publish'
   );
 
   $result = array();
