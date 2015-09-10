@@ -36,16 +36,32 @@ function blendModeTest() {
   if ('CSS' in window && 'supports' in window.CSS) {
     support = window.CSS.supports('mix-blend-mode', 'exclusion');
   } else {
-    // Work around for Safari
-    const sniffr = new Sniffr();
-    sniffr.sniff(navigator.userAgent);
+    // Workaround for Safari supporting blend modes but not the supports API
+    const sniff = new Sniffr();
+    sniff.sniff(navigator.userAgent);
 
-    if (sniffr.browser.name === 'safari' && (sniffr.browser.version[0] >= 7.1)) {
+    if (supportedOsx(sniff) || supportedIos(sniff)) {
       support = true;
     }
   }
 
-  document.documentElement.classList.add(support ? 'with-blendModes' : '');
+  document.documentElement.classList.add(support ? 'with-blendModes' : 'no-blendModes');
+
+  function supportedOsx(s) {
+    let version = s.browser.version;
+    if (s.os.name !== 'macos' || s.browser.name !== 'safari') {
+      return false;
+    }
+    return version[0] > 6 ? true : version[0] = 6 && version[1] >= 2;
+  }
+
+  function supportedIos(s) {
+    let version = s.browser.version;
+    if (s.os.name !== 'ios') {
+      return false;
+    }
+    return version[0] > 7 ? true : version[0] = 7 && version[1] >= 1;
+  }
 }
 
 /**
@@ -100,7 +116,6 @@ function expander(selector) {
     });
 
     function expand(force = false) {
-      // expand it
       defer(() => {
         target.style.maxHeight = contentHeight + 'px';
         target.classList.add('is-expanded');
@@ -182,7 +197,7 @@ function navigation(selector) {
     }
 
     /**
-     * Improve the scrolling a little bit
+     * Improve navigation readability when scrolling
      */
 
     if (inScrollMode) {

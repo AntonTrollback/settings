@@ -12,11 +12,11 @@
 }
 
 @media (--md-viewport) {
-  .Banner { height: 550px; }
+  .Banner { height: 500px; }
 }
 
 @media (--lg-viewport) {
-  .Banner { height: 600px; }
+  .Banner { height: 550px; }
 }
 
 .Banner-background {
