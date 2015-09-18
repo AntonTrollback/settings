@@ -39,6 +39,16 @@ function get_image_url ( $size ) {
   return $img_id ? wp_get_attachment_image_src( $img_id, $size )[0] : '';
 }
 
+function share_img_url () {
+  $share_img_url = get_image_url( 'size-banner-hq' );
+
+  if ($share_img_url === '') {
+    $share_img_url = get_template_directory_uri() . '/src/images/share.jpg';
+  }
+
+  echo $share_img_url;
+}
+
 function image_url ( $size = 'regular' ) {
   echo get_image_url( 'size-' . $size );
 }

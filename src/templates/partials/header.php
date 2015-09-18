@@ -3,6 +3,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php wp_head(); ?>
+<meta property="og:image" content="<?php share_img_url(); ?>">
 <link rel="stylesheet" href="<?php asset_url( 'styles/settings.css' ); ?>">
 <script>document.documentElement.classList.remove('no-script');</script>
 
