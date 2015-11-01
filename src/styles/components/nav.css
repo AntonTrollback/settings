@@ -23,7 +23,6 @@
   text-align: center;
   user-select: none;
   white-space: nowrap;
-  will-change: transform;
 }
 
 .Nav-home,
@@ -189,7 +188,6 @@
 
 .Nav-inner {
   transition: transform 0.5s ease;
-  will-change: transform;
 }
 
 .Nav.is-hintingScroll .Nav-inner {

@@ -16,7 +16,7 @@
     </div>
   </footer>
 
-  <script src="<?php asset_url( 'scripts/settings.js' ); ?>"></script>
+  <script src="<?php asset_url( 'src/scripts/settings.js' ); ?>"></script>
 
   <?php partial( 'svg-sprite' ); ?>
 
