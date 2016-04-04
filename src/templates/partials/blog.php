@@ -6,7 +6,7 @@
       </div>
     </div>
 
-    <?php foreach ( $blog_posts as $key=>$post ): setup_postdata( $post ); ?>
+    <?php foreach ($blog_posts as $key=>$post): setup_postdata($post); ?>
       <article class="Blog-item">
         <?php if (get_the_content() !== ''): ?>
         <a class="u-blockLink" href="<?php the_permalink(); ?>">
@@ -17,7 +17,7 @@
           <div class="Type Type--plain u-colorGreen">
             <p>
               <strong><?php echo get_the_date(); ?> &middot; </strong>
-              <?php the_field( 'excerpt' ); ?>
+              <?php the_field('excerpt'); ?>
               <?php if (get_the_content() !== ''): ?>
                 <span class="u-link u-textNoWrap">Läs mer</span>
               <?php endif; ?>

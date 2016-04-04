@@ -22,7 +22,7 @@ gulp.task('css', () => {
   return gulp.src(['src/styles/index.css'])
     .pipe(cssnext({
       compress: {
-        comments: {
+        discardComments: {
           removeAll: true
         }
       },

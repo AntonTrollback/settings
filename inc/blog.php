@@ -8,10 +8,10 @@ function get_blog_posts() {
     'post_status' => 'publish'
   );
 
-  return get_posts( $args );
+  return get_posts($args);
 }
 
 function blog() {
-  set_query_var( 'blog_posts', get_blog_posts() );
-  partial( 'blog' );
+  set_query_var('blog_posts', get_blog_posts());
+  partial('blog');
 }

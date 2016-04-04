@@ -1,4 +1,10 @@
-<<?php echo $event['url'] ? 'a href="' . $event['url'] . '" class="Event Event--linked"' : 'div class="Event"'; ?>>
+<?php
+$link = '<a class="Event Event--linked" href="' . $event['url'] . '">';
+$open = $event['url'] ? $link : '<div class="Event">';
+$close = $event['url'] ? '</a>' : '</div>';
+?>
+
+<?php echo $open; ?>
   <div class="Event-figure">
     <div class="Event-month">
       <span><?php echo $event['month']; ?></span>
@@ -14,4 +20,4 @@
       <span class="u-colorGreen u-sm-show"><?php echo $event['desc']; ?></span>
     </div>
   </div>
-</<?php echo $event['url'] ? 'a' : 'div' ?>>
+<?php echo $close ?>

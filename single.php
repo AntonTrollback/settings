@@ -1,1 +1,1 @@
-<?php template( 'post' ); ?>
+<?php template('post'); ?>

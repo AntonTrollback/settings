@@ -1,6 +1,6 @@
 <header class="Nav" role="banner">
   <div class="Nav-wrap">
-    <a class="Nav-home" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+    <a class="Nav-home" href="<?php echo esc_url( home_url('/')); ?>" rel="home">
       <strong class="u-hiddenVisually">Startsidan</strong>
     </a>
 
@@ -12,5 +12,5 @@
   </div>
 </header>
 
-<?php // Todo: move into .Nav ?>
+<?php // Todo: move into the header.Nav element ?>
 <div class="Nav-backdrop"></div>

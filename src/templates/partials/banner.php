@@ -3,8 +3,8 @@
        data-anchor-target=".Banner"
        data-top="transform: translateY(0%)"
        data-top-center="transform: translateY(-14%)"
-       style="background-image: url(<?php image_url( 'banner-hq' ); ?>)">
+       style="background-image: url(<?php image_url('banner-hq'); ?>)">
   </div>
 
-  <?php if ( $is_home ) { partial( 'banner-logo' ); } ?>
+  <?php if ($is_home) { partial('banner-logo'); } ?>
 </div>

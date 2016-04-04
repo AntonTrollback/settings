@@ -12,5 +12,4 @@
        data--400-bottom-top="transform: translateY(0%) translateX(-50%)">
     <use xlink:href="#swoosh-1b"></use>
   </svg>
-
 </div>

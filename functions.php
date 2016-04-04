@@ -1,9 +1,9 @@
 <?php
 
-function show ( $data ) {
+function show ($data) {
   echo '<pre style="box-sizing: border-box; height: 50vh; resize: vertical;
         outline: 2px solid; background: #fff; font: 13px/1.3 monospace">';
-  print_r( $data );
+  print_r($data);
   echo '</pre>';
 }
 

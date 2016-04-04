@@ -6,8 +6,8 @@
   </div>
 
   <div>
-    <?php foreach ( $events as $event ): set_query_var( 'event', $event ); ?>
-      <?php partial( 'event' ); ?>
+    <?php foreach ($events as $event): set_query_var('event', $event); ?>
+      <?php partial('event'); ?>
     <?php endforeach; ?>
   </div>
 </div>
