@@ -62,12 +62,16 @@
   width: 2.5em;
 }
 
-.Event-month {
+.Event-date {
   line-height: 1.1;
   position: absolute;
-  right: 2em;
+  right: 2.7em;
   text-align: right;
   top: 0.5em;
+}
+
+.Event-date span:last-child {
+  font-size: 0.95em;
 }
 
 .Event-day {
@@ -86,8 +90,11 @@
     font-size: 25px;
   }
 
-  .Event-month span {
+  .Event-date {
     font-size: 18px;
+    right: 2.1em;
+    top: 1.1em;
+    white-space: nowrap;
   }
 
   .Event-day {
@@ -100,8 +107,13 @@
     font-size: 32px;
   }
 
-  .Event-month {
-    margin-right: 0.7em;
+  .Event-date {
+    margin-right: 2.8em;
+    margin-top: 0.3em;
+  }
+
+  .Event-date span {
+    display: block;
   }
 
   .Event-day {
@@ -158,14 +170,18 @@
   width: 3em;
 }
 
-.Event:nth-child(3) .Event-month {
-  right: 2.5em;
+.Event:nth-child(3) .Event-date {
+  right: 2.9em;
   top: 1em;
 }
 
 @media (--sm-viewport) {
   .Event:nth-child(3) .Event-body {
     padding-top: 1.15em;
+  }
+
+  .Event:nth-child(3) .Event-date {
+    top: 1.4em;
   }
 }
 
@@ -176,6 +192,10 @@
 
   .Event:nth-child(3) .Event-day {
     top: 26%;
+  }
+
+  .Event:nth-child(3) .Event-date {
+    top: 2em;
   }
 
   .Event:nth-child(3) .Calendar-body {
@@ -201,8 +221,8 @@
   width: 3.3em;
 }
 
-.Event:nth-child(4) .Event-month {
-  right: 2.75em;
+.Event:nth-child(4) .Event-date {
+  right: 3.1em;
 }
 
 @media (--md-viewport) {

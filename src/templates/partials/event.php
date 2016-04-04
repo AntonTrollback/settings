@@ -6,8 +6,9 @@ $close = $event['url'] ? '</a>' : '</div>';
 
 <?php echo $open; ?>
   <div class="Event-figure">
-    <div class="Event-month">
+    <div class="Event-date">
       <span><?php echo $event['month']; ?></span>
+      <span><?php echo $event['year']; ?></span>
     </div>
     <div class="Event-day">
       <span><?php echo $event['day']; ?></span>

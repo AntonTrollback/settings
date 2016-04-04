@@ -9,6 +9,7 @@ function get_events() {
     $event = array(
       'day'   => get_day($date),
       'month' => get_month($date),
+      'year'  => get_year($date),
       'title' => get_field('event_' . $num . '_title'),
       'desc'  => get_field('event_' . $num . '_desc'),
       'url'   => get_field('event_' . $num . '_url')
@@ -29,6 +30,10 @@ function get_day($date) {
 
 function get_month($date) {
   return strtolower( date('M', strtotime($date)));
+}
+
+function get_year($date) {
+  return strtolower( date('Y', strtotime($date)));
 }
 
 function calendar() {
