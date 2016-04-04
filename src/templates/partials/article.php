@@ -4,7 +4,7 @@ $highlight = get_field('highlight');
 $highlight_text = get_field('highlight_title');
 
 $has_aside = $link_url || $highlight;
-$is_collapsed = ( is_page() || isset($is_home)) && $has_aside;
+$is_collapsed = (is_page() || isset($is_home)) && $has_aside;
 
 // Define text color theme for posts
 global $theme_key;

@@ -14,3 +14,4 @@ require get_template_directory() . '/inc/blog.php';
 require get_template_directory() . '/inc/calendar.php';
 require get_template_directory() . '/inc/post-list.php';
 require get_template_directory() . '/inc/large-post-list.php';
+require get_template_directory() . '/inc/shortcode.php';

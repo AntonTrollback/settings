@@ -6,6 +6,7 @@ function get_events() {
 
   while ($num <= 4) {
     $date = get_field('event_' . $num . '_date');
+
     $event = array(
       'day'   => get_day($date),
       'month' => get_month($date),
@@ -15,7 +16,7 @@ function get_events() {
       'url'   => get_field('event_' . $num . '_url')
     );
 
-    if ($event['day'] && $event['month'] && $event['title'] && $event['desc']) {
+    if ($event['day'] && $event['title']) {
       array_push($events, $event);
     }
     $num++;

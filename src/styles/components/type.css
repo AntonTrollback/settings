@@ -240,3 +240,12 @@
   top: 0 !important;
   width: 100% !important;
 }
+
+/**
+ * Inline event
+ */
+
+.Type-event {
+  margin: 40px 0 25px 5%;
+  isolation: isolate;
+}
