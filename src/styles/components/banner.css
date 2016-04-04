@@ -1,5 +1,6 @@
 .Banner {
   height: 350px;
+  max-height: 95vh;
   overflow: hidden;
   position: relative;
   transition: height 0.5s ease;
