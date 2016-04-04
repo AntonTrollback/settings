@@ -5,7 +5,7 @@
 .alignleft,
 .alignright {
   height: auto !important;
-  margin: 7px 13px 0 !important;
+  margin: 7px 13px !important;
   max-height: 201px !important;
   max-width: 152px !important;
   width: auto !important;
