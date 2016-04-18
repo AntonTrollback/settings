@@ -30,3 +30,14 @@
     padding-left: 49px;
   }
 }
+
+.Calendar-prev {
+  margin: -12px 0 0;
+  display: block;
+  padding-bottom: 15px;
+}
+
+.Calendar-prev::before {
+  content: "\2190";
+  padding-right: 0.3em;
+}

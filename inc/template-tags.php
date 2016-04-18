@@ -23,7 +23,7 @@ function set_post_by_slug ($slug) {
 }
 
 function asset_url ($asset) {
-  echo get_template_directory_uri() . '/' . $asset . '?160404';
+  echo get_template_directory_uri() . '/' . $asset;
 }
 
 function template ($name) {
