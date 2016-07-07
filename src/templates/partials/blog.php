@@ -2,7 +2,7 @@
   <div class="Blog">
     <div class="Blog-heading">
       <div class="Type Type--plain u-colorPinkDark">
-        <h2>Nyheter</h2>
+        <h2>Tips</h2>
       </div>
     </div>
 
