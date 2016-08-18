@@ -7,23 +7,23 @@
 
 /* Components */
 
-@import "src/styles/components/banner";
-@import "src/styles/components/banner-logo";
-@import "src/styles/components/blog";
-@import "src/styles/components/button";
-@import "src/styles/components/calendar";
-@import "src/styles/components/colored-section";
-@import "src/styles/components/event";
-@import "src/styles/components/expander";
-@import "src/styles/components/footer";
-@import "src/styles/components/form";
-@import "src/styles/components/icon-section";
-@import "src/styles/components/nav";
-@import "src/styles/components/post-list";
-@import "src/styles/components/section";
-@import "src/styles/components/site";
-@import "src/styles/components/swoosh";
-@import "src/styles/components/type";
+@import "components/banner";
+@import "components/banner-logo";
+@import "components/blog";
+@import "components/button";
+@import "components/calendar";
+@import "components/colored-section";
+@import "components/event";
+@import "components/expander";
+@import "components/footer";
+@import "components/form";
+@import "components/icon-section";
+@import "components/nav";
+@import "components/post-list";
+@import "components/section";
+@import "components/site";
+@import "components/swoosh";
+@import "components/type";
 
 /* Utilities */
 
@@ -32,8 +32,8 @@
 @import "suitcss-utils-size";
 @import "suitcss-utils-text";
 
-@import "src/styles/utilities/misc";
-@import "src/styles/utilities/wysiwyg";
+@import "utilities/misc";
+@import "utilities/wysiwyg";
 
 /* Global props */
 
