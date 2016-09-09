@@ -76,6 +76,10 @@
       </div>
     <?php endif; ?>
 
+    <?php if (get_field('show_knowledge_test')): ?>
+      <?php knowledge_test(); ?>
+    <?php endif; ?>
+
   </main>
 <?php endwhile; ?>
 
