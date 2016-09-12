@@ -68,16 +68,22 @@
       <?php large_post_list(); ?>
     <?php endif; ?>
 
+    <?php if (get_field('show_knowledge_test')): ?>
+      <div class="Site-container">
+        <div class="Section u-cf">
+          <div class="Section-main">
+            <?php knowledge_test(); ?>  
+          </div>
+        </div>
+      </div>
+    <?php endif; ?>
+
     <?php /* Swoosh */ if (!get_field('show_post_list') && !get_field('show_large_post_list') && !get_field('show_calendar') && !get_field('show_newsletter_form') && !get_field('highlight') && !get_field('link_url')) { partial('swoosh-3'); } ?>
 
     <?php if (get_field('show_clients')): ?>
       <div class="Site-container">
         <?php partial('clients'); ?>
       </div>
-    <?php endif; ?>
-
-    <?php if (get_field('show_knowledge_test')): ?>
-      <?php knowledge_test(); ?>
     <?php endif; ?>
 
   </main>

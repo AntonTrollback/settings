@@ -54,6 +54,13 @@ function get_knowledge_test_level() {
 
 function catch_knowledge_test_submission() {
   $submit = isset($_POST['action']) && $_POST['action'] === 'submit_knowledge_test';
+  $score = isset($_GET['test_score']) ? (int)$_GET['test_score'] : false;
+  $result = get_knowledge_test_thresholds();
+
+  if (isset($_GET['test_score']) && ($score > count($result) || $score < 1)) {
+    wp_redirect(get_permalink());
+    exit; 
+  }
 
   if ($submit) {
     $level = get_knowledge_test_level();
@@ -63,10 +70,21 @@ function catch_knowledge_test_submission() {
 }
 add_action('wp', 'catch_knowledge_test_submission');
 
+function get_knowledge_test_success() {
+  $result = get_knowledge_test_thresholds();
+  $score = isset($_GET['test_score']) ? (int)$_GET['test_score'] : false;
+  $body = $result[$score - 1];
+
+  return array(
+    "body" => $body['text']
+  );
+}
+
 function knowledge_test() {
   $show_score = isset($_GET['test_score']);
 
   if ($show_score) {
+    set_query_var('knowledge_test_success', get_knowledge_test_success());
     partial('knowledge-test-success');
   } else {
     set_query_var('knowledge_test', get_knowledge_test_questions());
