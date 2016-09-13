@@ -1,4 +1,4 @@
-<form method="post">
+<form method="post" class="js-knowledgeTest">
   <?php foreach ($knowledge_test as $key=>$data): ?>
     <?php echo $data; ?>
     <?php for ($i = 1; $i <= 5; $i++): ?>

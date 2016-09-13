@@ -8,7 +8,7 @@ function get_knowledge_test_questions() {
 }
 
 function add_knowledge_test_explainations($questions) {
-  $link_template = '<button data-explaination="%s">%s</button>';
+  $link_template = '<div><button data-explaination="%s">%s</button></div>';
   $explainations_prepared = array();
   $explainations = explode('***', get_field('knowledge_explainations'));
 

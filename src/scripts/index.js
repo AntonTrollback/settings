@@ -24,6 +24,7 @@ docReady(() => {
   navigation('.Nav');
   moveAbove('.js-moveAbove');
   postList('.PostList-showMore');
+  knowledgeTest();
 });
 
 /**
@@ -234,4 +235,35 @@ function navigation(selector) {
       nav.style.display = '';
     }
   });
+}
+
+function knowledgeTest() {
+  document.addEventListener('click', onClick);
+
+  function onClick(e) {
+    removePreviousExplainations();
+
+    if (!e.target.getAttribute('data-explaination')) {
+      return;
+    }
+
+    e.preventDefault();
+
+    var explaination = e.target.getAttribute('data-explaination');
+    var parentNode = e.target.parentNode;
+    var tooltip = document.createElement('div');
+
+    tooltip.className = 'js-explaination';
+    tooltip.innerText = explaination;
+
+    parentNode.appendChild(tooltip);
+  }
+
+  function removePreviousExplainations() {
+    var explainations = document.querySelectorAll('.js-explaination');
+
+    forEach(explainations, (el) => {
+      el.parentNode.removeChild(el);
+    });
+  }
 }
