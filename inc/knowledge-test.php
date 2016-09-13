@@ -2,6 +2,31 @@
 
 function get_knowledge_test_questions() {
   $questions = explode('***', get_field('knowledge_questions'));
+  $questions = add_knowledge_test_explainations($questions);
+
+  return $questions;
+}
+
+function add_knowledge_test_explainations($questions) {
+  $link_template = '<button data-explaination="%s">%s</button>';
+  $explainations_prepared = array();
+  $explainations = explode('***', get_field('knowledge_explainations'));
+
+  foreach ($explainations as $explaination) {
+    $explaination_splitted = explode(':', $explaination);
+    $explainations_prepared[trim($explaination_splitted[0])] = trim($explaination_splitted[1]);
+  }
+
+  foreach ($questions as $question_key => $question) {
+    foreach ($explainations_prepared as $keyword => $explaination) {
+      $found = (strpos($question, $keyword) !== false) ? true : false;
+
+      if ($found) {
+        $replacement = sprintf($link_template, $explaination, $keyword);
+        $questions[$question_key] = str_replace($keyword, $replacement, $question);
+      }
+    }
+  }
 
   return $questions;
 }
