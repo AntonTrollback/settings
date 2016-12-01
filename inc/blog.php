@@ -3,7 +3,6 @@
 function get_blog_posts() {
   $args = array(
     'posts_per_page' => 99999,
-    'orderby' => 'menu_order',
     'category_name' => 'blog',
     'post_status' => 'publish'
   );
