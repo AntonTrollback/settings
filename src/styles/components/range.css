@@ -1,0 +1,48 @@
+.Range {
+  font-size: 0;
+}
+
+.Range-choice {
+  padding: 9.3px;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.Range-choiceInner {
+  position: relative;
+  width: 45px;
+  height: 45px;
+}
+
+.Range-input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  appearance: none;
+}
+
+.Range-square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  background-color: var(--color-pink);
+  transform: rotate(-45deg);
+}
+
+.Range-input:checked + .Range-square {
+  background-color: #000;
+}
+
+.Range-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #fff;
+  font-size: 22px;
+  font-family: var(--font-family-alt);
+}

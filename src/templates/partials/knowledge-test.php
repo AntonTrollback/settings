@@ -1,13 +1,32 @@
 <form method="post" class="js-knowledgeTest">
   <?php foreach ($knowledge_test as $key=>$data): ?>
-    <?php echo $data; ?>
-    <?php for ($i = 1; $i <= 5; $i++): ?>
-      <input name="question_<?php echo $key + 1; ?>" id="question_<?php echo $key + 1; ?>_<?php echo $i; ?>" type="radio" value="<?php echo $i; ?>" <?php if ($i === 1) : ?> checked<?php endif; ?> required>
-      <label for="question_<?php echo $key + 1; ?>_<?php echo $i; ?>"><?php echo $i; ?></label>
-    <?php endfor; ?>
+    <article>
+      <div class="u-textCenter">
+        <div class="Type Type--plain">
+          <h1 class="Type-h3 u-colorTeal">
+            <?php echo $data; ?>
+          </h1>
+        </div>
+      </div>
+      <div class="u-textCenter">
+        <div class="Range">
+          <?php for ($i = 1; $i <= 5; $i++): ?>
+            <div class="Range-choice">
+              <div class="Range-choiceInner">
+                <input class="Range-input" name="question_<?php echo $key + 1; ?>" id="question_<?php echo $key + 1; ?>_<?php echo $i; ?>" type="radio" value="<?php echo $i; ?>" <?php if ($i === 1) : ?> checked<?php endif; ?> required>
+                <div class="Range-square" role="presentational"></div>
+                <label class="Range-label" for="question_<?php echo $key + 1; ?>_<?php echo $i; ?>">
+                  <?php echo $i; ?>
+                </label>
+              </div>
+            </div>
+          <?php endfor; ?>
+        </div>
+      </div>
+    </article>
   <?php endforeach; wp_reset_postdata(); ?>
   <div>
-    <button type="submit">Skicka</button>
+    <button class="Button" type="submit">Skicka</button>
   </div>
   <input type="hidden" name="action" value="submit_knowledge_test">
 </form>

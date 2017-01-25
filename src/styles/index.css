@@ -21,6 +21,7 @@
 @import "components/nav";
 @import "components/post-list";
 @import "components/section";
+@import "components/range";
 @import "components/site";
 @import "components/swoosh";
 @import "components/type";
