@@ -30,3 +30,15 @@
   </div>
   <input type="hidden" name="action" value="submit_knowledge_test">
 </form>
+<style>
+  .js-explaination {
+    font-size: 13px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+  }
+  button[data-explaination] {
+    color: black;
+    text-decoration: underline;
+  }
+</style>
