@@ -20,6 +20,7 @@ function add_knowledge_test_explainations($questions) {
   foreach ($questions as $question_key => $question) {
     foreach ($explainations_prepared as $keyword => $explaination) {
       $found = (strpos($question, $keyword) !== false) ? true : false;
+      $explaination = esc_attr(sprintf('<div class="Type Type--plain">%s</div>', wpautop($explaination) .  wpautop($explaination)));
 
       if ($found) {
         $replacement = sprintf($link_template, $explaination, $keyword);

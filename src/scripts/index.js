@@ -252,13 +252,16 @@ function knowledgeTest(selector) {
     e.preventDefault()
 
     var explaination = e.target.getAttribute('data-explaination')
-    var parentNode = e.target.parentNode
     var tooltip = document.createElement('div')
+    var body = document.body || document.bodyElement
+    var tooltipInfo = document.createElement('div')
 
-    tooltip.className = 'js-explaination'
-    tooltip.innerText = explaination
+    tooltip.className = 'Knowledge-explainationWrap js-explaination'
+    tooltipInfo.className = 'Knowledge-explainationInfo'
+    tooltipInfo.innerHTML = explaination
 
-    parentNode.appendChild(tooltip)
+    tooltip.appendChild(tooltipInfo);
+    body.appendChild(tooltip)
   }
 
   function removePreviousExplainations() {
