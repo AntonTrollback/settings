@@ -33,11 +33,9 @@
 }
 
 .Knowledge-begin:active {
-
 }
 
 .Knowledge-submit {
-
 }
 
 /**
@@ -54,18 +52,17 @@
 }
 
 .Knowledge-questionText {
-
-    font-family: var(--font-family-alt);
-    font-size: 22px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    letter-spacing: -0.8px;
-    line-height: 1.48;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-        margin: 0 auto 30px;
-    color: var(--color-blue);
-    max-width: 410px;
+  font-family: var(--font-family-alt);
+  font-size: 22px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.8px;
+  line-height: 1.48;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  margin: 0 auto 34px;
+  color: var(--color-blue);
+  max-width: 410px;
 }
 
 .Knowledge-range {
@@ -76,7 +73,6 @@
 }
 
 .Knowledge-question--muted {
-
 }
 
 .Knowledge-explaination {
@@ -96,7 +92,6 @@
   margin: -14px -20px;
   outline: 0;
 }
-
 
 .Knowledge-question br:first-child,
 .Knowledge-question br:last-child {
