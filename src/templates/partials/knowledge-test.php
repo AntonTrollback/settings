@@ -23,7 +23,7 @@
             <div class="Range-choice">
               <div class="Range-choiceInner">
                 <input class="Range-input" name="question_<?php echo $key + 1; ?>" id="question_<?php echo $key + 1; ?>_<?php echo $i; ?>" type="radio" value="<?php echo $i; ?>" <?php if ($i === 1) : ?> checked<?php endif; ?> required>
-                <div class="Range-square" role="presentational"></div>
+                <div class="Range-figure" role="presentational"></div>
                 <label class="Range-label" for="question_<?php echo $key + 1; ?>_<?php echo $i; ?>">
                   <?php echo $i; ?>
                 </label>
