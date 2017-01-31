@@ -50,6 +50,26 @@
  */
 
 .Knowledge-question {
+  margin: 60px -10px;
+}
+
+.Knowledge-questionText {
+
+    font-family: var(--font-family-alt);
+    font-size: 22px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.8px;
+    line-height: 1.48;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+        margin: 0 auto 30px;
+    color: var(--color-blue);
+    max-width: 410px;
+}
+
+.Knowledge-range {
+  margin: -15px;
 }
 
 .Knowledge-question.is-visible {
@@ -61,7 +81,20 @@
 
 .Knowledge-explaination {
   display: inline;
-  color: black;
+  background: var(--color-yellow);
+  cursor: help;
+  padding: 0 2px;
+  margin: 0 -2px;
+  mix-blend-mode: darken;
+  transition: margin 150ms ease, padding 150ms ease;
+}
+
+.Knowledge-explaination:hover,
+.Knowledge-explaination:focus,
+.Knowledge-explaination:active {
+  padding: 14px 20px;
+  margin: -14px -20px;
+  outline: 0;
 }
 
 

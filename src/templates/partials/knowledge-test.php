@@ -10,14 +10,8 @@
 
   <?php foreach ($knowledge_test as $key=>$data): ?>
     <article class="Knowledge-question">
-      <div class="u-textCenter">
-        <div class="Type Type--plain">
-          <h1 class="Type-h3 u-colorTeal">
-            <?php echo $data; ?>
-          </h1>
-        </div>
-      </div>
-      <div class="u-textCenter">
+      <p class="Knowledge-questionText"><?php echo $data; ?></p>
+      <div class="Knowledge-range">
         <div class="Range">
           <?php for ($i = 1; $i <= 5; $i++): ?>
             <div class="Range-choice">
