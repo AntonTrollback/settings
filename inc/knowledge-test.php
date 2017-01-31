@@ -8,7 +8,7 @@ function get_knowledge_test_questions() {
 }
 
 function add_knowledge_test_explainations($questions) {
-  $link_template = '<div><button data-explaination="%s">%s</button></div>';
+  $link_template = '<button class="Knowledge-explaination" data-explaination="%s">%s</button>';
   $explainations_prepared = array();
   $explainations = explode('***', get_field('knowledge_explainations'));
 
@@ -84,7 +84,7 @@ function catch_knowledge_test_submission() {
 
   if (isset($_GET['test_score']) && ($score > count($result) || $score < 1)) {
     wp_redirect(get_permalink());
-    exit; 
+    exit;
   }
 
   if ($submit) {

@@ -24,6 +24,7 @@
 .Button:active {
   background: var(--color-pink);
   color: var(--color-purple);
+  outline: none;
 }
 
 .Button:active {

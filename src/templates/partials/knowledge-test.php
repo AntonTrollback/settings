@@ -1,6 +1,15 @@
-<form method="post" class="js-knowledgeTest">
+<form method="post" class="js-knowledgeTest Knowledge">
+
+  <div class="Knowledge-intro">
+    <div class="Type u-colorPurpleAlt">
+      <h1 class="u-colorOrange Knowledge-title">Har du koll på hur normkreativ du är på jobbet?</h1>
+      <p>Vi ser kunskap som ett spektrum, inte som en tävling och därför har vi skapat ett test som fungerar som en barometer. Vi vänder oss speciellt till dig som har extra ansvar på din arbetsplats. Det är hos dig kunskapen måste finnas för att sedan kunna få snurr i resten av verksamheten.</p>
+    </div>
+    <button class="Knowledge-begin js-begin" type="button">Starta testet!</button>
+  </div>
+
   <?php foreach ($knowledge_test as $key=>$data): ?>
-    <article>
+    <article class="Knowledge-question">
       <div class="u-textCenter">
         <div class="Type Type--plain">
           <h1 class="Type-h3 u-colorTeal">
@@ -25,20 +34,11 @@
       </div>
     </article>
   <?php endforeach; wp_reset_postdata(); ?>
-  <div>
+
+  <div style="display: none;">
     <button class="Button" type="submit">Skicka</button>
   </div>
+
   <input type="hidden" name="action" value="submit_knowledge_test">
+
 </form>
-<style>
-  .js-explaination {
-    font-size: 13px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-  }
-  button[data-explaination] {
-    color: black;
-    text-decoration: underline;
-  }
-</style>
