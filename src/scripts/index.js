@@ -264,7 +264,7 @@ function knowledgeTest(selector) {
     tooltipInfo.className = 'Knowledge-explainationInfo'
     tooltipInfo.innerHTML = explaination
 
-    tooltip.appendChild(tooltipInfo);
+    tooltip.appendChild(tooltipInfo)
     body.appendChild(tooltip)
   }
 
@@ -279,14 +279,24 @@ function knowledgeTest(selector) {
   }
 
   function showQuestions() {
+    var questions = document.querySelector('.Knowledge-questions')
+    var headerHeight = 90
+
     document.querySelector('.Knowledge-intro').classList.add('is-hidden')
-    document.querySelector('.Knowledge-questions').classList.remove('is-hidden')
+    questions.classList.remove('is-hidden')
+
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop
+
+    setTimeout(function() {
+      scrollTo(questions.getBoundingClientRect().top - headerHeight + scrollTop, null, 600)
+    }, 250)
+
   }
 
   document.querySelector('.Knowledge-begin').addEventListener('click', function(e) {
     e.preventDefault()
     showQuestions()
-  });
+  })
 
   root.addEventListener('submit', function(e) {
     if (root.checkValidity()) {
@@ -300,7 +310,7 @@ function knowledgeTest(selector) {
 
       e.preventDefault()
     }
-  });
+  })
 
   var setCheck
 
@@ -314,4 +324,59 @@ function knowledgeTest(selector) {
       }
     })
   })
+}
+
+// easing functions http://goo.gl/5HLl8
+Math.easeInOutQuad = function(t, b, c, d) {
+  t /= d / 2
+  if (t < 1) {
+    return c / 2 * t * t + b
+  }
+  t--
+  return -c / 2 * (t * (t - 2) - 1) + b
+}
+
+// requestAnimationFrame for Smart Animating http://goo.gl/sx5sts
+var requestAnimFrame = (function() {
+  return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function(callback) {
+      window.setTimeout(callback, 1000 / 60)
+    }
+})()
+
+function scrollTo(to, callback, duration) {
+  // because it's difficult to detect the scrolling element, just move them all
+  function move(amount) {
+    document.documentElement.scrollTop = amount
+    document.body.parentNode.scrollTop = amount
+    document.body.scrollTop = amount
+  }
+
+  function position() {
+    return document.documentElement.scrollTop || document.body.parentNode.scrollTop || document.body.scrollTop
+  }
+
+  var start = position()
+  var change = to - start
+  var currentTime = 0
+  var increment = 20
+  var duration = (typeof (duration) === 'undefined') ? 500 : duration
+
+  var animateScroll = function() {
+    // increment the time
+    currentTime += increment
+    // find the value with the quadratic in-out easing function
+    var val = Math.easeInOutQuad(currentTime, start, change, duration)
+    // move the document.body
+    move(val)
+    // do the animation unless its over
+    if (currentTime < duration) {
+      requestAnimFrame(animateScroll)
+    } else {
+      if (callback && typeof (callback) === 'function') {
+        // the animation is done so lets callback
+        callback()
+      }
+    }
+  }
+  animateScroll()
 }

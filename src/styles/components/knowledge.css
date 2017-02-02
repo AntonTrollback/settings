@@ -1,5 +1,6 @@
 .Knowledge {
   margin: 69px 0;
+  min-height: calc(100vh - 336px);
 }
 
 .Knowledge-intro {
@@ -8,10 +9,6 @@
   margin: 0 auto;
   max-width: 800px;
   width: 88%;
-}
-
-.Knowledge-intro.is-hidden .Knowledge-begin {
-  display: none;
 }
 
 .Knowledge-title {
@@ -33,7 +30,10 @@
   -moz-osx-font-smoothing: grayscale;
   outline: 0;
   width: 240px;
+  left: -6px;
+  position: relative;
   box-shadow: 12px 12px 0px 0px black;
+  transition: opacity 250ms 200ms ease;
 }
 
 .Knowledge-button:hover,
@@ -43,6 +43,14 @@
 }
 
 .Knowledge-button:active {
+  outline: 0;
+  box-shadow: none;
+  top: 12px;
+  left: 6px;
+}
+
+.Knowledge-intro.is-hidden .Knowledge-begin {
+  opacity: 0;
 }
 
 .Knowledge-begin {
@@ -64,7 +72,7 @@
   width: 70%;
   line-height: 29px;
   left: 15%;
-  color: #fff !important;
+  color: #fff;
   opacity: 0;
   transition: opacity 100ms ease;
 }
@@ -89,16 +97,27 @@
 
 .Knowledge-questions {
   text-align: center;
-  margin-top: 30px;
+  overflow: hidden;
+  margin-top: -110px;
+  will-change: margin, height;
 }
 
 .Knowledge-questions.is-hidden {
-  display: none;
+  margin: 0;
+  height: 0;
 }
 
 .Knowledge-question {
   overflow: hidden;
   padding: 70px 15px 80px;
+  transition: opacity 1000ms 200ms ease;
+  opacity: 1;
+  will-change: opacity;
+  background: #fff;
+}
+
+.Knowledge-questions.is-hidden .Knowledge-question {
+  opacity: 0;
 }
 
 .Knowledge-question:nth-child(odd) {
@@ -124,11 +143,12 @@
 
 .Knowledge-explaination {
   display: inline;
-  background: #f9f7b3;
+  background: var(--color-pink);
+  color: rgba(0, 0, 0, 0.8);
   cursor: zoom-in;
   padding: 0 2px;
   margin: 0 -2px;
-  mix-blend-mode: darken;
+  mix-blend-mode: multiply;
   transition: margin 150ms ease, padding 150ms ease;
 }
 
@@ -164,7 +184,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  background: #f9f7b3;
+  background: var(--color-pink);
+  color: rgba(0, 0, 0, 0.8);
   max-height: calc(100% - 29px);
   width: calc(100% - 29px);
   transform: translateX(-50%) translateY(-50%);
@@ -216,6 +237,14 @@
 
 @media (--md-viewport) {
   .Knowledge {
+    min-height: calc(100vh - 374px);
+  }
+
+  .Knowledge-questions {
+    margin-top: -90px;
+  }
+
+  .Knowledge {
     margin: 90px 0;
   }
 
@@ -255,16 +284,16 @@
     padding: 100px 15px;
   }
 
-  .Knowledge-questions {
-    margin-top: 10px;
-  }
-
   .Knowledge-submit {
     margin: 74px 0 -10px;
   }
 }
 
 @media (--lg-viewport) {
+  .Knowledge {
+    min-height: calc(100vh - 414px);
+  }
+
   .Knowledge-title {
     font-size: 52px !important;
     max-width: 710px !important;
