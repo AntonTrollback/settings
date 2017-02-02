@@ -255,6 +255,10 @@ function knowledgeTest(selector) {
     var tooltip = document.createElement('div')
     var body = document.body || document.bodyElement
     var tooltipInfo = document.createElement('div')
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop
+
+    window.scrollTo(0, scrollTop)
+    document.documentElement.style.overflow = 'hidden'
 
     tooltip.className = 'Knowledge-explainationWrap js-explaination'
     tooltipInfo.className = 'Knowledge-explainationInfo'
@@ -267,8 +271,47 @@ function knowledgeTest(selector) {
   function removePreviousExplainations() {
     var explainations = document.querySelectorAll('.js-explaination')
 
+    document.documentElement.style.overflow = ''
+
     forEach(explainations, (el) => {
       el.parentNode.removeChild(el)
     })
   }
+
+  function showQuestions() {
+    document.querySelector('.Knowledge-intro').classList.add('is-hidden')
+    document.querySelector('.Knowledge-questions').classList.remove('is-hidden')
+  }
+
+  document.querySelector('.Knowledge-begin').addEventListener('click', function(e) {
+    e.preventDefault()
+    showQuestions()
+  });
+
+  root.addEventListener('submit', function(e) {
+    if (root.checkValidity()) {
+
+    } else {
+      root.querySelector('.Knowledge-submit').classList.add('is-showingWarning')
+
+      setTimeout(function() {
+        root.querySelector('.Knowledge-submit').classList.remove('is-showingWarning')
+      }, 3000)
+
+      e.preventDefault()
+    }
+  });
+
+  var setCheck
+
+  Array.prototype.forEach.call(document.querySelectorAll('.Range-input'), function(input) {
+    input.addEventListener('click', function() {
+      if (setCheck !== this) {
+        setCheck = this
+      } else {
+        this.checked = false
+        setCheck = null
+      }
+    })
+  })
 }
