@@ -9,15 +9,21 @@
 }
 
 @media (--sm-viewport) {
-  .Banner { height: 450px; }
+  .Banner {
+    height: 450px;
+  }
 }
 
 @media (--md-viewport) {
-  .Banner { height: 500px; }
+  .Banner {
+    height: 500px;
+  }
 }
 
 @media (--lg-viewport) {
-  .Banner { height: 550px; }
+  .Banner {
+    height: 550px;
+  }
 }
 
 .Banner-background {

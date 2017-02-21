@@ -2,6 +2,7 @@
 $link_url = get_field('link_url');
 $highlight = get_field('highlight');
 $highlight_text = get_field('highlight_title');
+$diplomeringen_design = get_field('show_diplomering_design');
 
 $has_aside = $link_url || $highlight;
 $is_collapsed = (is_page() || isset($is_home)) && $has_aside;
@@ -12,6 +13,11 @@ $theme_key = (is_page() || isset($is_home)) ? 0 : $theme_key;
 
 $title_theme = array('u-colorTeal', 'u-colorPinkDark', 'u-colorGreen', 'u-colorOrange')[$theme_key];
 $body_theme = array('u-colorPurple', '', 'u-colorPurpleAlt', 'u-colorBlue')[$theme_key];
+
+if ($diplomeringen_design) {
+  $title_theme = 'u-colorDiplomeringPrimary';
+  $body_theme = 'u-colorDiplomeringSecondary';
+}
 ?>
 
 <div class="Section u-cf <?php echo $has_aside ? '' : 'Section--full '; ?>">
@@ -21,7 +27,16 @@ $body_theme = array('u-colorPurple', '', 'u-colorPurpleAlt', 'u-colorBlue')[$the
     <?php endif; ?>
 
       <div class="Type <?php echo $body_theme; ?>">
-        <h1 class="<?php echo $title_theme; ?>"><?php the_title(); ?></h1>
+        <?php if ($diplomeringen_design): ?>
+          <div class="Type-logoWrap">
+            <img class="Type-logo" src="<?php asset_url('src/images/diplomeringen.svg'); ?>" alt="Normkreativt ledarskap – Diplomeringen">
+          </div>
+          <img class="Type-logo--fixed" role="presentation" src="<?php asset_url('src/images/diplomeringen-black.svg'); ?>" alt="Normkreativt ledarskap – Diplomeringen">
+          <h1 class="u-hiddenVisually"><?php the_title(); ?></h1>
+        <?php else: ?>
+          <h1 class="<?php echo $title_theme; ?>"><?php the_title(); ?></h1>
+        <?php endif; ?>
+
         <?php the_content(); ?>
 
         <?php if ($link_url): ?>

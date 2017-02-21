@@ -4,6 +4,14 @@
   margin-top: 70px;
   overflow: hidden;
   padding: 60px 0 30px;
+  position: relative;
+  z-index: 101;
+}
+
+.Footer.is-hidden {
+  opacity: 0;
+  filter: blur(20px);
+  transition: opacity 500ms 100ms ease-in, filter 500ms 100ms ease-in;
 }
 
 .Footer-content {

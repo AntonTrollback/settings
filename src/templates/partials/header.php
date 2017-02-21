@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#111">
 <link rel="mask-icon" href="<?php asset_url('icon.svg'); ?>" color="#111111">
 <link rel="shortcut icon" href="<?php asset_url('favicon.ico'); ?>">
-<link rel="stylesheet" href="<?php asset_url('src/styles/settings.css'); ?>">
+<link rel="stylesheet" href="<?php asset_url('src/styles/settings.css?v10'); ?>">
 <script>document.documentElement.classList.remove('no-script');</script>
 
 <body class="Site-body">

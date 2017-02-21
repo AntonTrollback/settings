@@ -1,4 +1,4 @@
-  <footer class="Footer">
+  <footer class="Footer <?php if (is_on_knowledge_test_success_page()): ?>is-hidden<?php endif; ?>">
     <div class="Site-container">
 
       <?php if (get_field('show_contact')): ?>
@@ -15,7 +15,7 @@
     </div>
   </footer>
 
-  <script src="<?php asset_url('src/scripts/settings.js'); ?>"></script>
+  <script src="<?php asset_url('src/scripts/settings.js?v10'); ?>"></script>
 
   <?php partial('svg-sprite'); ?>
 

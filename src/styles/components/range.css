@@ -10,6 +10,22 @@
   position: relative;
 }
 
+.Range--informative .Range-choice:first-child::after,
+.Range--informative .Range-choice:last-child::after {
+  content: "Sällan";
+  position: absolute;
+  bottom: -34px;
+  left: 0px;
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  color: #3c8ba5;
+}
+
+.Range--informative .Range-choice:last-child::after {
+  content: "Ofta";
+}
+
 .Range-choiceInner {
   position: relative;
   width: 54px;
@@ -38,7 +54,7 @@
 }
 
 .Range-input:checked ~ .Range-figure {
-  background: linear-gradient(-20deg, #154c78 0%, #61c6ce 100%);
+  background: #3c8ba5;
   color: #fff;
   border: 0;
   width: 100%;

@@ -1,9 +1,9 @@
-<form method="post" class="js-knowledgeTest Knowledge" novalidate>
+<form method="post" class="Knowledge" novalidate>
 
   <div class="Knowledge-intro">
     <div class="Type">
-      <h1 class="Knowledge-title">Har du koll på hur normkreativ du är på jobbet?</h1>
-      <p>Vi ser kunskap som ett spektrum, inte som en tävling och därför har vi skapat ett test som fungerar som en barometer. Vi vänder oss speciellt till dig som har extra ansvar på din arbetsplats. Det är hos dig kunskapen måste finnas för att sedan kunna få snurr i resten av verksamheten.</p>
+      <h1 class="Knowledge-title">Hur normkreativ är du på jobbet?</h1>
+      <p><?php echo get_field('knowledge_intro'); ?></p>
     </div>
     <button class="Knowledge-button Knowledge-begin js-begin" type="button">Starta testet!</button>
   </div>
@@ -14,7 +14,7 @@
       <article class="Knowledge-question">
         <p class="Knowledge-questionText"><?php echo $data; ?></p>
         <div class="Knowledge-range">
-          <div class="Range">
+          <div class="Range Range--informative">
             <?php for ($i = 1; $i <= 5; $i++): ?>
               <div class="Range-choice">
                 <div class="Range-choiceInner">

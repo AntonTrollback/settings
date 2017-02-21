@@ -1,0 +1,124 @@
+.Share {
+  display: block;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+  transform-origin: center;
+  mix-blend-mode: multiply;
+  font-size: 22px;
+  will-change: transform;
+  font-family: var(--font-family-alt);
+  transition: transform 200ms ease-out;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+}
+
+.Share--facebook {
+  background-image: linear-gradient(to bottom right, #2c467d 0%, #5b7cbf 100%);
+  left: -5%;
+  top: 120px;
+  width: 130px;
+  height: 130px;
+}
+
+.Share--linkedin {
+  background-image: linear-gradient(to bottom right, #191919 0%, #616161 100%);
+  left: 27%;
+  top: 157px;
+  width: 120px;
+  height: 120px;
+}
+
+.Share--twitter {
+  background-image: linear-gradient(to bottom right, #1294e4 0%, #79ccff 100%);
+  left: 51%;
+  top: 100px;
+  width: 110px;
+  height: 110px;
+}
+
+.Share--email {
+  background-image: linear-gradient(to bottom right, #b34e43 0%, #ec7164 100%);
+  left: 76%;
+  top: 200px;
+  width: 90px;
+  height: 90px;
+}
+
+.Share:hover,
+.Share:active {
+  transform: scale(1.3);
+}
+
+.Share:focus {
+  outline: none;
+}
+
+.Share:active {
+  transform: scale(1.2);
+  transition: transform 100ms ease-out;
+}
+
+.ShareWrap {
+  position: relative;
+  height: 280px;
+  margin-top: -40px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 500ms 500ms ease-out, transform 500ms 300ms ease-out;
+  will-change: opacity;
+}
+
+.ShareWrap.is-ready {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ShareWrap-title {
+  position: relative;
+  top: 20px;
+  cursor: default;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (--sm-viewport) {
+  .ShareWrap {
+    margin-top: -70px;
+  }
+}
+
+@media (--md-viewport) {
+  .ShareWrap {
+    margin-top: -80px;
+    height: 360px;
+  }
+
+  .Share--facebook {
+    left: -10%;
+    top: 145px;
+    width: 160px;
+    height: 160px;
+  }
+
+  .Share--linkedin {
+    left: 24%;
+    top: 207px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .Share--twitter {
+    left: 53%;
+    top: 130px;
+    width: 130px;
+    height: 130px;
+  }
+
+  .Share--email {
+    left: 87%;
+    top: 207px;
+    width: 110px;
+    height: 110px;
+  }
+}

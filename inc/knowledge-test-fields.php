@@ -15,6 +15,29 @@ if(function_exists("register_field_group"))
         'default_value' => 0,
       ),
       array (
+        'key' => 'field_57bb1342efca1337',
+        'label' => 'Introtext',
+        'name' => 'knowledge_intro',
+        'type' => 'textarea',
+        'instructions' => '',
+        'conditional_logic' => array (
+          'status' => 1,
+          'rules' => array (
+            array (
+              'field' => 'field_57bacadbc5759',
+              'operator' => '==',
+              'value' => '1',
+            ),
+          ),
+          'allorany' => 'all',
+        ),
+        'default_value' => '',
+        'placeholder' => 'Håll den kort :)',
+        'maxlength' => '',
+        'rows' => '2',
+        'formatting' => 'none',
+      ),
+      array (
         'key' => 'field_57bac9941c673',
         'label' => 'Frågor',
         'name' => 'knowledge_questions',
@@ -42,7 +65,7 @@ if(function_exists("register_field_group"))
         'label' => 'Ordbeskrivningar',
         'name' => 'knowledge_explainations',
         'type' => 'textarea',
-        'instructions' => 'Ord: Beskrivning ... (dela upp med kolon).<br> 
+        'instructions' => 'Ord: Beskrivning ... (dela upp med kolon).<br>
   Dela upp med "***"',
         'conditional_logic' => array (
           'status' => 1,

@@ -1,3 +1,7 @@
+/**
+ * Ehh. This could be better.
+ */
+
 .Knowledge {
   margin: 69px 0;
   min-height: calc(100vh - 336px);
@@ -5,16 +9,19 @@
 
 .Knowledge-intro {
   text-align: center;
-  color: #454342;
+  color: var(--color-diplomering-secondary);
   margin: 0 auto;
   max-width: 800px;
   width: 88%;
 }
 
 .Knowledge-title {
-  color: #e39161 !important;
+  color: var(--color-diplomering-primary) !important;
   margin-bottom: -6px !important;
   font-size: 39px !important;
+  max-width: 310px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .Knowledge-button {
@@ -27,6 +34,8 @@
   height: 90px;
   letter-spacing: -1px;
   line-height: 90px;
+  display: inline-block;
+  text-align: center;
   -moz-osx-font-smoothing: grayscale;
   outline: 0;
   width: 240px;
@@ -34,6 +43,7 @@
   position: relative;
   box-shadow: 12px 12px 0px 0px black;
   transition: opacity 250ms 200ms ease;
+  user-select: none;
 }
 
 .Knowledge-button:hover,
@@ -91,33 +101,166 @@
  * Result
  */
 
+.Knowledge-resultBody {
+  margin: 0 auto;
+  max-width: 530px;
+  width: 88%;
+  position: relative;
+}
+
+.Knowledge-resultPrimaryText {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: opacity 500ms 200ms ease-out, transform 700ms ease-out;
+}
+
+.Knowledge-resultPrimaryText.is-ready {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.Knowledge-figure {
+  width: 350px;
+  height: 200px;
+  position: absolute;
+  left: -140px;
+  background: currentColor;
+  border-radius: 50%;
+  top: 150px;
+  opacity: 0.4;
+  transform: scale(0) rotate(40deg);
+  transition: transform 2s 1s cubic-bezier(0.175, 0.885, 0.32, 1.28);
+  mix-blend-mode: hard-light;
+}
+
+.Knowledge-figureWrap.is-ready .Knowledge-figure {
+  transform: scale(1) rotate(40deg);
+  animation: rotate 30s 3s linear infinite;
+}
+
+.Knowledge-figure--alt {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  transform-origin: 220px 160px;
+  animation-duration: 7s;
+  animation-direction: reverse;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(40deg);
+  }
+
+  100% {
+    transform: rotate(400deg);
+  }
+}
+
+.Knowledge-diplomeraSection {
+  text-align: center;
+  margin-top: 50px;
+  background: var(--color-diplomering-secondary);
+  margin-bottom: -70px;
+  padding: 50px 0 70px;
+  color: #fff;
+}
+
+.Knowledge-diplomeraLogo {
+  margin: 0 auto;
+  display: block;
+  width: 60%;
+  max-width: 210px;
+}
+
+.Knowledge-diplomera {
+  background: #fff;
+  color: var(--color-diplomering-primary);
+  height: 80px;
+  line-height: 80px;
+  box-shadow: 12px 12px 0 0 rgba(0, 0, 0, 0.6);
+}
+
+.Knowledge-diplomeraText {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0 auto !important;
+  max-width: 520px !important;
+  width: 88% !important;
+}
+
+@media (--sm-viewport) {
+  .Knowledge-diplomeraSection {
+    padding: 55px 0 90px;
+    margin-top: 70px;
+  }
+}
+
+@media (--md-viewport) {
+  .Knowledge-diplomeraSection {
+    margin-bottom: -100px;
+  }
+
+  .Knowledge-resultPrimaryText {
+    position: relative;
+    right: -50%;
+    margin: 90px 0 30px;
+    max-width: 360px;
+    text-align: justify;
+    font-size: 20px;
+    hyphens: auto;
+  }
+
+  .Knowledge-diplomeraLogo {
+    display: inline-block;
+    margin-right: 30px;
+    max-width: 230px;
+    vertical-align: top;
+  }
+
+  .Knowledge-diplomeraBody {
+    display: inline-block;
+    max-width: 470px;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .Knowledge-diplomeraText {
+    text-align: left !important;
+  }
+}
+
+@media (--lg-viewport) {
+  .Knowledge-diplomeraSection {
+    padding: 70px 0 110px;
+  }
+}
+
 /**
  * Questions
  */
 
 .Knowledge-questions {
   text-align: center;
-  overflow: hidden;
   margin-top: -110px;
-  will-change: margin, height;
+  transform: translateZ(0px);
+  transition: opacity 1000ms 200ms ease;
+  will-change: opacity;
+  opacity: 1;
 }
 
 .Knowledge-questions.is-hidden {
   margin: 0;
   height: 0;
+  overflow: hidden;
+  opacity: 0;
 }
 
 .Knowledge-question {
   overflow: hidden;
   padding: 70px 15px 80px;
-  transition: opacity 1000ms 200ms ease;
-  opacity: 1;
-  will-change: opacity;
   background: #fff;
-}
-
-.Knowledge-questions.is-hidden .Knowledge-question {
-  opacity: 0;
+  transform: translateZ(0px);
 }
 
 .Knowledge-question:nth-child(odd) {
@@ -133,8 +276,10 @@
   line-height: 1.48;
   -moz-osx-font-smoothing: grayscale;
   margin: 0 auto 34px;
-  color: #3a3837;
+  color: var(--color-diplomering-secondary);
   max-width: 410px;
+  z-index: 6;
+  position: relative;
 }
 
 .Knowledge-range {
@@ -150,6 +295,7 @@
   margin: 0 -2px;
   mix-blend-mode: multiply;
   transition: margin 150ms ease, padding 150ms ease;
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.5);
 }
 
 .Knowledge-explaination:hover,
@@ -214,9 +360,7 @@
   .Knowledge-title {
     font-size: 42px !important;
     line-height: 1.15 !important;
-    max-width: 530px !important;
-    margin-right: auto !important;
-    margin-left: auto !important;
+    max-width: 380px !important;
   }
 
   .Knowledge-intro p {
@@ -262,7 +406,7 @@
 
   .Knowledge-title {
     font-size: 46px !important;
-    max-width: 570px !important;
+    max-width: 450px !important;
   }
 
   .Knowledge-intro p {

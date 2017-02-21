@@ -24,7 +24,7 @@ docReady(() => {
   navigation('.Nav')
   moveAbove('.js-moveAbove')
   postList('.PostList-showMore')
-  knowledgeTest('.js-knowledgeTest')
+  knowledgeTest('.Knowledge')
 })
 
 /**
@@ -240,6 +240,21 @@ function navigation(selector) {
 function knowledgeTest(selector) {
   var root = document.querySelector(selector)
 
+  if (!root) {
+    return
+  }
+
+  var success = root.classList.contains('Knowledge--success')
+
+  if (success) {
+    document.querySelector('.Footer').classList.remove('is-hidden')
+    document.querySelector('.Site-main').classList.remove('is-hidden')
+    document.querySelector('.Knowledge-resultPrimaryText').classList.add('is-ready')
+    document.querySelector('.ShareWrap').classList.add('is-ready')
+    document.querySelector('.Knowledge-figureWrap').classList.add('is-ready')
+    return
+  }
+
   document.addEventListener('click', onClick)
 
   function onClick(e) {
@@ -299,8 +314,14 @@ function knowledgeTest(selector) {
   })
 
   root.addEventListener('submit', function(e) {
-    if (root.checkValidity()) {
+    e.preventDefault()
 
+    if (root.checkValidity()) {
+      document.querySelector('.Footer').classList.add('is-hidden')
+      document.querySelector('.Site-main').classList.add('is-hidden')
+      setTimeout(function() {
+        root.submit()
+      }, 700)
     } else {
       root.querySelector('.Knowledge-submit').classList.add('is-showingWarning')
 

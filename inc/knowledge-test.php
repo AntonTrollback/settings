@@ -14,13 +14,13 @@ function add_knowledge_test_explainations($questions) {
 
   foreach ($explainations as $explaination) {
     $explaination_splitted = explode(':', $explaination);
-    $explainations_prepared[trim($explaination_splitted[0])] = trim($explaination_splitted[1]);
+    $explainations_prepared[trim($explaination_splitted[0])] = substr($explaination, strlen($explaination_splitted[0]) + 1);
   }
 
   foreach ($questions as $question_key => $question) {
     foreach ($explainations_prepared as $keyword => $explaination) {
       $found = (strpos($question, $keyword) !== false) ? true : false;
-      $explaination = esc_attr(sprintf('<div class="Type Type--plain">%s</div>', wpautop($explaination) .  wpautop($explaination)));
+      $explaination = esc_attr(sprintf('<div class="Type Type--plain">%s</div>', wpautop($explaination)));
 
       if ($found) {
         $replacement = sprintf($link_template, $explaination, $keyword);
@@ -96,13 +96,18 @@ function catch_knowledge_test_submission() {
 }
 add_action('wp', 'catch_knowledge_test_submission');
 
+function is_on_knowledge_test_success_page() {
+  return isset($_GET['test_score']);
+}
+
 function get_knowledge_test_success() {
   $result = get_knowledge_test_thresholds();
   $score = isset($_GET['test_score']) ? (int)$_GET['test_score'] : false;
   $body = $result[$score - 1];
 
   return array(
-    "body" => $body['text']
+    "body" => $body['text'],
+    "score" => $score
   );
 }
 

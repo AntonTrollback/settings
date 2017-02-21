@@ -1,7 +1,7 @@
 <?php partial('header'); $is_home = handle_start_page_content(); ?>
 
 <?php while (have_posts()): the_post(); ?>
-  <main role="main">
+  <main class="Site-main <?php if (is_on_knowledge_test_success_page()): ?>is-hidden<?php endif; ?>" role="main">
 
     <?php // Page intro ----------------------------------------------------- ?>
 

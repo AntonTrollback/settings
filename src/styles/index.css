@@ -21,6 +21,7 @@
 @import "components/nav";
 @import "components/post-list";
 @import "components/section";
+@import "components/share";
 @import "components/range";
 @import "components/site";
 @import "components/swoosh";
@@ -33,7 +34,6 @@
 @import "suitcss-utils-layout";
 @import "suitcss-utils-size";
 @import "suitcss-utils-text";
-
 @import "utilities/misc";
 @import "utilities/wysiwyg";
 
@@ -54,6 +54,8 @@
   --color-teal: #237d81;
   --color-text: #333;
   --color-yellow: #e6fe9c;
+  --color-diplomering-primary: #f6892a;
+  --color-diplomering-secondary: #383635; /* #454342 */
 
   --font-family: "Karla", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
   --font-family-alt: "Asul", "Karla", "Verdana", "Geneva", "sans-serif";
@@ -61,13 +63,22 @@
 
 /* Breakpoints */
 
-@custom-media --xs-viewport  (width >= 330px);
-@custom-media --sm-viewport  (width >= 460px);
-@custom-media --md-viewport  (width >= 760px);
-@custom-media --lg-viewport  (width >= 1000px);
-@custom-media --xl-viewport  (width >= 1260px);
-@custom-media --xs-max-viewport  (width <= 329px);
-@custom-media --sm-max-viewport  (width <= 459px);
-@custom-media --md-max-viewport  (width <= 759px);
-@custom-media --lg-max-viewport  (width <= 999px);
-@custom-media --xl-max-viewport  (width <= 1259px);
+@custom-media --xs-viewport (width >= 330px);
+
+@custom-media --sm-viewport (width >= 460px);
+
+@custom-media --md-viewport (width >= 760px);
+
+@custom-media --lg-viewport (width >= 1000px);
+
+@custom-media --xl-viewport (width >= 1260px);
+
+@custom-media --xs-max-viewport (width <= 329px);
+
+@custom-media --sm-max-viewport (width <= 459px);
+
+@custom-media --md-max-viewport (width <= 759px);
+
+@custom-media --lg-max-viewport (width <= 999px);
+
+@custom-media --xl-max-viewport (width <= 1259px);

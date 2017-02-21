@@ -19,6 +19,15 @@
   overflow-x: hidden;
 }
 
+.Site-main {
+}
+
+.Site-main.is-hidden {
+  opacity: 0;
+  filter: blur(20px);
+  transition: opacity 700ms 100ms ease-in, filter 700ms 100ms ease-in;
+}
+
 .Site-container {
   margin: 0 auto;
   max-width: 800px;

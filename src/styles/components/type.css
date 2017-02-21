@@ -63,14 +63,11 @@
  * Styled elements
  */
 
-@custom-selector :--Type-block-elements
-  img, video, iframe, embed, object,
-  blockquote, p, pre, ul, ol, hr,
-  h1, h2, h3, h4, h5, h6;
-@custom-selector :--Type-inline-block
-  img, video, iframe, embed, object;
-@custom-selector :--Type-sub-lists
-  ul ul, ol ol, ul ol, ol ul;
+@custom-selector :--Type-block-elements img, video, iframe, embed, object, blockquote, p, pre, ul, ol, hr, h1, h2, h3, h4, h5, h6;
+
+@custom-selector :--Type-inline-block img, video, iframe, embed, object;
+
+@custom-selector :--Type-sub-lists ul ul, ol ol, ul ol, ol ul;
 
 .Type-h1,
 .Type-h2,
@@ -213,6 +210,27 @@
   width: 300px;
 }
 
+/* Quotes */
+
+.Type blockquote:not([class|="Type"]) {
+  font-style: italic;
+  margin-bottom: 35px;
+  font-size: 1.15em;
+  line-height: 1.45;
+  border-left: 0.6em solid var(--color-pink);
+  padding: 0 0 0 1em;
+  margin-left: -1.6em;
+}
+
+.Type blockquote:not([class|="Type"]) strong:last-child {
+  display: block;
+  line-height: 1.3;
+  margin-top: 10px;
+  font-style: normal;
+  font-size: 0.85em;
+  color: var(--color-pink);
+}
+
 /**
  * Responsive videos
  */
@@ -248,4 +266,48 @@
 .Type-event {
   margin: 40px 0 25px 5%;
   isolation: isolate;
+}
+
+/**
+ * Logo
+ */
+
+.Type-logoWrap {
+  margin: 0 auto;
+  display: block;
+  width: 70%;
+  margin-bottom: 40px;
+  max-width: 260px;
+}
+
+.Type-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (--md-viewport) {
+  .Type-logoWrap {
+    shape-outside: circle();
+    float: left;
+    margin: 7px;
+    max-width: 290px;
+  }
+
+  .Type-logo {
+    margin: 0 0 0 -27px;
+  }
+}
+
+.Type-logo--fixed {
+  margin: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.04;
+  width: 90vw;
+  transform: translate(40%, 30%);
+  max-width: 900px;
 }
